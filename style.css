@@ -1,9 +1,16 @@
 
 
+.riassunto {
+    background-color: brown;
+    border-radius: 20px;
+    width: 1024px;
+}
+
 .services-flex-conteiner {
     display: flex;
     flex-wrap: wrap;
     max-width: 1024px;
+    max-height: 800px;
     margin: 0 auto;
     background-color: white;
 }
@@ -11,12 +18,16 @@
 .flex-services {
     font-size: 20px;
     padding: 100px 10px;
-    width: 80%;
+    width: 100%;
 }
 
 .eventi {
     background-color: aqua;
     border-radius: 20px;
+    text-align: left;
+    inline-size: 100px;
+    overflow-wrap: break-word;
+    width: 95%;
 }
 
 .locali {
