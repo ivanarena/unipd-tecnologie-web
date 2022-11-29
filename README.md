@@ -1,5 +1,14 @@
 # Progetto di laboratorio del corso di Tecnologie Web A.A. 2022/2023
 
+## Getting started
+
+1. Assicurati di avere installato Docker Desktop
+2. Clona la repo (preferibilmente via SSH)
+3. Spostati nella repo e lancia il comando  ```docker-compose up -d```
+4. Per visualizzare il sito vai su localhost (o localhost:80);
+5. Per gestire il database vai su localhost:8080
+
+
 ## Specifiche Tecniche
 1. Il sito web deve essere realizzato con lo standard XHTML Strict, o HTML5. Le pagine in HTML5 devono degradare in modo elegante e devono rispettare la sintassi XML;
 2. Il layout deve essere realizzato con CSS puri (CSS2 o CSS3);
