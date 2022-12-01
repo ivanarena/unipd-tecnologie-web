@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <meta charset="utf-8" />
-        <title>San Junipero - Il metaverso</title>
-        <meta name="description" content="Questo è il sito ufficiale del metaverso San Junipero. Nella pagina viene spiegato come funziona il nostro mondo virtuale,
+
+<head>
+    <meta charset="utf-8" />
+    <title>San Junipero - Il metaverso</title>
+    <meta name="description"
+        content="Questo è il sito ufficiale del metaverso San Junipero. Nella pagina viene spiegato come funziona il nostro mondo virtuale,
          gli eventi a cui poter partecipare, gli abbonamenti disponibili, il team del progetto,
           i contatti dell'azienda e la possibilità di accedere al profilo personale e di acquistare il proprio abbonamento" />
-        <meta name="keywords" content="San Junipero, metaverso," /> <!--Non so che cazzo mettere-->
-        <meta name="author" content="San Junipero Inc" />
+    <meta name="keywords" content="San Junipero, metaverso," />
+    <!--Non so che cazzo mettere-->
+    <meta name="author" content="San Junipero Inc" />
 
-        <link rel="stylesheet" href="style.css" media="handheld, screen"/>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    </head>
+    <link rel="stylesheet" href="/src/style/main.css" media="handheld, screen" />
+    <link rel="shortcut icon" href="/res/favicon16x16.png" type="image/x-icon">
+</head>
 
-    <body>
-        <header>
+<!-- TODO: mettere classi a tutti i tag o quasi -->
+
+<body>
+    <header>
+        <div class="logo-container">
             <h1>San Junipero</h1>
+
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider"></span>
             </label>
-        </header>
+        </div>
 
         <nav>
             <ul>
@@ -33,59 +40,75 @@
             </ul>
 
             <ul>
-                <li><a href=""><span lang="en">Log In</span></a></li> <!--Tradurrei in Accedi per una maggiore coerenza con il sito in italiano-->
+                <li><a href=""><span lang="en">Accedi</span></a></li>
                 <li><a href="">Registrati</a></li>
             </ul>
         </nav>
-            
+
         <nav>
             <p>Ti trovi in: <span lang="en">Home</span></p>
         </nav>
+    </header>
 
-        <main> <!--I nomi dei div sono chiaramente momentanei giusto per capire come suddividere la pagina-->
-            <div class="riassunto">
-                <h1>Vivi la tua vita da sogno in un universo fatto su misura per te!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
+    <main>
+        <!--I nomi dei div sono chiaramente momentanei giusto per capire come suddividere la pagina-->
+        <div class="h-card">
+            <h1>Vivi la tua vita da sogno in un universo fatto su misura per te!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.
+            </p>
+        </div>
 
-            <div class="services-flex-conteiner">
-                <div class="flex-services eventi">
-                    <h1>Scopri una marea di eventi per fare nuove amicizie</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
+        <div class="h-card">
+            <h1>Scopri una marea di eventi per fare nuove amicizie</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum.
+            </p>
+        </div>
 
-                <div class="flex-services locali">
-                    <h1>Vuoi una pizza? Vuoi un piatto di Cracco?</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-            </div>
+        <div class="h-card">
+            <h1>Vuoi una pizza? Vuoi un piatto di Cracco?</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum.
+            </p>
+        </div>
+        </div>
 
-            <div class="story">
-                <h1>Ti raccontiamo la nostra storia! Anche se non te ne frega un cazzo!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
+        <div class="h-card">
+            <h1>Ti raccontiamo la nostra storia! Anche se non te ne frega un cazzo!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.
+            </p>
+        </div>
 
-            <!--Secondo me cambierei il fatto di mandare i messaggi  e metterei dei partners fittizi-->
+        <!--Secondo me cambierei il fatto di mandare i messaggi  e metterei dei partners fittizi-->
 
-        </main>
+    </main>
 
-        <footer>
-            <p>San Junipero <span lang="en"><abbr title="incorporated">Inc</abbr></span> | <span lang="en">Copyright</span> | Via Paolo Bassi 1 | 35137 Padova PD | mail: contact@sanjunipero.it</p>
-        </footer>
-    </body>
+    <footer class="flex-row-center">
+        <p>San Junipero <span lang="en"><abbr title="incorporated">Inc</abbr></span> | <span lang="en">Copyright</span>
+            | Via Paolo Bassi 1 | 35137 Padova PD | mail: contact@sanjunipero.it</p>
+    </footer>
+</body>
