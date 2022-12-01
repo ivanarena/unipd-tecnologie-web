@@ -21,6 +21,14 @@
 9. I dati inseriti dagli utenti devono essere salvati in un database;
 10. È preferibile che il database sia in forma normale.
 
+Il progetto deve essere accompagnato da una relazione che ne illustri le fasi di progettazione, realizzazione e test ed evidenzi il ruolo svolto dai singoli componenti del gruppo.
+
+Viene richiesta un'analisi iniziale delle caratteristiche degli utenti che il sito si propone di raggiungere e le possibili ricerche sui motori di ricerca a cui il sito deve rispondere. 
+
+Le pagine web devono essere accessibili indipendentemente dal browser e dalle dimensioni dello schermo del dispositivo degli utenti. Considerazioni riguardanti diversi dispositivi (laddove possibile) verranno valutate positivamente.
+
+***NB: Il non rispetto di anche una sola di queste regole comporta la non sufficienza del progetto!***
+
 ## Regole per la consegna del progetto
 
 ***NB: Il non rispetto di anche una sola di queste regole può comportare l'esclusione dalla consegna o una penalizzazione nella valutazione!***
