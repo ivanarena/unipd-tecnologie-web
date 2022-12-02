@@ -5,7 +5,7 @@
     $title = 'Home';
     $desc = 'blabalb';
 
-    $builder = new PageBuilder('/pages/index.html', $title, $desc);
+    $builder = new PageBuilder('/pages/home.html', $title, $desc);
 
     $page = $builder->buildPage();
     echo $page;

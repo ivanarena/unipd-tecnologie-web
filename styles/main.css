@@ -1,3 +1,5 @@
+/* ! PER COMODITA' STO BUTTANDO TUTTO QUA MA POI SI FA REFACTORING */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -39,8 +41,24 @@ main {
 .h-card {
     display: flex;
     flex-direction: column;
-    background-color: red;
+    background-color: lightgray;
     width: 99%;
     border-radius: 1.3em;
     padding: 2em;
+}
+
+/* PAGINA ABBONAMENTI */
+.plans-container {
+    background-color: lightgray;
+    width: 99%;
+    border-radius: 1.3em;
+    padding: 2em;
+}
+
+.plan-container {
+    background-color: red;
+    display: flex;
+    border-radius: 1.3em;
+    padding: 1.3em;
+    flex-direction: column;
 }
