@@ -2,33 +2,51 @@
 
 class PageBuilder {
     private $hostName = 'San Junipero';
-    private $pageName;
     private $path;
     private $content;
+    private $title;
+    private $desc;
 
-    public function __construct(string $_pageName, string $_path) {
-        $this->pageName = $_pageName;
+    private $head; 
+    private $header; 
+    private $footer; 
+
+    public function __construct(string $_path, string $_title, string $_desc) {
         $this->path = $_path;
-        $this->content = file_get_contents(__DIR__ . "/pages/index.html");
+        $this->title = $_title;
+        $this->desc = $_desc;
+        
+        $this->content = file_get_contents(__DIR__ . $this->path);
+        $this->head = file_get_contents(__DIR__."/pages/components/head.html");
+        $this->header = file_get_contents(__DIR__."/pages/components/header.html");
+        $this->footer = file_get_contents(__DIR__."/pages/components/footer.html");
+
     }
 
-    public function setHead(string $head) {
-        $head = str_replace('titleToReplace', 'Home - San Junipero', $head);
-        $this->content = str_replace('<headPlaceholder />', $head, $this->content);
+    public function setHead() {
+        $this->head = str_replace('<titlePlaceholder />', $this->title . ' | ' . $this->hostName, $this->head);
+        $this->head = str_replace('<meta name="description" content="" />', '<meta name="description" content="' . $this->desc . '" />', $this->head);
+        $this->content = str_replace('<headPlaceholder />', $this->head, $this->content);
     }
     
-    public function setHeader(string $header) {
-        // $this->content = str_replace('', $header, $this->content);
-        $this->content = str_replace('<headerPlaceholder />', $header, $this->content);
+    public function setHeader() {
+        $this->content = str_replace('<headerPlaceholder />', $this->header, $this->content);
     }
     
-    public function setBreadcrumb() {}  
+    public function setBreadcrumb() {
+        $this->content = str_replace('<breadcrumbPlaceholder />', $this->title, $this->content);
+        
+    }  
     
-    public function setFooter(string $footer) {
-        $this->content = str_replace('<footerPlaceholder />', $footer, $this->content);
+    public function setFooter() {
+        $this->content = str_replace('<footerPlaceholder />', $this->footer, $this->content);
     }
     
     public function buildPage() {
+        $this->setHead();
+        $this->setHeader();
+        $this->setBreadcrumb();
+        $this->setFooter();
         return $this->content;
     }
 }
