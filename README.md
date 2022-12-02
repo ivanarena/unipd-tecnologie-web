@@ -7,6 +7,7 @@
 3. Spostati nella repo e lancia il comando  ```docker-compose up -d```
 4. Per visualizzare il sito vai su localhost (o localhost:80)
 5. Per gestire il database vai su localhost:8080
+6. DB username : "root" e password : "example" 
 
 
 ## Specifiche Tecniche
