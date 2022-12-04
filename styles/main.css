@@ -30,7 +30,6 @@ main {
 
 .h-card {
     display: flex;
-    flex-direction: column;
     width: 97%;
     border-radius: 1.3em;
     padding: 4vh 4vw 4vh 4vw;
@@ -39,7 +38,8 @@ main {
 }
 
 .h-card h1 {
-    font-size: var();
+    width: 40vw;
+    font-size: var(--fs-h1-d);
     margin-bottom: 4vh;
     text-align: center;
 }
@@ -51,6 +51,13 @@ main {
 
 .flex-row-center {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-col-center {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
