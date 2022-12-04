@@ -1,5 +1,4 @@
 # Progetto di laboratorio del corso di Tecnologie Web A.A. 2022/2023
-
 ## Getting Started
 
 1. Assicurati di avere installato Docker Desktop
