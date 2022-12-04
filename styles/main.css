@@ -1,12 +1,5 @@
 /* ! PER COMODITA' STO BUTTANDO TUTTO QUA MA POI SI FA REFACTORING */
 
-:root {
-    --clr-text: black;
-    --clr-headings: #d413cd;
-    --clr-a-active: #007faa;
-    --clr-a-visited: #3b0053;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -28,31 +21,6 @@ a:visited {
     color: var(--clr-a-visited);
 }
 
-/* classe utile per centrare in un secondo */
-.flex-row-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -66,6 +34,12 @@ main {
     width: 99%;
     border-radius: 1.3em;
     padding: 2em;
+}
+
+.flex-row-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* PAGINA ABBONAMENTI */
