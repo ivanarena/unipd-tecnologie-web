@@ -25,39 +25,43 @@
 
     <!-- ! DA TOGLIERE DOPO -->
     <header>
-        <div class="top-nav-container">
+        <div class="l-container">
             <div class="logo-container">
                 <img class="logo" src="/images/logo125x125.png" alt="Logo San Junipero">
                 <h1>San Junipero</h1>
             </div>
+
+            <nav class="menu">
+                <ul class="menu-links-list">
+                    <li class="menu-link"><a href="/index.php">Home</a></li>
+                    <li class="menu-link"><a href="/php/abbonamenti.php">Abbonamenti</a></li>
+                    <li class="menu-link"><a href="/php/locali.php">Locali</a></li>
+                    <li class="menu-link"><a href="/php/eventi.php">Eventi</a></li>
+                    <li class="menu-link"><a href="/php/chiSiamo.php">Chi siamo</a></li>
+                    <li class="menu-link"><a href="/php/contatti.php">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="r-container">
+
+            <nav class="menu user-menu">
+                <ul class="menu-links-list">
+                    <li class="menu-link"><a href=""><span lang="en">Accedi</span></a></li>
+                    <li class="menu-link"><a href="">Registrati</a></li>
+                </ul>
+            </nav>
             <div class="switch-container">
                 <input type="checkbox">
                 <span class="slider"></span>
             </div>
         </div>
-
-        <nav class="menu">
-            <ul class="menu-links-list">
-                <li class="menu-link"><a href="/index.php">Home</a></li>
-                <li class="menu-link"><a href="/php/abbonamenti.php">Abbonamenti</a></li>
-                <li class="menu-link"><a href="/php/locali.php">Locali</a></li>
-                <li class="menu-link"><a href="/php/eventi.php">Eventi</a></li>
-                <li class="menu-link"><a href="/php/chiSiamo.php">Chi siamo</a></li>
-                <li class="menu-link"><a href="/php/contatti.php">Contatti</a></li>
-            </ul>
-
-            <ul class="menu-links-list">
-                <li class="menu-link"><a href=""><span lang="en">Accedi</span></a></li>
-                <li class="menu-link"><a href="">Registrati</a></li>
-            </ul>
-        </nav>
-
-        <nav class="breadcrumb-container">
-            <p>Ti trovi in: <span class="breadcrumb" lang="en">
-                    <breadcrumbPlaceholder />
-                </span></p>
-        </nav>
     </header>
+
+    <nav class="breadcrumb-container flex-row-center">
+        <p>Ti trovi in: <span class="breadcrumb" lang="en">
+                <breadcrumbPlaceholder />
+            </span></p>
+    </nav>
     <!-- ! -->
 
     <main>
