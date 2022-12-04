@@ -13,8 +13,9 @@ h3 {
     color: var(--clr-headings);
 }
 
-a:active {
+a {
     color: var(--clr-a-active);
+    text-decoration: none;
 }
 
 a:visited {
@@ -30,11 +31,23 @@ main {
 .h-card {
     display: flex;
     flex-direction: column;
-    background-color: lightgray;
-    width: 99%;
+    width: 97%;
     border-radius: 1.3em;
-    padding: 2em;
+    padding: 4vh 4vw 4vh 4vw;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
 }
+
+.h-card h1 {
+    font-size: var();
+    margin-bottom: 4vh;
+    text-align: center;
+}
+
+.h-card p {
+    text-align: justify;
+}
+
 
 .flex-row-center {
     display: flex;

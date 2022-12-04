@@ -1,9 +1,11 @@
 :root {
+    /* COLORS */
     --clr-text: black;
     --clr-headings: #d413cd;
-    --clr-a-active: #007faa;
+    --clr-a: #007faa;
     --clr-a-visited: #3b0053;
 
-    /* --fs-h1: 24px; */
+    /* FONT SIZES */
+    --fs-h1-d: 24px;
     /* --fs-h2: 18px; */
 }
