@@ -28,8 +28,17 @@ main {
     align-items: center;
 }
 
+.page-heading {
+    font-size: var(--fs-h1-d);
+    margin-bottom: 8vh;
+    width: 30vw;
+    min-width: 400px;
+    text-align: center;
+}
+
 .h-card {
     display: flex;
+    background-color: gainsboro;
     width: var(--card-width);
     border-radius: var(--card-b-radius);
     padding: 4vh 4vw 4vh 4vw;
@@ -37,14 +46,14 @@ main {
     margin-bottom: 0.5vh;
 }
 
-.h-card h1 {
+.h-card-title {
     width: 40vw;
     font-size: var(--fs-h1-d);
     margin-bottom: 4vh;
     text-align: center;
 }
 
-.h-card p {
+.h-card-text {
     text-align: justify;
 }
 
