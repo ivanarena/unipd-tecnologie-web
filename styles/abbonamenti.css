@@ -29,8 +29,6 @@
     justify-content: space-between;
 }
 
-.plan-card-content {}
-
 .plan-name {
     color: var(--clr-text);
 }
@@ -41,6 +39,24 @@
     color: var(--clr-headings);
     display: flex;
 }
+
+.plan-features {
+    list-style-type: none;
+    margin-top: 4vh;
+}
+
+.plan-feature {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.feature-name {
+    font-weight: bold;
+}
+
+
 
 .euro {
     font-size: 24px;
