@@ -1,0 +1,32 @@
+.place-text {
+    background-color: white;
+    height: 40vh;
+}
+
+.place-name {
+    font-size: var(--fs-h1-d);
+}
+
+.place-street {
+    color: var(--clr-secondary);
+}
+
+.place-desc {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.place-events-btn,
+.place-events-btn:visited {
+    width: var(--btn-w);
+    height: var(--btn-h);
+    border: none;
+    border-radius: var(--btn-b-radius);
+    background-color: var(--clr-btn);
+    color: var(--clr-btn-text);
+    font-weight: bold;
+    align-self: center;
+    padding: 2vw;
+
+    margin-top: ;
+}
