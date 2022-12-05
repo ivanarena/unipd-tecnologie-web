@@ -4,8 +4,16 @@
     --clr-headings: #d413cd;
     --clr-a: #007faa;
     --clr-a-visited: #3b0053;
+    --clr-btn: #d413cd;
+    --clr-btn-text: white;
 
     /* FONT SIZES */
     --fs-h1-d: 48px;
     /* --fs-h2: 18px; */
+
+    --card-width: 97%;
+    --card-b-radius: 40px;
+
+
+    --btn-b-radius: 40px;
 }

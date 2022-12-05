@@ -1,0 +1,61 @@
+.page-heading {
+    font-size: var(--fs-h1-d);
+    margin-top: 4vh;
+    margin-bottom: 8vh;
+    width: 30vw;
+    min-width: 400px;
+    text-align: center;
+}
+
+.plans-container {
+    background-color: lightgray;
+    border-radius: 1.3em;
+    padding: 2em;
+    width: var(--card-width);
+}
+
+.plan-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 30vw;
+    max-height: 500px;
+    max-width: 350px;
+    border-radius: var(--card-b-radius);
+    padding: 40px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    justify-content: space-between;
+}
+
+.plan-card-content {}
+
+.plan-name {
+    color: var(--clr-text);
+}
+
+.plan-price {
+    font-size: var(--fs-h1-d);
+    font-weight: bold;
+    color: var(--clr-headings);
+    display: flex;
+}
+
+.euro {
+    font-size: 24px;
+    margin-top: 0.6vh;
+    margin-right: 0.1vw;
+}
+
+.subscribe-btn {
+    width: 120px;
+    height: 60px;
+    border: none;
+    border-radius: var(--btn-b-radius);
+    background-color: var(--clr-btn);
+    color: var(--clr-btn-text);
+    font-weight: bold;
+    align-self: center;
+    /* margin-top: 90%; */
+}

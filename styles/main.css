@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h1,
@@ -30,8 +30,8 @@ main {
 
 .h-card {
     display: flex;
-    width: 97%;
-    border-radius: 1.3em;
+    width: var(--card-width);
+    border-radius: var(--card-b-radius);
     padding: 4vh 4vw 4vh 4vw;
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
@@ -60,19 +60,4 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-/* PAGINA ABBONAMENTI */
-.plans-container {
-    background-color: lightgray;
-    width: 99%;
-    border-radius: 1.3em;
-    padding: 2em;
-}
-
-.plan-container {
-    display: flex;
-    border-radius: 1.3em;
-    padding: 1.3em;
-    flex-direction: column;
 }
