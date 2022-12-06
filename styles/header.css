@@ -90,3 +90,9 @@ header {
 .breadcrumb {
     color: var(--clr-a-active);
 }
+
+@media only screen and (max-width: 768px) {
+    .logo-text {
+        display: none;
+    }
+}

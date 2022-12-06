@@ -29,7 +29,7 @@
     border: none;
     border-radius: var(--card-b-radius);
     height: 3em;
-    padding-left: 1vw;
+    padding-left: 2vw;
     padding-right: 2vw;
 }
 
@@ -43,4 +43,15 @@
     margin-top: 2vh;
     width: 120px;
     align-self: flex-end;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .contact-form {
+        width: 90vw;
+    }
+
+    .input-container .form-input {
+        width: 30vw;
+    }
 }
