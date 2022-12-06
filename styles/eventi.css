@@ -1,0 +1,23 @@
+.events-container {}
+
+.event-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.event-place {
+    color: var(--clr-a-visited);
+    margin-left: 1vw;
+}
+
+.event-desc {
+    margin-left: 1vw;
+}
+
+.booking-btn,
+.booking-btn:visited {
+    color: white;
+    margin-left: 1.5vw;
+}

@@ -72,7 +72,8 @@ main {
     justify-content: center;
 }
 
-.btn {
+.btn,
+.btn:visited {
     width: 200px;
     height: var(--btn-h);
     border: none;
