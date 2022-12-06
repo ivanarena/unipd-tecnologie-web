@@ -32,7 +32,7 @@
                 <h1 class="logo-text">San Junipero</h1>
             </div>
 
-            <nav class="menu">
+            <nav id="menu-nav" class="menu">
                 <ul class="menu-links-list">
                     <li class="menu-link"><a href="/index.php">Home</a></li>
                     <li class="menu-link"><a href="/php/abbonamenti.php">Abbonamenti</a></li>
@@ -44,8 +44,14 @@
             </nav>
         </div>
         <div class="r-container">
-
-            <nav class="menu user-menu">
+            <!-- toggle -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- toggle -->
+            <nav id="user-menu-nav" class="menu user-menu">
                 <ul class="menu-links-list">
                     <li class="menu-link"><a class="btn login-btn" href=""><span lang="en">Accedi</span></a></li>
                     <li class="menu-link"><a class="btn signup-btn" href="">Registrati</a></li>
@@ -63,6 +69,9 @@
                 <breadcrumbPlaceholder />
             </span></p>
     </nav>
+    <!-- spostare sta roba -->
+    <script src="/scripts/menuToggleHandler.js"></script>
+    <!--  -->
     <!-- ! -->
 
     <main>
