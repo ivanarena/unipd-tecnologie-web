@@ -1,14 +1,5 @@
 
 /**
-ABBONAMENTO(IdAbb, NomeAbb, Descrizione, Prezzo, DurataAbb)
-ABBONAMENTO_UTENTE(IdAbbUtente, Email, IdAbb, NumeroCarta, DataPagamento, DataScadenza[AttributoCalcolato = DataPagamento+DurataAbb])
-LOCALE(IdLocale, NomeLocale, Indirizzo, Descrizione, Capienza, LinkImg)
-EVENTO(IdEvento, NomeEvento, Descrizione, LinkImg, IdLocale, DataOraInizio, DataOraFine)
-FORMCONTATTO(IdRichiesta, Email, Nome, Cognome, Messaggio)
-Utente-Evento(Email, IdEvento, DataIscrizione)
-*/
-
-/**
 Eliminazione Tabelle
 */
 DROP TABLE IF EXISTS EVENTO_UTENTE;
