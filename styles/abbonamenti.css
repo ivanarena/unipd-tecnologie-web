@@ -63,3 +63,14 @@
     font-weight: bold;
     align-self: center;
 }
+
+@media only screen and (max-width: 768px) {
+    .plans-container {
+        flex-direction: column;
+    }
+
+    .plan-card {
+        margin-bottom: 2vh;
+        width: 90vw;
+    }
+}
