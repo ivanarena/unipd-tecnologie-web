@@ -27,7 +27,7 @@ CREATE TABLE UTENTE(
     Cognome VARCHAR(50) NOT NULL, 
     DataNascita DATE NOT NULL, 
     LuogoNascita VARCHAR(50) NOT NULL,
-    Borsellino DECIMAL(10,2) NOT NULL default 0.00,
+    --Borsellino DECIMAL(10,2) NOT NULL default 0.00,
     Privilegio INT NOT NULL default 1,
     PRIMARY KEY(Email)
     );
@@ -47,7 +47,7 @@ CREATE TABLE ABBONAMENTO(
     Prezzo DECIMAL(10,2) NOT NULL, 
     DurataAbb INT NOT NULL,
     EventiSettimanali INT NOT NULL,
-    Borsellino DECIMAL(10,2) NOT NULL,
+    --Borsellino DECIMAL(10,2) NOT NULL,
     PRIMARY KEY(IdAbbonamento)
     );
 
