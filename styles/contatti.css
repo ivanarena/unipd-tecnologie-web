@@ -1,0 +1,46 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    border-radius: var(--card-b-radius);
+    width: 40vw;
+    padding: 40px;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.form-row {
+    display: flex;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4vw;
+}
+
+.input-container .form-input {
+    width: 15rem;
+}
+
+.form-input {
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    border: none;
+    border-radius: var(--card-b-radius);
+    height: 3em;
+    padding-left: 1vw;
+    padding-right: 2vw;
+}
+
+#msg {
+    height: 20vh;
+    border-radius: 20px;
+    padding-top: 2vh;
+}
+
+.submit-btn {
+    margin-top: 2vh;
+    width: 120px;
+    align-self: flex-end;
+}

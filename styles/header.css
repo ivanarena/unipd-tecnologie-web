@@ -3,20 +3,21 @@ header {
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    width: 100vw;
 }
 
 .l-container {
     display: flex;
     align-items: center;
     margin-top: 2vh;
-    margin-left: 2vw;
+    margin-left: 8vw;
 }
 
 .r-container {
     display: flex;
     align-items: center;
     margin-top: 2vh;
-    margin-right: 2vw;
+    margin-right: 8vw;
 }
 
 .logo-container {
@@ -34,23 +35,46 @@ header {
 .menu {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.user-menu {
-    margin-left: 10vw;
+.login-btn,
+.login-btn:visited {
+    width: 120px;
+    color: white;
+}
 
+.signup-btn,
+.signup-btn:visited {
+    width: 120px;
+    height: var(--btn-h);
+    border: none;
+    border-radius: var(--btn-b-radius);
+    background-color: lightgrey;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-links-list {
     display: flex;
-    flex-direction: row;
     list-style-type: none;
 }
-
 
 .menu-link {
     margin-left: 1.5vw;
     margin-right: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-menu .menu-link {
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
 }
 
 .menu-link a {
@@ -61,10 +85,6 @@ header {
 .breadcrumb-container {
     margin-top: 2vh;
     margin-bottom: 4vh;
-}
-
-.breadcrumb-container p {
-    margin-left: 1.5vw;
 }
 
 .breadcrumb {

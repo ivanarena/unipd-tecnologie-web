@@ -15,7 +15,8 @@
     <link type="text/css" rel="stylesheet" href="/styles/main.css" media="handheld, screen" />
     <link type="text/css" rel="stylesheet" href="/styles/variables.css" media="handheld, screen" />
     <link type="text/css" rel="stylesheet" href="/styles/header.css" media="handheld, screen" />
-    <link type="text/css" rel="stylesheet" href="/styles/footer.css" media="handheld, screen" />
+    <link type="text/css" rel="stylesheet" href="/styles/header.css" media="handheld, screen" />
+    <link type="text/css" rel="stylesheet" href="/styles/contatti.css" media="handheld, screen" />
     <link rel="shortcut icon" href="/images/favicon16x16.png" type="image/x-icon">
 </head>
 <!-- ! DA TOGLIERE DOPO -->
@@ -23,71 +24,76 @@
 <body>
     <headerPlaceholder />
 
-        <!-- ! DA TOGLIERE DOPO -->
-        <header>
-            <div class="l-container">
-                <div class="logo-container">
-                    <img class="logo" src="/images/logo125x125.png" alt="Logo San Junipero">
-                    <h1>San Junipero</h1>
-                </div>
-    
-                <nav class="menu">
-                    <ul class="menu-links-list">
-                        <li class="menu-link"><a href="/index.php">Home</a></li>
-                        <li class="menu-link"><a href="/php/abbonamenti.php">Abbonamenti</a></li>
-                        <li class="menu-link"><a href="/php/locali.php">Locali</a></li>
-                        <li class="menu-link"><a href="/php/eventi.php">Eventi</a></li>
-                        <li class="menu-link"><a href="/php/chiSiamo.php">Chi siamo</a></li>
-                        <li class="menu-link"><a href="/php/contatti.php">Contatti</a></li>
-                    </ul>
-                </nav>
+    <!-- ! DA TOGLIERE DOPO -->
+    <header>
+        <div class="l-container">
+            <div class="logo-container">
+                <img class="logo" src="/images/logo125x125.png" alt="Logo San Junipero">
+                <h1>San Junipero</h1>
             </div>
-            <div class="r-container">
-    
-                <nav class="menu user-menu">
-                    <ul class="menu-links-list">
-                        <li class="menu-link"><a href=""><span lang="en">Accedi</span></a></li>
-                        <li class="menu-link"><a href="">Registrati</a></li>
-                    </ul>
-                </nav>
-                <div class="switch-container">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </div>
+
+            <nav class="menu">
+                <ul class="menu-links-list">
+                    <li class="menu-link"><a href="/index.php">Home</a></li>
+                    <li class="menu-link"><a href="/php/abbonamenti.php">Abbonamenti</a></li>
+                    <li class="menu-link"><a href="/php/locali.php">Locali</a></li>
+                    <li class="menu-link"><a href="/php/eventi.php">Eventi</a></li>
+                    <li class="menu-link"><a href="/php/chiSiamo.php">Chi siamo</a></li>
+                    <li class="menu-link"><a href="/php/contatti.php">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="r-container">
+
+            <nav class="menu user-menu">
+                <ul class="menu-links-list">
+                    <li class="menu-link"><a class="btn login-btn" href=""><span lang="en">Accedi</span></a></li>
+                    <li class="menu-link"><a class="btn signup-btn" href="">Registrati</a></li>
+                </ul>
+            </nav>
+            <div class="switch-container">
+                <input type="checkbox">
+                <span class="slider"></span>
             </div>
-        </header>
-    
-        <nav class="breadcrumb-container flex-row-center">
-            <p>Ti trovi in: <span class="breadcrumb" lang="en">
-                    <breadcrumbPlaceholder />
-                </span></p>
-        </nav>
-        <!-- ! -->
+        </div>
+    </header>
+
+    <nav class="breadcrumb-container flex-row-center">
+        <p>Ti trovi in: <span class="breadcrumb" lang="en">
+                <breadcrumbPlaceholder />
+            </span></p>
+    </nav>
+    <!-- ! -->
 
     <main>
-        <h1>Contattaci</h1>
-        <p>Non abbiano alcun social perché siamo misantropi. Ma puoi scriverci via mail: contact@sanjunipero.com oppure via cellulare +39 3892381421</p>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" />
-            <label for="cognome">Cognome:</label>
-            <input type="text" id="cognome" /> <br />
-            <label for="email">Email:</label> <br />
-            <input type="email" id="email" /> <br />
-            <label for="messaggio">Il tuo messaggio:</label> <br />
-            <textarea id="messaggio" cols="70" rows="10"></textarea><br />
-            <input type="submit" value="Invia" />
-
-
+        <h1 class="page-heading">Hai domande? Contattaci subito!</h1>
+        <p>Non abbiano alcun social perché siamo misantropi. Ma puoi scriverci via mail: contact@sanjunipero.com oppure
+            via cellulare +39 3892381421</p>
+        <form class="contact-form">
+            <div class="form-row">
+                <div class="input-container">
+                    <label class="input-label" for="nome">Nome:</label>
+                    <input class="form-input" type="text" id="nome" />
+                </div>
+                <div class="input-container">
+                    <label class="input-label" for="cognome">Cognome:</label>
+                    <input class="form-input" type="text" id="cognome" />
+                </div>
+            </div>
+            <label class="input-label" for="email">Email:</label>
+            <input class="form-input" type="email" id="email" />
+            <label class="input-label" for="messaggio">Il tuo messaggio:</label>
+            <textarea class="form-input" id="msg" cols="70" rows="10"></textarea>
+            <input class="btn submit-btn" type="submit" value="Invia" />
         </form>
     </main>
 
     <footerPlaceholder />
-    
-        <!-- ! DA TOGLIERE DOPO -->
-        <footer class="flex-row-center">
-            <p>San Junipero <span lang="en"><abbr title="incorporated">Inc</abbr></span> | <span lang="en">&copy</span>
-                | Via Paolo Bassi 1 | 35137 Padova PD | mail: contact@sanjunipero.it</p>
-        </footer>
-        <!-- ! DA TOGLIERE DOPO -->
+
+    <!-- ! DA TOGLIERE DOPO -->
+    <footer class="flex-row-center">
+        <p>San Junipero <span lang="en"><abbr title="incorporated">Inc</abbr></span> | <span lang="en">&copy</span>
+            | Via Paolo Bassi 1 | 35137 Padova PD | mail: contact@sanjunipero.it</p>
+    </footer>
+    <!-- ! DA TOGLIERE DOPO -->
 </body>
