@@ -1,4 +1,9 @@
-
+/**
+CREATE DATABASE sanjunipero;
+USE sanjunipero;
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+*/
 /**
 Eliminazione Tabelle
 */
@@ -11,7 +16,9 @@ DROP TABLE IF EXISTS ABBONAMENTO;
 DROP TABLE IF EXISTS CARTA;
 DROP TABLE IF EXISTS UTENTE;
 
-
+/**
+Creazione Tabelle
+*/
 CREATE TABLE UTENTE(
     Email VARCHAR(100) NOT NULL, 
     Username VARCHAR(20) UNIQUE NOT NULL,
