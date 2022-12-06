@@ -5,10 +5,12 @@ let breadcrumb = document.getElementById('breadcrumb-nav');
 let sanJunipero = document.getElementById('san-junipero');
 
 const mobile = window.matchMedia("(max-width: 728px)");
+// const desktop = window.matchMedia("(min-width: 729px)");
 
 let toHide = [sanJunipero, pagesMenu, userMenu];
 
 if (mobile.matches) {
+    menuToggle.classList.toggle('hide');
     hideElements();
 }
 

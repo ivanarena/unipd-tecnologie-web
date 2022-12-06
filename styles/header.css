@@ -105,7 +105,6 @@ header {
 .menu-toggle {
     margin-right: 25px;
     cursor: pointer;
-    /* display: none; */
 }
 
 .menu-toggle:hover {
