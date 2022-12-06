@@ -91,3 +91,7 @@ main {
 .is-active {
     display: block;
 }
+
+.hide {
+    display: none !important;
+}
