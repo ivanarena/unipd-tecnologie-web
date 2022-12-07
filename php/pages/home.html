@@ -28,10 +28,10 @@
         <div class="l-container">
             <div class="logo-container">
                 <img class="logo" src="/images/logo125x125.png" alt="Logo San Junipero">
-                <h1>San Junipero</h1>
+                <h1 id="san-junipero" class="logo-text">San Junipero</h1>
             </div>
 
-            <nav class="menu">
+            <nav id="menu-nav" class="menu">
                 <ul class="menu-links-list">
                     <li class="menu-link"><a href="/index.php">Home</a></li>
                     <li class="menu-link"><a href="/php/abbonamenti.php">Abbonamenti</a></li>
@@ -43,49 +43,70 @@
             </nav>
         </div>
         <div class="r-container">
-
-            <nav class="menu user-menu">
+            <nav id="user-menu-nav" class="menu user-menu">
                 <ul class="menu-links-list">
-                    <li class="menu-link"><a href=""><span lang="en">Accedi</span></a></li>
-                    <li class="menu-link"><a href="">Registrati</a></li>
+                    <li class="menu-link"><a class="btn login-btn" href=""><span lang="en">Accedi</span></a></li>
+                    <li class="menu-link"><a class="btn signup-btn" href="">Registrati</a></li>
                 </ul>
             </nav>
             <div class="switch-container">
-                <input type="checkbox">
-                <span class="slider"></span>
+                <span>☀️</span>
+                <label class="switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <span>🌙</span>
             </div>
+            <!-- toggle -->
+            <div class="menu-toggle hide" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- toggle -->
         </div>
     </header>
 
-    <nav class="breadcrumb-container flex-row-center">
+    <nav id="breadcrumb-nav" class="breadcrumb-container flex-row-center">
         <p>Ti trovi in: <span class="breadcrumb" lang="en">
                 <breadcrumbPlaceholder />
             </span></p>
     </nav>
+    <!-- spostare sta roba -->
+    <script src="/scripts/menuToggleHandler.js"></script>
+    <script src="/scripts/darkModeHandler.js"></script>
+    <!--  -->
     <!-- ! -->
 
     <main>
         <div class="h-card flex-col-center">
             <h1 class="h-card-title">Vivi la tua vita da sogno in un universo fatto su misura per te!</h1>
-            <p class="h-card-text">Il metaverso di San Junipero ti permette di sfuggire dalla realtà e rifugiarti in un universo dove 
-                responsabilità, relazioni e divertimenti avranno un sapore diverso. Scegliendo il tipo di abbonamento più adatto a te potrai 
-                poi spendere tutto il tempo che desidererai nel nostro metaverso, costruirti una vita alternativa e coltivare passioni ed esperienze
+            <p class="h-card-text">Il metaverso di San Junipero ti permette di sfuggire dalla realtà e rifugiarti in un
+                universo dove
+                responsabilità, relazioni e divertimenti avranno un sapore diverso. Scegliendo il tipo di abbonamento
+                più adatto a te potrai
+                poi spendere tutto il tempo che desidererai nel nostro metaverso, costruirti una vita alternativa e
+                coltivare passioni ed esperienze
                 in un posto sicuro.
             </p>
         </div>
 
         <div class="h-card flex-col-center">
             <h1 class="h-card-title">Scopri una marea di eventi per fare nuove amicizie</h1>
-            <p class="h-card-text">Nel metaverso potrai partecipare ad una selezione vastissima di eventi pensati per permetterti di accrescere
-                 la tua rete di relazioni e avere una vita sociale attiva, divertente e priva di tutti gli stressanti costrutti sociali ai quali 
-                 siamo abituati nell’universo reale.
+            <p class="h-card-text">Nel metaverso potrai partecipare ad una selezione vastissima di eventi pensati per
+                permetterti di accrescere
+                la tua rete di relazioni e avere una vita sociale attiva, divertente e priva di tutti gli stressanti
+                costrutti sociali ai quali
+                siamo abituati nell’universo reale.
             </p>
         </div>
 
         <div class="h-card flex-col-center">
             <h1 class="h-card-title">Vuoi una pizza? Vuoi ballare? Ti annoi?</h1>
-            <p class="h-card-text">Abbiamo a disposizione per te tutti i tuoi locali preferiti per ospitare gli eventi a cui 
-                parteciperai e anche per svolgere qualsiasi attività desideri... a San Junipero il tempo libero è sacro!|
+            <p class="h-card-text">Abbiamo a disposizione per te tutti i tuoi locali preferiti per ospitare gli eventi a
+                cui
+                parteciperai e anche per svolgere qualsiasi attività desideri... a San Junipero il tempo libero è
+                sacro!|
             </p>
         </div>
     </main>
