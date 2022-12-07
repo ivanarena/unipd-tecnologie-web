@@ -30,10 +30,10 @@
         <div class="l-container">
             <div class="logo-container">
                 <img class="logo" src="/images/logo125x125.png" alt="Logo San Junipero">
-                <h1>San Junipero</h1>
+                <h1 id="san-junipero" class="logo-text">San Junipero</h1>
             </div>
 
-            <nav class="menu">
+            <nav id="menu-nav" class="menu">
                 <ul class="menu-links-list">
                     <li class="menu-link"><a href="/index.php">Home</a></li>
                     <li class="menu-link"><a href="/php/abbonamenti.php">Abbonamenti</a></li>
@@ -45,25 +45,39 @@
             </nav>
         </div>
         <div class="r-container">
-
-            <nav class="menu user-menu">
+            <nav id="user-menu-nav" class="menu user-menu">
                 <ul class="menu-links-list">
-                    <li class="menu-link"><a href=""><span lang="en">Accedi</span></a></li>
-                    <li class="menu-link"><a href="">Registrati</a></li>
+                    <li class="menu-link"><a class="btn login-btn" href=""><span lang="en">Accedi</span></a></li>
+                    <li class="menu-link"><a class="btn signup-btn" href="">Registrati</a></li>
                 </ul>
             </nav>
             <div class="switch-container">
-                <input type="checkbox">
-                <span class="slider"></span>
+                <span>☀️</span>
+                <label class="switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <span>🌙</span>
             </div>
+            <!-- toggle -->
+            <div class="menu-toggle hide" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- toggle -->
         </div>
     </header>
 
-    <nav class="breadcrumb-container flex-row-center">
+    <nav id="breadcrumb-nav" class="breadcrumb-container flex-row-center">
         <p>Ti trovi in: <span class="breadcrumb" lang="en">
                 <breadcrumbPlaceholder />
             </span></p>
     </nav>
+    <!-- spostare sta roba -->
+    <script src="/scripts/menuToggleHandler.js"></script>
+    <script src="/scripts/darkModeHandler.js"></script>
+    <!--  -->
     <!-- ! -->
 
 
