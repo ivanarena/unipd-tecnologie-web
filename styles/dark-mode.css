@@ -1,0 +1,16 @@
+body {
+    /*background-color: var(--clr-d-background); 
+    color: var(--clr-d-text)*/
+}
+
+.menu-link{
+    color: var(--clr-d-text);
+}  
+
+/*.menu-link-list{
+    color: var(--clr-d-text);
+}*/
+
+footer{
+    color: var(--clr-d-text);
+}
