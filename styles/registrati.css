@@ -1,20 +1,31 @@
 .login-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 60vh;
+    justify-content: start;
+    height: 70vh;
     background-color: lightgray;
     border-radius: var(--card-b-radius);
+    padding: 40px;
 }
 
 .page-heading {
-    margin-top: 8vh;
+    margin-top: 5vh;
     margin-bottom: 0vh;
 }
 
 .inputs-container {
+    display: flex;
     width: 30vw;
+}
+
+
+.inline-content .form-input {
+    width: 15rem;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
 }
 
 .form-input {

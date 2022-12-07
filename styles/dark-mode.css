@@ -1,6 +1,6 @@
 body {
-    /*background-color: var(--clr-d-background); 
-    color: var(--clr-d-text)*/
+    background-color: var(--clr-d-background); 
+    color: var(--clr-d-text);
 }
 
 .menu-link{
