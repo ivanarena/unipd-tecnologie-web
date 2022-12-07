@@ -20,12 +20,19 @@
 
 
 .inline-content .form-input {
+    display: flex;
     width: 15rem;
+}
+
+.form-input-f {
+    margin-bottom: 2vh;
+    width: 15rem;
+    margin-right: 2rem;
 }
 
 .form-row {
     display: flex;
-    justify-content: space-between;
+    justify-items: center;
 }
 
 .form-input {
