@@ -88,6 +88,16 @@ main {
     cursor: pointer;
 }
 
+input {
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    border: none;
+    border-radius: var(--card-b-radius);
+    height: 3em;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
 .is-active {
     display: block;
 }

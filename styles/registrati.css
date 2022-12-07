@@ -1,0 +1,41 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 60vh;
+    background-color: lightgray;
+    border-radius: var(--card-b-radius);
+}
+
+.page-heading {
+    margin-top: 8vh;
+    margin-bottom: 0vh;
+}
+
+.inputs-container {
+    width: 30vw;
+}
+
+.form-input {
+    margin-bottom: 2vh;
+    width: 20vw;
+}
+
+.btns-container {
+    margin-bottom: 6vh;
+}
+
+.login-btn {
+    margin-right: 1vw;
+}
+
+.signup-btn {
+    margin-left: 1vw;
+}
+
+@media only screen and (max-width: 728px) {
+    .form-input {
+        width: 40vw;
+    }
+}

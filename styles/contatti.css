@@ -17,25 +17,22 @@
     display: flex;
     flex-direction: column;
     margin-right: 4vw;
+    margin-top: 2vh;
+}
+
+.input-label {
+    margin-top: 1vh;
 }
 
 .input-container .form-input {
     width: 15rem;
 }
 
-.form-input {
-    margin-top: 1vh;
-    margin-bottom: 2vh;
-    border: none;
-    border-radius: var(--card-b-radius);
-    height: 3em;
-    padding-left: 2vw;
-    padding-right: 2vw;
-}
-
 #msg {
     height: 20vh;
+    border: none;
     border-radius: 20px;
+    margin-top: 2vh;
     padding-top: 2vh;
 }
 
