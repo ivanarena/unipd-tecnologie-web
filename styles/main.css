@@ -95,8 +95,9 @@ input {
     border: none;
     border-radius: var(--card-b-radius);
     height: 3em;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: gainsboro;
 }
 
 .is-active {

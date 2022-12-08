@@ -49,7 +49,6 @@
 }
 
 .signup-btn {
-    margin-top: 2vh;
     background-color: var(--clr-btn);
     color: var(--clr-btn-text);
 }
