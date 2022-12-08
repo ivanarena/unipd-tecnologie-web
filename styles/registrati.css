@@ -5,7 +5,6 @@
     justify-content: space-between;
     height: auto;
     width: auto;
-    background-color: lightgray;
     border-radius: var(--card-b-radius);
     padding: 40px;
 }

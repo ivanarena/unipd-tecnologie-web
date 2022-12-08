@@ -1,7 +1,6 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    background-color: lightgray;
     border-radius: var(--card-b-radius);
     width: 40vw;
     padding: 40px;
@@ -38,6 +37,7 @@
 
 .submit-btn {
     margin-top: 2vh;
+    margin-right: 1vw;
     width: 120px;
     align-self: flex-end;
 }

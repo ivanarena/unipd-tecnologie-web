@@ -1,8 +1,8 @@
 .plans-container {
-    background-color: lightgray;
     border-radius: 1.3em;
     padding: 2em;
     width: var(--card-width);
+    margin-bottom: 4vh;
 }
 
 .plan-card {
