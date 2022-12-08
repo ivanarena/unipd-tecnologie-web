@@ -1,13 +1,13 @@
-let menuToggle = document.getElementById('mobile-menu');
-let pagesMenu = document.getElementById('menu-nav');
-let userMenu = document.getElementById('user-menu-nav');
-let breadcrumb = document.getElementById('breadcrumb-nav');
-let sanJunipero = document.getElementById('san-junipero');
+const menuToggle = document.getElementById('mobile-menu');
+const pagesMenu = document.getElementById('menu-nav');
+const userMenu = document.getElementById('user-menu-nav');
+const breadcrumb = document.getElementById('breadcrumb-nav');
+const sanJunipero = document.getElementById('san-junipero');
 
-const mobile = window.matchMedia("(max-width: 728px)");
+const mobile = window.matchMedia("(max-width: 1400px)");
 // const desktop = window.matchMedia("(min-width: 729px)");
 
-let toHide = [sanJunipero, pagesMenu, userMenu];
+const toHide = [sanJunipero, pagesMenu, userMenu];
 
 if (mobile.matches) {
     menuToggle.classList.toggle('hide');

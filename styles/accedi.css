@@ -3,14 +3,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 60vh;
+    width: auto;
+    height: auto;
     background-color: lightgray;
     border-radius: var(--card-b-radius);
 }
 
 .page-heading {
     margin-top: 8vh;
-    margin-bottom: 0vh;
+    margin-bottom: 4vh;
 }
 
 .inputs-container {
@@ -19,7 +20,7 @@
 
 .form-input {
     margin-bottom: 4vh;
-    width: 20vw;
+    width: 15vw;
 }
 
 .btns-container {
@@ -36,6 +37,6 @@
 
 @media only screen and (max-width: 728px) {
     .form-input {
-        width: 40vw;
+        width: 50vw;
     }
 }
