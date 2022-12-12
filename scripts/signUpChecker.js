@@ -13,7 +13,7 @@ function checkName() {
         alert("Inserisci il tuo nome");
         return false;
     }
-    else if (sname.lenght > 50) {
+    else if (sname.length > 50) {
         alert("Inserisci un nome valido");
         return false;
     }
@@ -29,7 +29,7 @@ function checkSurname() {
         alert("Inserisci il tuo cognome");
         return false;
     }
-    else if (surname.lenght > 50) {
+    else if (surname.length > 50) {
         alert("Inserisci un cognome valido");
         return false;
     }
@@ -41,11 +41,11 @@ function checkSurname() {
 
 function checkUsername() {
     userName = document.getElementById('username').value; 
-    if(userName == "" || userName.lenght > 20) {   
+    if(userName == "" || userName.length > 20) {   
         alert("Inserisci il Nome Utente");  
         return false;  
     }
-    else if (userName.lenght > 20) {
+    else if (userName.length > 20) {
         alert("Il nome utente deve avere massimo 20 caratteri");
         return false;
     }
