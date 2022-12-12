@@ -20,21 +20,11 @@ function checkPassword() {
         alert("Inserisci la password");  
         return false;  
     }  
-   /* if(password.length < 8) {  
-        alert("La password deve essere lunga almeno 8 caratteri");
-        return false;  
-    }
-    if(password.length > 15) {  
-        alert("La password non può essere più lunga di 15 caratteri");
-        return false;  
-    } */
     else {  
         alert("La password è corretta");  
     }  
     console.log('password ok');
 }
-
-
 
 function checkForm() {
     if (checkUsername() && checkPassword()) {
