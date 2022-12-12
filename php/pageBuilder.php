@@ -1,3 +1,4 @@
+<?php require_once('session.php'); ?>
 <?php
 
 class PageBuilder {
@@ -29,8 +30,17 @@ class PageBuilder {
         $this->content = str_replace('<headPlaceholder />', $this->head, $this->content);
     }
     
+    public function setNavButtons(){
+        if(isset($_SESSION['Username'])){
+            $this->content = str_replace('<userButtonsPlaceholder />', file_get_contents(__DIR__."/pages/components/button_logout.html"), $this->content);
+        }else{
+            $this->content = str_replace('<userButtonsPlaceholder />', file_get_contents(__DIR__."/pages/components/button_login_reg.html"), $this->content);
+        }
+    }
+
     public function setHeader() {
         $this->content = str_replace('<headerPlaceholder />', $this->header, $this->content);
+        $this->setNavButtons();
     }
     
     public function setBreadcrumb() {
@@ -41,7 +51,13 @@ class PageBuilder {
     public function setFooter() {
         $this->content = str_replace('<footerPlaceholder />', $this->footer, $this->content);
     }
-    
+
+    public function setError($msg,$isError) {
+        if($isError == 1){
+            $this->content = str_replace('<errorPlaceholder />', $msg, $this->content);
+        }
+    }
+
     public function buildPage() {
         $this->setHead();
         $this->setHeader();

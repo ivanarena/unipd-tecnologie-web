@@ -7,6 +7,15 @@
 
     $builder = new PageBuilder('/pages/accedi.html', $title, $desc);
 
+    //Visualizzazione messaggio di errore
+    if(!empty($_GET)){
+        if(array_key_exists("errUser", $_REQUEST) && !empty($_REQUEST["errUser"])){
+            $builder->setError("L'username è inesistente!!!",$_GET["errUser"]);  // TODO: Stilizzare meglio
+        }
+        if(array_key_exists("errPass", $_REQUEST) && !empty($_REQUEST["errPass"])){
+            $builder->setError("La password è errata!!!",$_GET["errPass"]); // TODO: Stilizzare meglio
+        }
+    }
     $page = $builder->buildPage();
     echo $page;
 ?>
