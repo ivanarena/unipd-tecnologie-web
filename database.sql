@@ -20,14 +20,14 @@ DROP TABLE IF EXISTS UTENTE;
 Creazione Tabelle
 */
 CREATE TABLE UTENTE(
-    Email VARCHAR(100) NOT NULL, 
     Username VARCHAR(20) UNIQUE NOT NULL,
     Password VARCHAR(255) NOT NULL, 
+    Email VARCHAR(100) NOT NULL, 
     Nome VARCHAR(50) NOT NULL,
     Cognome VARCHAR(50) NOT NULL, 
     DataNascita DATE NOT NULL, 
     LuogoNascita VARCHAR(50) NOT NULL,
-    Privilegio INT NOT NULL default 1,
+    Privilegio INT NOT NULL default 0,
     PRIMARY KEY(Username)
     );
 
@@ -101,3 +101,5 @@ CREATE TABLE EVENTO_UTENTE(
     FOREIGN KEY (Username) REFERENCES UTENTE(Username) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (IdEvento) REFERENCES EVENTO(IdEvento) ON DELETE CASCADE ON UPDATE CASCADE
     );
+
+INSERT INTO UTENTE VALUES("Alyon", "$2y$10$Q6tUlj8oIhdsdVa6hs40B.A9dSi0maYFwDVe9yScpcBCmNC8e5Vcq", "massimo.chioru@gmail.com", "Massimo", "Chioru", '2001-11-13', "Padova", 0); 

@@ -1,3 +1,4 @@
+<?php require('./php/session.php'); ?>
 <?php 
     require_once(__DIR__.'/php/pageBuilder.php');
 

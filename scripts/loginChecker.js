@@ -1,11 +1,19 @@
 const loginButton = document.getElementById('accedi');
-let userName = document.getElementById('username').value; 
-let password = document.getElementById("password").value;  
+let userName = ""; 
+let password = "";  
 
+function printError(ElementId, result, errMessage) { 
+	if (!result) {
+		document.getElementById(ElementId).innerHTML = errMessage;
+	} else {
+		document.getElementById(ElementId).innerHTML = "";
+	}
+}
 function checkUsername() {
     userName = document.getElementById('username').value; 
     if(userName == "") {   
         alert("Inserisci il Nome Utente");  
+        printError(document.getElementById('username'), true, "Inserisci il Nome Utente");
         return false;  
     }
     else {
@@ -22,6 +30,7 @@ function checkPassword() {
     }  
     else {  
         alert("La password è corretta");  
+        return true;
     }  
     console.log('password ok');
 }
@@ -29,12 +38,6 @@ function checkPassword() {
 function checkForm() {
     if (checkUsername() && checkPassword()) {
         console.log('ok');
-    }
-    else if (!checkUsername() && checkPassword()) {
-        alert('Inserire un Nome Utente Valido');
-    }
-    else {
-        alert('Inserire una Password')
     }
     console.log('bottone premuto');
 }
