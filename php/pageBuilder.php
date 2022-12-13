@@ -13,10 +13,10 @@ class PageBuilder {
     private $header; 
     private $footer; 
 
-    public function __construct(string $_fileName, string $_title, string $_desc) {
+    public function __construct(string $_fileName, string $_desc) {
         $this->htmlPath = '/pages/' . $_fileName . '.html';
         $this->cssPath = '/styles/' . $_fileName . '.css';
-        $this->title = $_title;
+        $this->title = ucfirst($_fileName);
         $this->desc = $_desc;
         
         $this->content = file_get_contents(__DIR__ . $this->htmlPath);

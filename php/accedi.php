@@ -2,10 +2,10 @@
 <?php 
     require_once(__DIR__.'/pageBuilder.php');
     // Page information 
-    $title = 'Accedi';
+    $fileName = 'accedi';
     $desc = 'blabalb';
 
-    $builder = new PageBuilder('/pages/accedi.html', $title, $desc);
+    $builder = new PageBuilder($fileName, $desc);
 
     //Visualizzazione messaggio di errore
     if(!empty($_GET)){

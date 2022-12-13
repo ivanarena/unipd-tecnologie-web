@@ -4,10 +4,9 @@
 
     // Page information 
     $fileName = 'abbonamenti';
-    $title = 'Abbonamenti';
     $desc = 'blabalb';
 
-    $builder = new PageBuilder($fileName, $title, $desc);
+    $builder = new PageBuilder($fileName, $desc);
 
     $page = $builder->buildPage();
     echo $page;

@@ -3,10 +3,10 @@
     require_once(__DIR__.'/pageBuilder.php');
 
     // Page information 
-    $title = 'Chi siamo';
+    $fileName = 'chi siamo';
     $desc = 'blabalb';
 
-    $builder = new PageBuilder('/pages/chi-siamo.html', $title, $desc);
+    $builder = new PageBuilder($fileName, $desc);
 
     $page = $builder->buildPage();
     echo $page;
