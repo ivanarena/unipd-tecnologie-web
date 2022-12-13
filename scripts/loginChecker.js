@@ -11,6 +11,7 @@ function printError(ElementId, result, errMessage) {
 		document.getElementById(ElementId).innerHTML = "";
 	}
 }
+
 function checkUsername() {
     userName = document.getElementById('username').value; 
     if(userName == "") {   

@@ -1,8 +1,8 @@
-<?php require_once("../session.php");
+<?php 
+require_once("../session.php");
 if (isset($_SESSION['Username'])) {
     header("location: ../../index.php");
-} else {?>
-    <?php
+} else { 
     if (!empty($_POST)) {
         $usernameError = null;
         $passwordError = null;
@@ -10,13 +10,11 @@ if (isset($_SESSION['Username'])) {
         if (array_key_exists("username", $_REQUEST) && !empty($_REQUEST["username"]) && strlen($_REQUEST["username"]) <= 20) {
             $username = $_POST['username'];
         } else {
-            $usernameError = 'Inserire un username';
             $valid = false;
         };
         if (array_key_exists("password", $_REQUEST) && !empty($_REQUEST["password"]) && strlen($_REQUEST["password"]) <= 50) {
             $password = $_POST['password'];
         } else {
-            $passwordError = 'Inserire una password';
             $valid = false;
         };
         if ($valid) { 
@@ -26,8 +24,8 @@ if (isset($_SESSION['Username'])) {
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $stmt = $pdo->prepare("SELECT Count(*) FROM UTENTE WHERE Username=?;");
                 $stmt->execute(array($username));
-                
                 if ($stmt->fetchColumn() <= 0) {
+                    header_remove();
                     header("location: ../accedi.php?errUser=1");
                 } else {
                     $sql = "SELECT * from UTENTE WHERE Username = ?";
@@ -38,6 +36,7 @@ if (isset($_SESSION['Username'])) {
                         $_SESSION["Username"] = $data["Username"];
                         $_SESSION["admin"] = $data["Privilegio"];
                     } else {
+                        header_remove();
                         header("location: ../accedi.php?errPass=1");
                     }
                 }
@@ -50,7 +49,8 @@ if (isset($_SESSION['Username'])) {
             if (isset($_SESSION['Username'])) {
                 header("location: ../../index.php");
             }
+        }else{
+            header("location: ../accedi.php?errGen=1");
         }
     }
-    ?>
-    <?php } ?>
+}?>

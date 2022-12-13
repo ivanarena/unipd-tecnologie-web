@@ -59,6 +59,12 @@ header {
     justify-content: center;
 }
 
+.logout-btn,
+.logout-btn:visited {
+    width: 140px;
+    color: white;
+}
+
 .menu-links-list {
     display: flex;
     list-style-type: none;

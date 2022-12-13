@@ -3,7 +3,7 @@
     require_once(__DIR__.'/pageBuilder.php');
 
     // Page information 
-    $title = 'contatti';
+    $fileName = 'contatti';
     $desc = 'blabalb';
 
     $builder = new PageBuilder($fileName, $desc);

@@ -2,8 +2,8 @@
 class database
 {
 	private static $dbName = 'sanjunipero';
-	private static $dbHost = 'localhost';
-	private static $dbUsername = 'admin';
+	private static $dbHost = 'db';
+	private static $dbUsername = 'root';
 	private static $dbUserPassword = 'password';
 	private static $cont = null;
 	private function __construct()
