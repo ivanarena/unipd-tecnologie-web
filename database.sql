@@ -20,20 +20,20 @@ DROP TABLE IF EXISTS UTENTE;
 Creazione Tabelle
 */
 CREATE TABLE UTENTE(
-    Username VARCHAR(20) UNIQUE NOT NULL,
+    Username VARCHAR(20) NOT NULL,
     Password VARCHAR(255) NOT NULL, 
     Email VARCHAR(100) NOT NULL, 
     Nome VARCHAR(50) NOT NULL,
     Cognome VARCHAR(50) NOT NULL, 
     DataNascita DATE NOT NULL, 
-    LuogoNascita VARCHAR(50) NOT NULL,
     Privilegio INT NOT NULL default 0,
     PRIMARY KEY(Username)
     );
 
 CREATE TABLE CARTA(
     NumeroCarta CHAR(16) NOT NULL, 
-    Circuito VARCHAR(50) NOT NULL, 
+    Circuito VARCHAR(50) NOT NULL,
+    CCV CHAR(3) NOT  NULL,
     DataScadenza DATE NOT NULL, 
     Intestatario VARCHAR(50) NOT NULL,
     PRIMARY KEY(NumeroCarta)
@@ -42,10 +42,11 @@ CREATE TABLE CARTA(
 CREATE TABLE ABBONAMENTO(
     IdAbbonamento INT NOT NULL AUTO_INCREMENT,
     TitoloAbb VARCHAR(100) NOT NULL, 
-    Descrizione VARCHAR(1024) NOT NULL, 
+    Descrizione VARCHAR(1024), 
     Prezzo DECIMAL(10,2) NOT NULL, 
     DurataAbb INT NOT NULL,
     EventiSettimanali INT NOT NULL,
+    MetaCoin DECIMAL(10,2) NOT NULL default 0.00,
     PRIMARY KEY(IdAbbonamento)
     );
 
