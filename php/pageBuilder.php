@@ -3,7 +3,8 @@
 
 class PageBuilder {
     private $hostName = 'San Junipero';
-    private $path;
+    private $htmlPath;
+    private $cssPath;
     private $content;
     private $title;
     private $desc;
@@ -12,12 +13,13 @@ class PageBuilder {
     private $header; 
     private $footer; 
 
-    public function __construct(string $_path, string $_title, string $_desc) {
-        $this->path = $_path;
+    public function __construct(string $_fileName, string $_title, string $_desc) {
+        $this->htmlPath = '/pages/' . $_fileName . '.html';
+        $this->cssPath = '/styles/' . $_fileName . '.css';
         $this->title = $_title;
         $this->desc = $_desc;
         
-        $this->content = file_get_contents(__DIR__ . $this->path);
+        $this->content = file_get_contents(__DIR__ . $this->htmlPath);
         $this->head = file_get_contents(__DIR__."/pages/components/head.html");
         $this->header = file_get_contents(__DIR__."/pages/components/header.html");
         $this->footer = file_get_contents(__DIR__."/pages/components/footer.html");
@@ -26,15 +28,20 @@ class PageBuilder {
 
     public function setHead() {
         $this->head = str_replace('<titlePlaceholder />', $this->title . ' | ' . $this->hostName, $this->head);
+        if ($this->cssPath != '/styles/home.css') {
+            $this->head = str_replace('<pageCssPlaceholder />', '<link type="text/css" rel="stylesheet" href="' . $this->cssPath . '" media="handheld, screen" />', $this->head);
+        } else {
+            $this->head = str_replace('<pageCssPlaceholder />', '', $this->head);
+        }
         $this->head = str_replace('<meta name="description" content="" />', '<meta name="description" content="' . $this->desc . '" />', $this->head);
         $this->content = str_replace('<headPlaceholder />', $this->head, $this->content);
     }
     
     public function setNavButtons(){
         if(isset($_SESSION['Username'])){
-            $this->content = str_replace('<userButtonsPlaceholder />', file_get_contents(__DIR__."/pages/components/button_logout.html"), $this->content);
+            $this->content = str_replace('<userButtonsPlaceholder />', file_get_contents(__DIR__."/pages/components/logout-btn.html"), $this->content);
         }else{
-            $this->content = str_replace('<userButtonsPlaceholder />', file_get_contents(__DIR__."/pages/components/button_login_reg.html"), $this->content);
+            $this->content = str_replace('<userButtonsPlaceholder />', file_get_contents(__DIR__."/pages/components/login-btn.html"), $this->content);
         }
     }
 
