@@ -177,7 +177,7 @@ header {
     .user-menu,
     .menu {
 
-        /* display: none; */
+        display: none;
     }
 
 }
