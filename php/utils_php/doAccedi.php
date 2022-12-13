@@ -1,7 +1,7 @@
 <?php require_once("../session.php");
 if (isset($_SESSION['Username'])) {
     header("location: ../../index.php");
-} else { echo 'Sono nel post';?>
+} else {?>
     <?php
     if (!empty($_POST)) {
         $usernameError = null;
