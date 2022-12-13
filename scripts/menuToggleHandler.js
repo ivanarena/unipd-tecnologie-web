@@ -9,9 +9,12 @@ const mobile = window.matchMedia("(max-width: 1400px)");
 
 const toHide = [sanJunipero, pagesMenu, userMenu];
 
-if (mobile.matches) {
-    menuToggle.classList.toggle('hide');
-    hideElements();
+function mobileViewToggle() {
+    console.log('pasta')
+    if (mobile.matches) {
+        menuToggle.classList.toggle('hide');
+        hideElements();
+    }
 }
 
 
@@ -30,3 +33,4 @@ function hideElements() {
 }
 
 menuToggle.addEventListener('click', toggleMenu);
+// window.addEventListener('resize', mobileViewToggle, true);
