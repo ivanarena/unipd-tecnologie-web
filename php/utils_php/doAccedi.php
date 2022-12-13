@@ -1,9 +1,8 @@
-<?php require_once("../session.php");?>
-<?php
+<?php 
+require_once("../session.php");
 if (isset($_SESSION['Username'])) {
     header("location: ../../index.php");
-} else {?>
-    <?php
+} else { 
     if (!empty($_POST)) {
         $usernameError = null;
         $passwordError = null;
@@ -25,7 +24,6 @@ if (isset($_SESSION['Username'])) {
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $stmt = $pdo->prepare("SELECT Count(*) FROM UTENTE WHERE Username=?;");
                 $stmt->execute(array($username));
-                
                 if ($stmt->fetchColumn() <= 0) {
                     header_remove();
                     header("location: ../accedi.php?errUser=1");
@@ -49,13 +47,10 @@ if (isset($_SESSION['Username'])) {
                 echo 'Errore: ' . $e->getMessage();
             }
             if (isset($_SESSION['Username'])) {
-                header_remove();
                 header("location: ../../index.php");
             }
+        }else{
+            header("location: ../accedi.php?errUser=1");
         }
-        echo "sonoqui";
-
-        
     }
-    ?>
-    <?php } ?>
+}?>
