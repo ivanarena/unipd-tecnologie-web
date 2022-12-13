@@ -50,7 +50,7 @@ if (isset($_SESSION['Username'])) {
                 header("location: ../../index.php");
             }
         }else{
-            header("location: ../accedi.php?errUser=1");
+            header("location: ../accedi.php?errGen=1");
         }
     }
 }?>
