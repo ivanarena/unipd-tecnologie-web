@@ -1,4 +1,6 @@
 const loginButton = document.getElementById('accedi');
+const hidePasswordButton = document.getElementById('nascondi-password');
+const passwordInput = document.getElementById("password");
 let userName = ""; 
 let password = "";  
 
@@ -42,4 +44,13 @@ function checkForm() {
     console.log('bottone premuto');
 }
 
+function hidePassword() {
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+}
+
 loginButton.addEventListener('click', checkForm);
+hidePasswordButton.addEventListener('change', hidePassword);
