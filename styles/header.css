@@ -176,7 +176,7 @@ header {
     .logo-text,
     .user-menu,
     .menu {
-        /* display: none; */
+        display: none;
     }
 
 }
