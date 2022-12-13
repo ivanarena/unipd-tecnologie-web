@@ -103,4 +103,4 @@ CREATE TABLE EVENTO_UTENTE(
     FOREIGN KEY (IdEvento) REFERENCES EVENTO(IdEvento) ON DELETE CASCADE ON UPDATE CASCADE
     );
 
-INSERT INTO UTENTE VALUES("Alyon", "$2y$10$Q6tUlj8oIhdsdVa6hs40B.A9dSi0maYFwDVe9yScpcBCmNC8e5Vcq", "massimo.chioru@gmail.com", "Massimo", "Chioru", '2001-11-13', "Padova", 0); 
+INSERT INTO UTENTE VALUES("Alyon", "$2y$10$Q6tUlj8oIhdsdVa6hs40B.A9dSi0maYFwDVe9yScpcBCmNC8e5Vcq", "massimo.chioru@gmail.com", "Massimo", "Chioru", '2001-11-13', 0); 
