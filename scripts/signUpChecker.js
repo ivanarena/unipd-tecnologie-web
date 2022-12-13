@@ -34,7 +34,7 @@ function checkSurname() {
         return false;
     }
     else {
-        return true;
+        return true;s
         console.log('cognome ok');
     }
 }
