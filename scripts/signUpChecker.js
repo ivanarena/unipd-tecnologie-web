@@ -1,4 +1,6 @@
 const signUpButton = document.getElementById('registrati');
+const hidePasswordButton = document.getElementById('nascondi-password');
+const passwordInput = document.getElementById("password");
 let userName = document.getElementById('username').value; 
 let password = document.getElementById("password").value; 
 let sname =  document.getElementById("nome").value;
@@ -6,6 +8,11 @@ let surname = document.getElementById("cognome").value;
 let dateOfBirth = document.getElementById("data").value;
 let password2 = document.getElementById("password-repeat").value; 
 let email = document.getElementById("email").value; 
+
+
+hidePasswordButton.addEventListener('change', hidePassword);
+
+
 
 function checkName() {
     sname =  document.getElementById("nome").value;
@@ -125,5 +132,15 @@ function checkForm() {
     }
     console.log('bottone premuto');
 }
+
+function hidePassword() {
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+}
+
+
 
 loginButton.addEventListener('click', checkForm);

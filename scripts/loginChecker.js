@@ -4,6 +4,9 @@ const passwordInput = document.getElementById("password");
 let userName = ""; 
 let password = "";  
 
+hidePasswordButton.addEventListener('change', hidePassword);
+
+
 function printError(ElementId, result, errMessage) { 
 	if (!result) {
 		document.getElementById(ElementId).innerHTML = errMessage;
@@ -54,4 +57,3 @@ function hidePassword() {
 }
 
 loginButton.addEventListener('click', checkForm);
-hidePasswordButton.addEventListener('change', hidePassword);
