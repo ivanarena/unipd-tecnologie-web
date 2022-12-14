@@ -6,7 +6,7 @@
 <body>
 
     <headerPlaceholder />
-    
+
     <main>
         <form action="" class="login-form card-shadow">
 
@@ -35,13 +35,21 @@
                 </div>
                 <label for="email" class="input-label">Indirizzo e-mail</label>
                 <input id="email" type="email" class="form-input" />
-                <label for="password" class="input-label">Password</label>
-                <input id="password" class="form-input" type="password" name="password" />
-                <label>Mostra Password</label>
-                <input type="checkbox" id="nascondi-password" />
-                <label for="password-repeat" class="input-label">Ripeti password</label>
-                <input id="password-repeat" type="password" class="form-input" />
-                
+                <div class="form-row">
+                    <div class="inline-content">
+                        <label for="password" class="input-label">Password</label>
+                        <input id="password" class="form-input" type="password" name="password" />
+                    </div>
+                    <div class="inline-content">
+                        <label for="password-repeat" class="input-label">Ripeti password</label>
+                        <input id="password-repeat" type="password" class="form-input" />
+                    </div>
+                </div>
+                <span class="mostra-password-container">
+                    <input type="checkbox" id="mostra-password" />
+                    <label for="mostra-password" class="show-password-label">Mostra Password</label>
+                </span>
+
 
             </div>
             <button class="btn signup-btn">Registrati</button> <!-- giusto button??? input submit meglio forse -->

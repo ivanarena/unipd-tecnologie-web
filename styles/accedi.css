@@ -29,6 +29,24 @@
     margin-bottom: 6vh;
 }
 
+.mostra-password-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2vh;
+    margin-bottom: 4vh;
+}
+
+#mostra-password {
+    margin: 0;
+    margin-right: 0.25vw;
+}
+
+.show-password-label {
+    margin: 0;
+    margin-left: 0.25vw;
+}
+
 .login-btn {
     margin-right: 1vw;
 }

@@ -19,6 +19,7 @@
             $builder->setError("Campi non validi!!!",$_GET["errGen"]); // TODO: Stilizzare meglio
         }
     }
+    
     $page = $builder->buildPage();
     echo $page;
 ?>

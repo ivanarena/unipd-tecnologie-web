@@ -1,22 +1,23 @@
 const signUpButton = document.getElementById('registrati');
-const hidePasswordButton = document.getElementById('nascondi-password');
+const showPasswordButton = document.getElementById('mostra-password');
 const passwordInput = document.getElementById("password");
-let userName = document.getElementById('username').value; 
-let password = document.getElementById("password").value; 
-let sname =  document.getElementById("nome").value;
+const passwordRepeatInput = document.getElementById("password-repeat");
+
+let userName = document.getElementById('username').value;
+let password = document.getElementById("password").value;
+let sname = document.getElementById("nome").value;
 let surname = document.getElementById("cognome").value;
 let dateOfBirth = document.getElementById("data").value;
-let password2 = document.getElementById("password-repeat").value; 
-let email = document.getElementById("email").value; 
+let password2 = document.getElementById("password-repeat").value;
+let email = document.getElementById("email").value;
 
 
-hidePasswordButton.addEventListener('change', hidePassword);
 
 
 
 function checkName() {
-    sname =  document.getElementById("nome").value;
-    if(sname == "") {
+    sname = document.getElementById("nome").value;
+    if (sname == "") {
         alert("Inserisci il tuo nome");
         return false;
     }
@@ -31,8 +32,8 @@ function checkName() {
 }
 
 function checkSurname() {
-    surname =  document.getElementById("cognome").value;
-    if(surname == "") {
+    surname = document.getElementById("cognome").value;
+    if (surname == "") {
         alert("Inserisci il tuo cognome");
         return false;
     }
@@ -41,16 +42,16 @@ function checkSurname() {
         return false;
     }
     else {
-        return true;s
+        return true; s
         console.log('cognome ok');
     }
 }
 
 function checkUsername() {
-    userName = document.getElementById('username').value; 
-    if(userName == "" || userName.length > 20) {   
-        alert("Inserisci il Nome Utente");  
-        return false;  
+    userName = document.getElementById('username').value;
+    if (userName == "" || userName.length > 20) {
+        alert("Inserisci il Nome Utente");
+        return false;
     }
     else if (userName.length > 20) {
         alert("Il nome utente deve avere massimo 20 caratteri");
@@ -59,13 +60,13 @@ function checkUsername() {
     else {
         return true;
         console.log('username ok');
-    }  
+    }
 }
 
 function checkEmail() {
-    email = document.getElementById("email").value; 
+    email = document.getElementById("email").value;
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-      return true;
+        return true;
     }
     else {
         alert("Indirizzo email non valido, riprova");
@@ -81,9 +82,9 @@ function checkDataNascita() {
     var m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
         age--;
-    }  
+    }
     console.log(age);
-    if(age > 17) {
+    if (age > 17) {
         return true;
         console.log('data ok');
     }
@@ -93,30 +94,30 @@ function checkDataNascita() {
     }
 }
 
-function checkPassword() { 
-    password = document.getElementById("password").value; 
-    if(password == "") {   
-        alert("Inserisci la password");  
-        return false;  
-    }  
-    else if(password.length < 8) {  
-        alert("La password deve essere lunga almeno 8 caratteri");
-        return false;  
+function checkPassword() {
+    password = document.getElementById("password").value;
+    if (password == "") {
+        alert("Inserisci la password");
+        return false;
     }
-    else if(password.length > 50) {  
+    else if (password.length < 8) {
+        alert("La password deve essere lunga almeno 8 caratteri");
+        return false;
+    }
+    else if (password.length > 50) {
         alert("La password non può essere più lunga di 15 caratteri");
-        return false;  
-    } 
-    else {  
-        alert("La password è corretta");  
+        return false;
+    }
+    else {
+        alert("La password è corretta");
         return true;
         console.log('password ok');
-    }  
+    }
 }
 
 function checkEqualPassword() {
-    password2 = document.getElementById("password-repeat").value; 
-    if(password == password2) {
+    password2 = document.getElementById("password-repeat").value;
+    if (password == password2) {
         return true;
         console.log('password2 ok');
     }
@@ -133,14 +134,15 @@ function checkForm() {
     console.log('bottone premuto');
 }
 
-function hidePassword() {
+function showPassword() {
+    console.log(passwordInput)
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
+        passwordRepeatInput.type = "text";
     } else {
         passwordInput.type = "password";
+        passwordRepeatInput.type = "password";
     }
 }
 
-
-
-loginButton.addEventListener('click', checkForm);
+showPasswordButton.addEventListener('change', showPassword);

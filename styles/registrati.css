@@ -48,6 +48,23 @@
     width: 20vw;
 }
 
+.mostra-password-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+#mostra-password {
+    margin: 0;
+    margin-right: 0.25vw;
+}
+
+.show-password-label {
+    margin: 0;
+    margin-left: 0.25vw;
+}
+
 .signup-btn {
     background-color: var(--clr-btn);
     color: var(--clr-btn-text);

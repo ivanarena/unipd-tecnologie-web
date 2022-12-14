@@ -8,6 +8,26 @@
 
     $builder = new PageBuilder($fileName, $desc);
 
+    // ! PROVANDO A FARLO FUNZIONARE
+    // try {
+    //     include_once('./utils/database.php');
+    //     $pdo = database::connect();
+    //     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    //     for ($i = 1; $i <= 3; $i+=1) {
+    //         $sth = $pdo->prepare('SELECT * FROM ABBONAMENTO WHERE IdAbbonamento = :i');
+    //         $sth->bindParam(':i', $i);
+    //         $sth->execute(array($abbonamenti));
+    //         $results = $sth->fetch(PDO::FETCH_ASSOC);
+    //     }
+    //     database::disconnect();
+    // } catch (PDOException $e) {
+    //     echo 'Errore PDO e connessione DB: <br />';
+    //     echo 'SQLQuery: ', $sql;
+    //     echo 'Errore: ' . $e->getMessage();
+    // }
+    // echo $results;
+    
     $page = $builder->buildPage();
     echo $page;
 ?>
