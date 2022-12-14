@@ -19,12 +19,14 @@
 }
 
 .place-street {
+    margin-top: 1vh;
     color: var(--clr-secondary);
 }
 
 .place-desc {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    font-size: var(--fs-p-d);
+    margin-top: 4vh;
+    margin-bottom: 4vh;
 }
 
 .place-events-btn,

@@ -47,7 +47,6 @@ function checkForm() {
 }
 
 function showPassword() {
-    console.log(passwordInput);
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
     } else {

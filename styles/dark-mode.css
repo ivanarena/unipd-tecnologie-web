@@ -1,16 +1,31 @@
-/*body {
-    background-color: var(--clr-d-background); 
+body {
+    background-color: var(--clr-d-background);
+}
+
+body,
+.menu-link a,
+footer {
     color: var(--clr-d-text);
 }
 
-.menu-link{
-    color: var(--clr-d-text);
-}  
+.card-shadow {
+    -webkit-box-shadow: 0px 0px 32px 8px rgba(255, 255, 255, 0.06);
+    -moz-box-shadow: 0px 0px 32px 8px rgba(255, 255, 255, 0.06);
+    box-shadow: 0px 0px 32px 8px rgba(255, 255, 255, 0.06);
+}
 
-/*.menu-link-list{
-    color: var(--clr-d-text);
-}*/
 
-/*footer{
+/* ABBONAMENTI */
+.plan-card {
+    background-color: var(--clr-d-background);
+}
+
+.plan-name {
     color: var(--clr-d-text);
-}*/
+}
+
+/* LOCALI, EVENTI */
+.place-street,
+.event-place {
+    color: var(--clr-d-secondary);
+}
