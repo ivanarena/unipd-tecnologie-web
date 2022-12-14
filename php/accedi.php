@@ -10,10 +10,10 @@
     //Visualizzazione messaggio di errore
     if(!empty($_GET)){
         if(array_key_exists("errUser", $_REQUEST) && !empty($_REQUEST["errUser"])){
-            $builder->setError("L'username è inesistente!!!",$_GET["errUser"]);  // TODO: Stilizzare meglio
+            $builder->setError("Il nome utente o la password inseriti sono errati.",$_GET["errUser"]);  // TODO: Stilizzare meglio
         }
         if(array_key_exists("errPass", $_REQUEST) && !empty($_REQUEST["errPass"])){
-            $builder->setError("La password è errata!!!",$_GET["errPass"]); // TODO: Stilizzare meglio
+            $builder->setError("Il nome utente o la password inseriti sono errati.",$_GET["errPass"]); // TODO: Stilizzare meglio
         }
         if(array_key_exists("errGen", $_REQUEST) && !empty($_REQUEST["errGen"])){
             $builder->setError("Campi non validi!!!",$_GET["errGen"]); // TODO: Stilizzare meglio

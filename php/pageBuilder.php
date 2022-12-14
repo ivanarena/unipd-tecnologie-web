@@ -62,9 +62,9 @@ class PageBuilder {
         $this->content = str_replace('<footerPlaceholder />', $this->footer, $this->content);
     }
 
-    public function setError($msg,$isError) {
+    public function setError($msg, $isError) {
         if($isError == 1){
-            $this->content = str_replace('<errorPlaceholder />', $msg, $this->content);
+            $this->content = str_replace('<span class="error hide"></span>', '<span class="error">' . $msg . '</span>', $this->content);
         }
     }
 
