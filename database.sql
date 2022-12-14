@@ -39,7 +39,7 @@ CREATE TABLE CARTA(
     PRIMARY KEY(NumeroCarta)
     );
 
-CREATE TABLE ABBONAMENTO(
+CREATE TABLE ABBONAMENTO( /**togliere durata?*/
     IdAbbonamento INT NOT NULL AUTO_INCREMENT,
     TitoloAbb VARCHAR(100) NOT NULL, 
     Descrizione VARCHAR(1024), 
@@ -120,25 +120,25 @@ INSERT INTO CARTA VALUES("583584310887", "Maestro", "026", "2027-01-01", "Simone
 INSERT INTO CARTA VALUES("783584310000", "Maestro", "021", "2023-01-01", "Luca Galeazzo");
 INSERT INTO CARTA VALUES("111562587000", "Maestro", "057", "2025-05-12", "Mario Rossi");
 
-/**ABBONAMENTI**/
-INSERT INTO ABBONAMENTO VALUES("1", "Basic", "", "100", "1", "1", "1000");
-INSERT INTO ABBONAMENTO VALUES("2", "Pro", "", "220", "1", "5", "3000");
-INSERT INTO ABBONAMENTO VALUES("3", "Superior", "", "365", "1", "10", "7000");
+/**ABBONAMENTI sistemare durata**/
+INSERT INTO ABBONAMENTO VALUES("1", "Basic", "NULL", "100", "1", "1", "1000");
+INSERT INTO ABBONAMENTO VALUES("2", "Pro", "NULL", "220", "1", "5", "3000");
+INSERT INTO ABBONAMENTO VALUES("3", "Superior", "NULL", "365", "1", "10", "7000");
 
-/**LOCALI**/
-INSERT INTO LOCALE VALUES("1", "Fluido Cafe", "", "", "", "");
-INSERT INTO LOCALE VALUES("2", "Extra Extra", "", "", "", "");
-INSERT INTO LOCALE VALUES("3", "Rush IN", "", "", "", "");
-INSERT INTO LOCALE VALUES("4", "Bagni Venere", "", "", "", "");
-INSERT INTO LOCALE VALUES("5", "Sala Conferenze Dante Alighieri", "", "", "", "");
+/**LOCALI manca link image**/
+INSERT INTO LOCALE VALUES("1", "Fluido Cafe", "Via Pirandello", "NULL", "50", "");
+INSERT INTO LOCALE VALUES("2", "Extra Extra", "Via Umberto I", "NULL", "700", "");
+INSERT INTO LOCALE VALUES("3", "Rush IN", "Via della Croce Verde", "NULL", "700", "");
+INSERT INTO LOCALE VALUES("4", "Bagni Venere", "Via Fratelli Cervi", "NULL", "150", "");
+INSERT INTO LOCALE VALUES("5", "Sala Conferenze Dante Alighieri", "Via Dante Alighieri", "NULL", "300", "");
 
-/**EVENTI**/
-INSERT INTO EVENTO VALUES("", "", "", "", "", "", "");
-INSERT INTO EVENTO VALUES("", "", "", "", "", "", "");
-INSERT INTO EVENTO VALUES("", "", "", "", "", "", "");
-INSERT INTO EVENTO VALUES("", "", "", "", "", "", "");
-INSERT INTO EVENTO VALUES("", "", "", "", "", "", "");
-INSERT INTO EVENTO VALUES("", "", "", "", "", "", "");
+/**EVENTI manca link image**/ 
+INSERT INTO EVENTO VALUES("1", "Salone del libro", "NULL", "", "1", "2023-01-15 17:00:00", "2023-01-15 19:00:00");
+INSERT INTO EVENTO VALUES("2", "Vida Loca", "NULL", "", "2", "2023-02-02 22:00:00", "2023-02-03 06:00:00");
+INSERT INTO EVENTO VALUES("3", "Spirit techno", "NULL", "", "2", "2022-12-26 22:00:00", "2022-12-27 06:00:00");
+INSERT INTO EVENTO VALUES("4", "Ride", "NULL", "", "3", "2022-12-29 09:00:00", "2022-12-29 20:00:00");
+INSERT INTO EVENTO VALUES("5", "Day Spa", "NULL", "", "4", "2022-12-30 08:00:00", "2022-12-30 23:00:00");
+INSERT INTO EVENTO VALUES("6", "Lotta alla mafia con Saviano", "NULL", "", "5", "2023-01-05 17:00:00", "2023-01-05 20:30:00");
 
 /**PORTAFOGLI**/
 INSERT INTO PORTAFOGLI VALUES("Alyon", "370406126264861");
@@ -148,16 +148,19 @@ INSERT INTO PORTAFOGLI VALUES("user", "783584310000");
 INSERT INTO PORTAFOGLI VALUES("admin", "111562587000");
 INSERT INTO PORTAFOGLI VALUES("simo_p", "583584310887");
 
-/**ABBONAMENTI UTENTI**/
-INSERT INTO ABBONAMENTO_UTENTE VALUES("", "", "", "", "", "");
-INSERT INTO ABBONAMENTO_UTENTE VALUES("", "", "", "", "", "");
-INSERT INTO ABBONAMENTO_UTENTE VALUES("", "", "", "", "", "");
-INSERT INTO ABBONAMENTO_UTENTE VALUES("", "", "", "", "", "");
+/**ABBONAMENTI UTENTI da vedere le prenotazioni eventi se abbonamento scaduto**/
+INSERT INTO ABBONAMENTO_UTENTE VALUES("1", "1", "Alyon", "370406126264861", "2022-01-01", "2022-01-01");
+INSERT INTO ABBONAMENTO_UTENTE VALUES("2", "1", "user", "783584310000", "2022-05-05", "2022-05-05");
+INSERT INTO ABBONAMENTO_UTENTE VALUES("3", "2", "dario69", "4245058018166046", "2022-03-04", "2022-03-04");
+INSERT INTO ABBONAMENTO_UTENTE VALUES("4", "2", "simo_p", "583584310887", "2022-12-12", "2022-12-12");
+INSERT INTO ABBONAMENTO_UTENTE VALUES("5", "3", "Bigtooth", "4141080454367972346", "2022-12-15", "2022-12-15");
 
 /**EVENTI UTENTI**/
-INSERT INTO EVENTO_UTENTE VALUES("", "", "");
-INSERT INTO EVENTO_UTENTE VALUES("", "", "");
-INSERT INTO EVENTO_UTENTE VALUES("", "", "");
-INSERT INTO EVENTO_UTENTE VALUES("", "", "");
-INSERT INTO EVENTO_UTENTE VALUES("", "", "");
-INSERT INTO EVENTO_UTENTE VALUES("", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("Alyon", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("dario69", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("simo_p", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("simo_p", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("Bigtooth", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("Bigtooth", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("Bigtooth", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("user", "", "");
