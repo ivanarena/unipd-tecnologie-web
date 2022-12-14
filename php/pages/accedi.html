@@ -8,14 +8,13 @@
 
     <main>
         <span class="error hide"></span>
-        <form class="login-form card-shadow" action="./utils_php/doAccedi.php" method="POST">
+        <form class="login-form card-shadow" action="./utils/doAccedi.php" method="POST">
             <h1 class="page-heading">Accedi</h1>
             <div class="inputs-container flex-col-center">
                 <label for="username" class="input-label">Nome utente</label>
-                <input id="username" class="form-input" type="text" name="username" value="" required aria-required="true">
+                <input id="username" class="form-input" type="text" name="username" value="username" required aria-required="true">
                 <label for="password" class="input-label">Password</label>
-                <input id="password" class="form-input" type="password" name="password" value="lol" required aria-required="true">
-                <!-- ! value=LOL direi che non va bene-->
+                <input id="password" class="form-input" type="password" name="password" value="password" required aria-required="true">
                 <span class="mostra-password-container">
                     <input type="checkbox" id="mostra-password" />
                     <label for="mostra-password" class="show-password-label">Mostra Password</label>
