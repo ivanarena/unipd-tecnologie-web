@@ -34,7 +34,6 @@ function checkPassword() {
         return false;
     }
     else {
-        alert("La password è corretta");
         return true;
     }
     console.log('password ok');
