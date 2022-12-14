@@ -1,16 +1,20 @@
 :root {
     /* COLORS */
     --clr-text: black;
-    --clr-headings: #d413cd;
+    --clr-headings: #C933BA;
     --clr-secondary: rgb(59, 0, 83);
     --clr-a: #007faa;
     --clr-a-visited: #3b0053;
-    --clr-btn: #d413cd;
+    --clr-btn: #C933BA;
     --clr-btn-text: white;
-    --clr-d-background: black;
+
+    --clr-d-background: #181818;
     --clr-d-text: white;
-    /* FONT SIZES */
+    --clr-d-secondary: #ce84eb;
+
+    /* FONT SIZES -- d = desktop, m = mobile*/
     --fs-h1-d: 48px;
+    --fs-p-d: 20px;
     /* --fs-h2: 18px; */
 
     --card-width: 85%;
