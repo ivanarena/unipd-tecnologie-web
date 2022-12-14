@@ -103,4 +103,61 @@ CREATE TABLE EVENTO_UTENTE(
     FOREIGN KEY (IdEvento) REFERENCES EVENTO(IdEvento) ON DELETE CASCADE ON UPDATE CASCADE
     );
 
+
+/**UTENTI**/
 INSERT INTO UTENTE VALUES("Alyon", "$2y$10$Q6tUlj8oIhdsdVa6hs40B.A9dSi0maYFwDVe9yScpcBCmNC8e5Vcq", "massimo.chioru@gmail.com", "Massimo", "Chioru", '2001-11-13', 0); 
+INSERT INTO UTENTE VALUES("admin", "$2y$10$wrvZiy1egezeMrYQ.LIvAe64zjSZHUnmhOU/n4xFZCFML9kVRKnRe", "admin@gmail.com", "Mario", "Rossi", '1992-01-23', 1); 
+INSERT INTO UTENTE VALUES("user", "$2y$10$V0IDAKje8lFy8BCCac/YZ.SPERXNWh2onazKJ3U6pTgxNP4PhaHOS", "user@gmail.com", "Luca", "Galeazzo", '1975-06-11', 0); 
+INSERT INTO UTENTE VALUES("Bigtooth", "$2y$10$XXnRpFBx2nu5ueYmB3Au9OHctgr.ROEIPpLSgM2I5jOM1oclg9bue", "giuliaadentone@gmail.com", "Giulia", "Dentone", '2001-10-15', 0); 
+INSERT INTO UTENTE VALUES("dario69", "$2y$10$hQ2WR0bPmRfrfJgAr4qOyORQknXYCIsON6oSAvqXFwYSzpXC/C7LG", "69dariod@gmail.com", "Dario", "Destro", '1969-03-07', 0); 
+INSERT INTO UTENTE VALUES("simo_p", "$2y$10$vHuvb6tMqelVADyZoiZu0..hjd3AVcl6QevJ8QxQhIb29D9J44gQq", "simonetta265@gmail.com", "Simonetta", "Pagliaro", '1998-05-26', 0); 
+
+/**CARTE**/
+INSERT INTO CARTA VALUES("370406126264861", "American Express", "022", "2026-05-14", "Massimo Chioru");
+INSERT INTO CARTA VALUES("4141080454367972346", "VISA", "123", "2023-10-05", "Giulia Dentone");
+INSERT INTO CARTA VALUES("4245058018166046", "VISA", "457", "2025-01-30", "Dario Destro");
+INSERT INTO CARTA VALUES("583584310887", "Maestro", "026", "2027-01-01", "Simonetta Pagliaro");
+INSERT INTO CARTA VALUES("783584310000", "Maestro", "021", "2023-01-01", "Luca Galeazzo");
+INSERT INTO CARTA VALUES("111562587000", "Maestro", "057", "2025-05-12", "Mario Rossi");
+
+/**ABBONAMENTI**/
+INSERT INTO ABBONAMENTO VALUES("1", "Basic", "", "100", "1", "1", "1000");
+INSERT INTO ABBONAMENTO VALUES("2", "Pro", "", "220", "1", "5", "3000");
+INSERT INTO ABBONAMENTO VALUES("3", "Superior", "", "365", "1", "10", "7000");
+
+/**LOCALI**/
+INSERT INTO LOCALE VALUES("1", "Fluido Cafe", "", "", "", "");
+INSERT INTO LOCALE VALUES("2", "Extra Extra", "", "", "", "");
+INSERT INTO LOCALE VALUES("3", "Rush IN", "", "", "", "");
+INSERT INTO LOCALE VALUES("4", "Bagni Venere", "", "", "", "");
+INSERT INTO LOCALE VALUES("5", "Sala Conferenze Dante Alighieri", "", "", "", "");
+
+/**EVENTI**/
+INSERT INTO EVENTO VALUES("", "", "", "", "", "", "");
+INSERT INTO EVENTO VALUES("", "", "", "", "", "", "");
+INSERT INTO EVENTO VALUES("", "", "", "", "", "", "");
+INSERT INTO EVENTO VALUES("", "", "", "", "", "", "");
+INSERT INTO EVENTO VALUES("", "", "", "", "", "", "");
+INSERT INTO EVENTO VALUES("", "", "", "", "", "", "");
+
+/**PORTAFOGLI**/
+INSERT INTO PORTAFOGLI VALUES("Alyon", "370406126264861");
+INSERT INTO PORTAFOGLI VALUES("Bigtooth", "4141080454367972346");
+INSERT INTO PORTAFOGLI VALUES("dario69", "4245058018166046");
+INSERT INTO PORTAFOGLI VALUES("user", "783584310000");
+INSERT INTO PORTAFOGLI VALUES("admin", "111562587000");
+INSERT INTO PORTAFOGLI VALUES("simo_p", "583584310887");
+
+/**ABBONAMENTI UTENTI**/
+INSERT INTO ABBONAMENTO_UTENTE VALUES("", "", "", "", "", "");
+INSERT INTO ABBONAMENTO_UTENTE VALUES("", "", "", "", "", "");
+INSERT INTO ABBONAMENTO_UTENTE VALUES("", "", "", "", "", "");
+INSERT INTO ABBONAMENTO_UTENTE VALUES("", "", "", "", "", "");
+
+/**EVENTI UTENTI**/
+INSERT INTO EVENTO_UTENTE VALUES("", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("", "", "");
+INSERT INTO EVENTO_UTENTE VALUES("", "", "");
