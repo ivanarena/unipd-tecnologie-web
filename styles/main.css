@@ -98,6 +98,18 @@ input {
     background-color: gainsboro;
 }
 
+input:focus {
+    outline-color: var(--clr-headings);
+}
+
+input:invalid {
+    outline-color: crimson;
+}
+
+input[type=checkbox] {
+    accent-color: var(--clr-headings);
+}
+
 .is-active {
     display: block;
 }

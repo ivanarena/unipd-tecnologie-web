@@ -224,7 +224,7 @@ header {
 }
 
 input:checked+.slider {
-    background-color: #66bb6a;
+    background-color: var(--clr-headings);
 }
 
 input:checked+.slider:before {
