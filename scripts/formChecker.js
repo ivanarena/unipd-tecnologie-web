@@ -1,12 +1,12 @@
 const sendButton = document.getElementById('invia-messaggio');
-let sname =  document.getElementById("nome").value;
-let surname =  document.getElementById("cognome").value;
-let email = document.getElementById("email").value; 
-let message =  document.getElementById("msg").value;
+let sname = document.getElementById("nome").value;
+let surname = document.getElementById("cognome").value;
+let email = document.getElementById("email").value;
+let message = document.getElementById("msg").value;
 
 function checkName() {
-    sname =  document.getElementById("nome").value;
-    if(sname == "") {
+    sname = document.getElementById("nome").value;
+    if (sname == "") {
         alert("Inserisci il tuo nome");
         return false;
     }
@@ -21,8 +21,8 @@ function checkName() {
 }
 
 function checkSurname() {
-    surname =  document.getElementById("cognome").value;
-    if(surname == "") {
+    surname = document.getElementById("cognome").value;
+    if (surname == "") {
         alert("Inserisci il tuo cognome");
         return false;
     }
@@ -31,15 +31,15 @@ function checkSurname() {
         return false;
     }
     else {
-        return true;s
+        return true; s
         console.log('cognome ok');
     }
 }
 
 function checkEmail() {
-    email = document.getElementById("email").value; 
+    email = document.getElementById("email").value;
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-      return true;
+        return true;
     }
     else {
         alert("Indirizzo email non valido, riprova");
@@ -48,8 +48,8 @@ function checkEmail() {
 }
 
 function checkMessage() {
-    message =  document.getElementById("msg").value;
-    if(message == "") {
+    message = document.getElementById("msg").value;
+    if (message == "") {
         alert("Lasciaci un messaggio!");
         return false;
     }
@@ -59,7 +59,7 @@ function checkMessage() {
     }
 }
 
-function checkForum() {
+function checkForm() {
     if (checkName() && checkSurname() && checkEmail() && checkMessage()) {
         console.log('ok');
     }

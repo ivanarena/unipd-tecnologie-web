@@ -5,9 +5,13 @@ darkModeLink.rel = "stylesheet";
 darkModeLink.href = '/styles/dark-mode.css';
 
 // cambiare con dark -- sto usando questo per testare
-let prefersDark = window.matchMedia("(prefers-color-scheme: light)").matches;
 
-if (prefersDark && !darkModeSwitch.checked) {
+if (localStorage.prefersDark === undefined) {
+    localStorage.setItem('prefersDark',
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+}
+
+if (localStorage.prefersDark === "true" && darkModeSwitch.checked === false) {
     darkModeSwitch.checked = true;
     toggleDarkMode();
 }
@@ -15,11 +19,13 @@ if (prefersDark && !darkModeSwitch.checked) {
 function toggleDarkMode() {
     let head = document.getElementsByTagName("head")[0];
     if (darkModeSwitch.checked) {
+        localStorage.prefersDark = true;
         head.appendChild(darkModeLink);
     } else {
-
+        localStorage.prefersDark = false;
         head.removeChild(darkModeLink);
     }
+    console.log(localStorage.prefersDark);
 }
 
 
