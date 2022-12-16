@@ -128,7 +128,7 @@ INSERT INTO ABBONAMENTO VALUES("3", "Superior", "NULL", "365", "1", "10", "7000"
 /**LOCALI manca link image**/
 INSERT INTO LOCALE VALUES("1", "Fluido Cafe", "Via Pirandello", "NULL", "50", "");
 INSERT INTO LOCALE VALUES("2", "Extra Extra", "Via Umberto I", "NULL", "700", "");
-INSERT INTO LOCALE VALUES("3", "Rush IN", "Via della Croce Verde", "NULL", "700", "");
+INSERT INTO LOCALE VALUES("3", "Rush IN", "Via della Croce Verde", "NULL", "100", "");
 INSERT INTO LOCALE VALUES("4", "Bagni Venere", "Via Fratelli Cervi", "NULL", "150", "");
 INSERT INTO LOCALE VALUES("5", "Sala Conferenze Dante Alighieri", "Via Dante Alighieri", "NULL", "300", "");
 
