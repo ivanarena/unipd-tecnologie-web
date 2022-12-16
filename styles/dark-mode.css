@@ -1,4 +1,5 @@
-body {
+body,
+.menu-is-mobile {
     background-color: var(--clr-d-background);
 }
 
@@ -6,6 +7,10 @@ body,
 .menu-link a,
 footer {
     color: var(--clr-d-text);
+}
+
+.menu-toggle .bar {
+    background-color: var(--clr-d-text);
 }
 
 .card-shadow {

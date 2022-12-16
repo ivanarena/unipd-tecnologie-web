@@ -109,7 +109,6 @@ header {
 }
 
 .menu-toggle {
-    margin-right: 25px;
     cursor: pointer;
 }
 
@@ -166,26 +165,21 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100vw;
-    /* background-color: red; */
     justify-content: flex-end;
     padding-right: 8vw;
 }
 
-@media only screen and (max-width: 768px) {
-
-    .logo-text,
-    .user-menu,
-    .menu {
-        /* display: none; */
-    }
-
-}
 
 /* SLIDER */
 .switch-container {
     display: flex;
     align-items: center;
     margin-left: 0.5vw;
+    margin-right: 2vw;
+}
+
+.switch-container span {
+    position: relative;
 }
 
 .switch {
