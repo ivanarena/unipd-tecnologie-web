@@ -40,6 +40,7 @@
     padding-left: 1vw;
     padding-right: 1vw;
     background-color: gainsboro;
+    resize: none;
 }
 
 .submit-btn {
@@ -47,6 +48,8 @@
     width: 120px;
     align-self: flex-end;
 }
+
+
 
 
 
