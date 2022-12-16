@@ -29,6 +29,7 @@
 .input-container .form-input {
     width: 15rem;
     display: flex;
+    
 }
 
 #msg {
