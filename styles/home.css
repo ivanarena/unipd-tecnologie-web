@@ -1,0 +1,86 @@
+.gradient-card {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 40vh;
+    width: 100%;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    margin-bottom: 4vh;
+}
+
+.gradient-card h1 {
+    text-align: center;
+    font-size: var(--fs-h1-d);
+    color: white;
+    width: 50vw;
+
+}
+
+
+.left-card,
+.right-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+}
+
+.left-card {
+    align-self: flex-start;
+    padding-left: 15vw;
+
+}
+
+.right-card {
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 15vw;
+    align-self: flex-end;
+}
+
+.card-text {
+    width: 60vw;
+    font-size: var(--fs-home-p-d);
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+.card-link,
+.card-link:visited {
+    color: var(--clr-headings);
+    font-weight: bold;
+    font-size: var(--fs-home-p-d);
+}
+
+@media screen and (max-width: 728px) {
+    .gradient-card {
+        height: 60vh;
+    }
+
+    .left-card,
+    .right-card {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-left: 4vw;
+        margin-right: 4vw;
+        padding-left: 0;
+        padding-right: 0;
+        align-self: center;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

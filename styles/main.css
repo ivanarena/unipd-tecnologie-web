@@ -16,6 +16,12 @@ h3 {
 a {
     color: var(--clr-a);
     text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 a:visited {
