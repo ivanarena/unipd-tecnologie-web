@@ -3,7 +3,6 @@
     flex-direction: column;
     border-radius: var(--card-b-radius);
     width: 40vw;
-    
     padding: 40px;
     margin-top: 4vh;
     margin-bottom: 4vh;
@@ -11,6 +10,14 @@
 
 .input-label {
     margin-top: 1vh;  
+}
+
+.form-input-m {
+    width: 60%;
+}
+
+.form-input-ns {
+    width: 40%;
 }
 
 #msg {
