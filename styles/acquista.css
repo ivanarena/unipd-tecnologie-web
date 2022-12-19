@@ -1,0 +1,31 @@
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    border-radius: var(--card-b-radius);
+    margin-top: 4vh;
+    margin-bottom: 8vh;
+}
+
+.page-heading {
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+}
+
+.confirm-btn {
+    margin-right: 1vw;
+}
+
+.undo-btn {
+    background-color: var(--clr-btn-alt);
+    margin-left: 1vw;
+}
+
+
+.btns-container {
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+}
