@@ -9,27 +9,8 @@
     margin-bottom: 4vh;
 }
 
-.form-row {
-    display: flex;
-    justify-items: center;
-}
-
-.input-container {
-    display: flex;
-    flex-direction: column;
-    margin-right: 4vw;
-    margin-top: 2vh;
-}
-
 .input-label {
-    margin-top: 1vh;
-    
-}
-
-.input-container .form-input {
-    width: 15rem;
-    display: flex;
-    
+    margin-top: 1vh;  
 }
 
 #msg {

@@ -11,6 +11,7 @@
     --clr-d-background: #181818;
     --clr-d-text: white;
     --clr-d-secondary: #ce84eb;
+    --clr-d-card: rgb(62, 62, 62);
 
     /* FONT SIZES -- d = desktop, m = mobile*/
     --fs-h1-d: 48px;
