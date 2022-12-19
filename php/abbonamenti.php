@@ -15,8 +15,7 @@
     //     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //     for ($i = 1; $i <= 3; $i+=1) {
-    //         $sth = $pdo->prepare('SELECT * FROM ABBONAMENTO WHERE IdAbbonamento = :i');
-    //         $sth->bindParam(':i', $i);
+    //         $sth = $pdo->prepare("SELECT * FROM ABBONAMENTO WHERE IdAbbonamento = $i");
     //         $sth->execute(array($abbonamenti));
     //         $results = $sth->fetch(PDO::FETCH_ASSOC);
     //     }
@@ -26,7 +25,6 @@
     //     echo 'SQLQuery: ', $sql;
     //     echo 'Errore: ' . $e->getMessage();
     // }
-    // echo $results;
     
     $page = $builder->buildPage();
     echo $page;
