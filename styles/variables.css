@@ -7,20 +7,24 @@
     --clr-a-visited: #3b0053;
     --clr-btn: #C933BA;
     --clr-btn-text: white;
+    --clr-input-bg: #dcdcdc;
 
+    /* COLORS DARK MODE */
     --clr-d-background: #181818;
     --clr-d-text: white;
     --clr-d-secondary: #ce84eb;
     --clr-d-card: rgb(62, 62, 62);
 
-    /* FONT SIZES -- d = desktop, m = mobile*/
+
+    /* FONT SIZES -- d = desktop, m = mobile */
     --fs-h1-d: 48px;
     --fs-p-d: 20px;
     /* --fs-h2: 18px; */
 
+
+    /* b = button, w = width, h = height */
     --card-width: 85%;
     --card-b-radius: 40px;
-
 
     --btn-b-radius: 40px;
     --btn-w: 120px;

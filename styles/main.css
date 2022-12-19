@@ -36,6 +36,11 @@ main {
     text-align: center;
 }
 
+.page-desc {
+    width: 50vw;
+    margin-bottom: 4vh;
+}
+
 .h-card {
     display: flex;
     width: var(--card-width);
@@ -95,14 +100,16 @@ input {
     height: 3em;
     padding-left: 1vw;
     padding-right: 1vw;
-    background-color: gainsboro;
+    background-color: var(--clr-input-bg);
 }
 
 input:focus {
+    /* TODO: con alcuni elementi stona */
     outline-color: var(--clr-headings);
 }
 
 input:invalid {
+    /* TODO: CAMBIARE */
     outline-color: crimson;
 }
 
@@ -125,3 +132,8 @@ input[type=checkbox] {
 }
 
 
+@media only screen and (max-width: 768px) {
+    .page-desc {
+        width: 70vw;
+    }
+}

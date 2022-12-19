@@ -9,15 +9,15 @@
 }
 
 .input-label {
-    margin-top: 1vh;  
+    margin-top: 1vh;
 }
 
-.form-input-m {
+.form-input-medium {
+    width: 70%;
+}
+
+.form-input-small {
     width: 60%;
-}
-
-.form-input-ns {
-    width: 40%;
 }
 
 #msg {
@@ -49,5 +49,11 @@
 
     .input-container .form-input {
         width: 30vw;
+    }
+
+    #msg,
+    .form-input-medium,
+    .form-input-small {
+        padding-left: 3vw;
     }
 }
