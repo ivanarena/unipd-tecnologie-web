@@ -3,11 +3,14 @@ const pagesMenu = document.getElementById('menu-nav');
 const userMenu = document.getElementById('user-menu-nav');
 const breadcrumb = document.getElementById('breadcrumb-nav');
 const sanJunipero = document.getElementById('san-junipero');
+const sanJuniperoLogo = document.getElementById('san-junipero-logo');
+const darkModeToggle = document.getElementById('dark-mode-toggle')
 
 const mobile = window.matchMedia("(max-width: 1400px)");
 // const desktop = window.matchMedia("(min-width: 729px)");
 
 const toHide = [sanJunipero, pagesMenu, userMenu];
+const toFix = [sanJuniperoLogo, menuToggle];
 
 let mobileToggled = false;
 if (mobile.matches) {
@@ -36,6 +39,9 @@ function toggleMenu() {
     userMenu.classList.toggle('hide');
     userMenu.classList.toggle('user-menu-is-mobile');
     breadcrumb.classList.toggle('hide');
+    darkModeToggle.classList.toggle('hide');
+    menuToggle.classList.toggle('fix-toggle');
+    toFix.forEach(x => x.classList.toggle('fixate'));
 }
 
 

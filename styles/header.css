@@ -27,6 +27,7 @@ header {
 }
 
 .logo {
+    z-index: 1;
     margin-right: 1vw;
     height: 7vh;
     max-height: 200px;
@@ -114,6 +115,12 @@ header {
 
 .menu-toggle:hover {
     cursor: pointer;
+}
+
+/* ! non togliere */
+.fix-toggle {
+    padding-top: 7.5vh;
+    right: 8vw;
 }
 
 #mobile-menu.is-active .bar:nth-child(2) {

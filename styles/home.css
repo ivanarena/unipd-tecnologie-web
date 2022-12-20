@@ -53,6 +53,10 @@
     font-size: var(--fs-home-p-d);
 }
 
+.card-link:hover {
+    /* text-decoration: underline; */
+}
+
 @media screen and (max-width: 728px) {
     .gradient-card {
         height: 60vh;

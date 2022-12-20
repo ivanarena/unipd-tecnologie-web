@@ -20,7 +20,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     cursor: pointer;
 }
 
@@ -81,6 +81,11 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+.fixate {
+    position: fixed;
+}
+
 
 .btn,
 .btn:visited {
