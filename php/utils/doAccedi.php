@@ -49,7 +49,7 @@ if (isset($_SESSION['Username'])) {
             if (isset($_SESSION['Username'])) {
                 header("location: ../../index.php");
             }
-        }else{
+        } else {
             header("location: ../accedi.php?errGen=1");
         }
     }
