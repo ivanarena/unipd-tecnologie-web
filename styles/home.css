@@ -54,7 +54,7 @@
 }
 
 .card-link:hover {
-    /* text-decoration: underline; */
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 728px) {
