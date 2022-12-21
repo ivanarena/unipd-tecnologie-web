@@ -38,9 +38,9 @@ class PageBuilder {
     
     public function setNavButtons(){
         if(isset($_SESSION['Username'])){
-            $this->content = str_replace('<userButtonsPlaceholder />', file_get_contents(__DIR__."/pages/components/logout-btn.html"), $this->content);
+            $this->content = str_replace('<userMenuPlaceholder />', file_get_contents(__DIR__."/pages/components/userMenuOn.html"), $this->content);
         }else{
-            $this->content = str_replace('<userButtonsPlaceholder />', file_get_contents(__DIR__."/pages/components/login-btn.html"), $this->content);
+            $this->content = str_replace('<userMenuPlaceholder />', file_get_contents(__DIR__."/pages/components/userMenuOff.html"), $this->content);
         }
     }
 

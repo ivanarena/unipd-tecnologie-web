@@ -39,14 +39,14 @@ header {
     justify-content: center;
 }
 
-.login-btn,
-.login-btn:visited {
+.menu-link .primary-btn,
+.menu-link .primary-btn:visited {
     width: 120px;
     color: white;
 }
 
-.signup-btn,
-.signup-btn:visited {
+.menu-link .secondary-btn,
+.menu-link .secondary-btn:visited {
     width: 120px;
     height: var(--btn-h);
     border: none;
@@ -58,12 +58,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.logout-btn,
-.logout-btn:visited {
-    width: 140px;
-    color: white;
 }
 
 .menu-links-list {
@@ -95,7 +89,8 @@ header {
 }
 
 .breadcrumb {
-    color: var(--clr-a-active);
+    color: var(--clr-headings);
+    font-weight: bold;
 }
 
 .menu-toggle .bar {
