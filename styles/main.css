@@ -101,6 +101,15 @@ main {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: background 0.4s ease-out;
+    transition: background-position 0.4s ease-out;
+}
+
+.btn:hover {
+    background: rgb(209, 0, 255);
+    background: linear-gradient(128deg, rgba(209, 0, 255, 1) 18%, rgba(144, 56, 229, 1) 50%, rgba(186, 20, 246, 1) 74%, rgba(157, 45, 234, 1) 98%);
+    background-size: 500%;
+    background-position: 150px;
 }
 
 input {
