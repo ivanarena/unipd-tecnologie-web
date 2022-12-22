@@ -40,6 +40,10 @@
     margin-top: 2vh;
 }
 
+footer {
+    margin-top: 6vh;
+}
+
 @media only screen and (max-width: 928px) {
 
     .event-card,

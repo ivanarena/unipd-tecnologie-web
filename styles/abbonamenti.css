@@ -53,7 +53,8 @@
     margin-right: 0.1vw;
 }
 
-.subscribe-btn {
+.subscribe-btn,
+.subscribe-btn:visited {
     width: var(--btn-w);
     height: var(--btn-h);
     border: none;
@@ -63,6 +64,7 @@
     font-weight: bold;
     align-self: center;
 }
+
 
 @media only screen and (max-width: 768px) {
     .plans-container {
