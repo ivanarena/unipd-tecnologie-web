@@ -125,12 +125,12 @@ INSERT INTO ABBONAMENTO VALUES("1", "Basic", "NULL", "100", "1", "1", "1000");
 INSERT INTO ABBONAMENTO VALUES("2", "Pro", "NULL", "220", "1", "5", "3000");
 INSERT INTO ABBONAMENTO VALUES("3", "Superior", "NULL", "365", "1", "10", "7000");
 
-/**LOCALI manca link image**/
-INSERT INTO LOCALE VALUES("1", "Fluido Cafe", "Via Pirandello", "NULL", "50", "");
-INSERT INTO LOCALE VALUES("2", "Extra Extra", "Via Umberto I", "NULL", "700", "");
-INSERT INTO LOCALE VALUES("3", "Rush IN", "Via della Croce Verde", "NULL", "100", "");
-INSERT INTO LOCALE VALUES("4", "Bagni Venere", "Via Fratelli Cervi", "NULL", "150", "");
-INSERT INTO LOCALE VALUES("5", "Sala Conferenze Dante Alighieri", "Via Dante Alighieri", "NULL", "300", "");
+/**LOCALI **/
+INSERT INTO LOCALE VALUES("1", "Fluido Caf&egrave;", "Via Pirandello, 65", "Caffetteria con un'ampia selezione di libri da cui attingere per immergersi in una rilassante lettura mentre si assaporano caffè e dolci fatti in casa.", "50", "/images/locali/fluido_cafe.jpg");
+INSERT INTO LOCALE VALUES("2", "Extra Extra", 'Via Umberto <abbr title="primo">I</abbr>, 75', 'Discoteca più <span lang="en">In</span> del Metaverso, con <span lang="en">djset</span> ed eventi per tutti i gusti. Ambiente <span lang="en">chic</span> ed elegante, ma senza selezione all&#39;ingresso.', "700", "/images/locali/extra_extra.jpg");
+INSERT INTO LOCALE VALUES("3", 'Rush IN', "Via della Croce Verde, 2", 'Pista per <span lang="en">Kart</span> con circuito sia <span lang="en">indoor</span> che <span lang="en">outdoor</span>. I <span lang="en">kart</span> sono noleggiabili per il tempo desiderato e se siete amanti della guida sportiva il divertimento è assicurato.', "100", "/images/locali/rush_in.jpg");
+INSERT INTO LOCALE VALUES("4", "Bagni Venere", "Via Fratelli Cervi, 73", 'Piscine <span lang="en">indoor</span> e <span lang="en">outdoor</span>, termali e olimpioniche, con idromassaggio e senza, insomma... per tutti i gusti. è possibile accedere alla SPA per usufruire di saune, massaggi rilassanti e trattamenti. Il bar offre servizio <span lang="en">open</span> bar dalle 18 alle 23.', "150", "/images/locali/bagni_venere.jpg");
+INSERT INTO LOCALE VALUES("5", "Sala Conferenze Dante Alighieri", "Via Dante Alighieri, 1", 'Sala conferenze che ospita presentazioni di libri, comizi, interviste e addirittura numerosi <span lang="en">TedX</span>. Posto perfetto per ampliare la propria cultura e i propri orizzonti.', "300", "/images/locali/sala_conferenze_dante_a.jpg");
 
 /**EVENTI manca link image**/ 
 INSERT INTO EVENTO VALUES("1", "Salone del libro", "NULL", "", "1", "2023-01-15 17:00:00", "2023-01-15 19:00:00");

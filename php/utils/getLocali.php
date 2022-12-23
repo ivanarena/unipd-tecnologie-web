@@ -10,7 +10,7 @@ function getLocali(){
         $sql = "SELECT * FROM LOCALE;";
         foreach ($pdo->query($sql)->fetchAll() as $locale) {
             $result.= strval('<div class="h-card card-shadow">
-            <img class="place-img" src="/images/locali/fluidocafe.jpg" alt="immagine $" />
+            <img class="place-img" src="' . $locale["LinkImg"] . '" alt="immagine ' . $locale["NomeLocale"] . '" />
             <div class="place-info-container">
 
                 <div class="place-text">
