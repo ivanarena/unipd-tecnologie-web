@@ -112,6 +112,11 @@ main {
     background-position: 150px;
 }
 
+.secondary-btn {
+    background-color: var(--clr-btn-alt);
+    color: var(--clr-btn-text-alt);
+}
+
 input {
     margin-top: 1vh;
     margin-bottom: 2vh;
