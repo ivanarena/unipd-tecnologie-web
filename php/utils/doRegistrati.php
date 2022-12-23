@@ -1,6 +1,6 @@
 <?php
 require_once('../session.php');
-if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/utils/doRegistrati.php') {
+if (isset($_SESSION['Username'])) {
     header("location: ../../index.php");
 } else { 
     $registrazioneCompletata = false;
@@ -9,15 +9,37 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/utils/doRegistrati.php') {
         $passwordError = null;
         $nomeError = null;
         $cognomeError = null;
+        $dataCheck = false;
         $valid = true;
         if (array_key_exists("username", $_REQUEST) && !empty($_REQUEST["username"]) && strlen($_REQUEST["username"]) <= 50) {
             $username = $_POST['username'];
-        };
-        if (array_key_exists("username", $_REQUEST) && !empty($_REQUEST["username"]) && strlen($_REQUEST["username"]) <= 50) {
-            $data = $_POST['data'];
-            $email = $_POST['email'];
         } else {
             $usernameError = 'Inserire un username';
+            $valid = false;
+        };
+        if (array_key_exists("data", $_REQUEST) && !empty($_REQUEST["data"])) {
+            $data = $_POST['data'];
+            $tdata=date_parse($data);
+            if (checkdate($tdata['month'], $tdata['day'], $tdata['year'])) {
+                $date1=date_create($tdata['year'].'-'.$tdata['month'].'-'.$tdata['day']);
+                $date2=date_create(date("Y-m-d"));
+                $diff=date_diff($date1,$date2);
+                if(intval($diff->format("%y"))>=18){
+                    $dataCheck = true;
+                }
+            }
+        } else {
+            $dataError = 'Inserire una data';
+            $valid = false;
+        };
+        if (array_key_exists("email", $_REQUEST) && !empty($_REQUEST["email"])){
+            $email = $_POST['email'];
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                $emailError = 'Email non valida';
+                $valid = false;
+            }
+        }else{
+            $emailError = 'Inserire un email';
             $valid = false;
         };
         if (array_key_exists("password", $_REQUEST) && !empty($_REQUEST["password"]) && strlen($_REQUEST["password"]) <= 255) {
@@ -38,7 +60,7 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/utils/doRegistrati.php') {
             $cognomeError = 'Inserire un cognome';
             $valid = false;
         };
-        if ($valid) {            
+        if ($valid && $dataCheck) {            
             try {
                 include_once('database.php');
                 $pdo = database::connect();
@@ -46,7 +68,7 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/utils/doRegistrati.php') {
                 $stmt = $pdo->prepare("SELECT Count(*) FROM UTENTE WHERE Username='$username';");
                 $stmt->execute();
                 if ($stmt->fetchColumn() > 0) {
-                    $usernameError = "Username già preso, cercane un altro. Sei già registrato? <a class='btn btn-default bg-light' href='./login.php?username=$username'>Accedi</a>";
+                    header('location: ../registrati.php?errUser=1');
                 } else {
                     $sql = "INSERT INTO UTENTE(Username, Password, Email, Nome, Cognome, DataNascita) values(?,?,?,?,?,?)";
                     $q = $pdo->prepare($sql);
@@ -60,10 +82,15 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/utils/doRegistrati.php') {
                 echo 'Errore: ' . $e->getMessage();
             }
             if($registrazioneCompletata){
-                header("location: ../accedi.php?userRegistrato=1");
+                header('location: ../accedi.php?userRegistrato='.$username);
             }
         } else {
-            header("location: ../registrati.php?errGen=1");
-        }
+            if(!$dataCheck){
+                header("location: ../registrati.php?errAge=1");
+            }else{
+                header("location: ../registrati.php?errGen=1");
+            }
+        } 
     }
-} ?>
+}
+?>

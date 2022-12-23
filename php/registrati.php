@@ -15,6 +15,9 @@
         if(array_key_exists("errGen", $_REQUEST) && !empty($_REQUEST["errGen"])){
             $builder->setError("Campi non validi!!!",$_GET["errGen"]); // TODO: Stilizzare meglio
         }
+        if(array_key_exists("errAge", $_REQUEST) && !empty($_REQUEST["errAge"])){
+            $builder->setError("Campi non validi!!!",$_GET["errAge"]); // TODO: Stilizzare meglio
+        }
     }
 
     $page = $builder->buildPage();

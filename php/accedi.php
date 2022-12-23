@@ -20,8 +20,10 @@
             $builder->setError("Campi non validi!!!",$_GET["errGen"]); // TODO: Stilizzare meglio
         }
         if(array_key_exists("userRegistrato", $_REQUEST) && !empty($_REQUEST["userRegistrato"])){
-            $builder->setError("La registrazione &egrave; stata completata. Accedi",$_GET["userRegistrato"]);  // TODO: Stilizzare meglio
+            $builder->setContent("<usernamePlaceholder />",$_GET["userRegistrato"]);  // TODO: Stilizzare meglio
         }
+    }else{
+        $builder->setContent("<usernamePlaceholder />","");
     }
     
     $page = $builder->buildPage();
