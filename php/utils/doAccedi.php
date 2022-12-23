@@ -1,6 +1,6 @@
 <?php 
 require_once("../session.php");
-if (isset($_SESSION['Username'])) {
+if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/utils/doAccedi.php') {
     header("location: ../../index.php");
 } else { 
     if (!empty($_POST)) {

@@ -19,6 +19,9 @@
         if(array_key_exists("errGen", $_REQUEST) && !empty($_REQUEST["errGen"])){
             $builder->setError("Campi non validi!!!",$_GET["errGen"]); // TODO: Stilizzare meglio
         }
+        if(array_key_exists("userRegistrato", $_REQUEST) && !empty($_REQUEST["userRegistrato"])){
+            $builder->setError("La registrazione &egrave; stata completata. Accedi",$_GET["userRegistrato"]);  // TODO: Stilizzare meglio
+        }
     }
     
     $page = $builder->buildPage();

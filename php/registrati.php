@@ -10,7 +10,7 @@
 
     if(!empty($_GET)){
         if(array_key_exists("errUser", $_REQUEST) && !empty($_REQUEST["errUser"])){
-            $builder->setError("Il nome utente non &egrave;	corretto.",$_GET["errUser"]);  // TODO: Stilizzare meglio
+            $builder->setError("Il nome utente &egrave;	gi&agrave; esistente, provane uno nuovo.",$_GET["errUser"]);  // TODO: Stilizzare meglio
         }
         if(array_key_exists("errGen", $_REQUEST) && !empty($_REQUEST["errGen"])){
             $builder->setError("Campi non validi!!!",$_GET["errGen"]); // TODO: Stilizzare meglio

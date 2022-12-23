@@ -49,6 +49,10 @@ class PageBuilder {
         $this->setNavButtons();
     }
     
+    public function setContent($placeHolder,$newContent) {
+        $this->content = str_replace($placeHolder, $newContent, $this->content);
+    }
+
     public function setBreadcrumb() {
         $this->content = str_replace('<breadcrumbPlaceholder />', $this->title, $this->content);
         
