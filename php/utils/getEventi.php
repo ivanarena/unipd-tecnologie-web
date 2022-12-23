@@ -1,36 +1,30 @@
 <?php 
 require_once("database.php");
 
-function getEventi(){
+function getEventi() {
     $result = "";
-    try{
+    try {
         $pdo = database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        $sql = "SELECT * FROM ABBONAMENTO;";
-        foreach ($pdo->query($sql)->fetchAll() as $abbonamento) {
-            $result.= strval('<div class="plan-card card-shadow">
-                    <div class="plan-card-content">
-                        <h1 class="plan-name"><span lang="en">'.$abbonamento["TitoloAbb"].'</span></h1>
-                        <span class="plan-price"><span class="euro">&#8364;</span>'.$abbonamento["Prezzo"].'</span>
-                        <ul class="plan-features">
-                            <li class="plan-feature">
-                                <p class="feature-name">Durata <abbr title="abbonamento">abb</abbr>.</p>
-                                <p class="feature-desc">'.$abbonamento["DurataAbb"].'/mese</p>
-                            </li>
-                            <li class="plan-feature">
-                                <p class="feature-name">Eventi</p>
-                                <p class="feature-desc">'.$abbonamento["EventiSettimanali"].'/sett</p>
-                            </li>
-                            <li class="plan-feature">
-                                <p class="feature-name">Borsellino</p>
-                                <p class="feature-desc">'.$abbonamento["MetaCoin"].'/giorno</p>
-                            </li>
-                        </ul>
+        $sql = "SELECT * FROM EVENTO;";
+        foreach ($pdo->query($sql)->fetchAll() as $evento) {
+            $result.= strval('<div class="h-card card-shadow events-container">
+            <div class="event-card">
+                <div class="event-text">
+                    <div class="event-heading">
+                        <h1 class="event-title">' . $evento["NomeEvento"] . '</h1>
+                        <h2 class="event-place">???</h2>
+                        <h3 class="event-timestamp"><time datetime="2023-01-15">15/01/2023</time>, dalle 17 alle 19</h3>
                     </div>
-                    <a href="/php/acquista.php?id='.$abbonamento["IdAbbonamento"].'" class="buttonbtn primary-btn subscribe-btn flex-row-center flex-row-center"
-                        text>Acquista</a>
-                </div>');
+                    <p class="event-desc">' . $evento["Descrizione"] . '</p>
+                </div>
+                <div class="booking-container flex-col-center">
+                    <button class="btn primary-btn booking-btn">Prenota</button>
+                    <span class="spots-available">???</span>
+                </div>
+            </div>
+        </div>');
         }
         database::disconnect();
     } catch (PDOException $e) {
