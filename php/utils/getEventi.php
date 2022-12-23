@@ -1,7 +1,7 @@
 <?php 
 require_once("database.php");
 
-function getAbbonamenti(){
+function getEventi(){
     $result = "";
     try{
         $pdo = database::connect();

@@ -8,6 +8,8 @@
 
     $builder = new PageBuilder($fileName, $desc);
 
+    $builder->setContent("<eventiPlaceholder />",getEventi());
+
     $page = $builder->buildPage();
     echo $page;
 ?>

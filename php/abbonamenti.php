@@ -10,7 +10,6 @@
     $builder = new PageBuilder($fileName, $desc);
     
     $builder->setContent("<abbonamentiPlaceholder />",getAbbonamenti());
-    
 
     $page = $builder->buildPage();
     echo $page;
