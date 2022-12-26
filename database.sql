@@ -132,7 +132,8 @@ INSERT INTO LOCALE VALUES("3", 'Rush IN', "Via della Croce Verde, 2", 'Pista per
 INSERT INTO LOCALE VALUES("4", "Bagni Venere", "Via Fratelli Cervi, 73", 'Piscine <span lang="en">indoor</span> e <span lang="en">outdoor</span>, termali e olimpioniche, con idromassaggio e senza, insomma... per tutti i gusti. è possibile accedere alla SPA per usufruire di saune, massaggi rilassanti e trattamenti. Il bar offre servizio <span lang="en">open</span> bar dalle 18 alle 23.', "150", "/images/locali/bagni_venere.jpg");
 INSERT INTO LOCALE VALUES("5", "Sala Conferenze Dante Alighieri", "Via Dante Alighieri, 1", 'Sala conferenze che ospita presentazioni di libri, comizi, interviste e addirittura numerosi <span lang="en">TedX</span>. Posto perfetto per ampliare la propria cultura e i propri orizzonti.', "300", "/images/locali/sala_conferenze_dante_a.jpg");
 
-/**EVENTI manca link image**/ 
+/**EVENTI **/ 
+-- ! MANCA LINK IMG
 INSERT INTO EVENTO VALUES("1", "Salone del libro", "NULL", "", "1", "2023-01-15 17:00:00", "2023-01-15 19:00:00");
 INSERT INTO EVENTO VALUES("2", "Vida Loca", "NULL", "", "2", "2023-01-02 22:00:00", "2023-02-03 06:00:00");
 INSERT INTO EVENTO VALUES("3", "Spirit techno", "NULL", "", "2", "2022-12-26 22:00:00", "2022-12-27 06:00:00");

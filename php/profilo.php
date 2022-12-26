@@ -9,7 +9,10 @@
 
     $builder = new PageBuilder($fileName, $desc);
 
+    $builder->setContent("<usernamePlaceholder />", strval($_SESSION["Username"]));
     $builder->setContent("<anagraficaPlaceholder />", getAnagrafica());
+    $builder->setContent("<abbonamentoUtentePlaceholder />", getAbbonamentoUtente());
+    $builder->setContent("<cartePlaceholder />", getCarte());
 
     $page = $builder->buildPage();
     echo $page;
