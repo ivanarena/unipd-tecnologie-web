@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="it">
-    <headPlaceholder />
+<headPlaceholder />
 
-    <body>
-        <headerPlaceholder />
+<body>
+    <headerPlaceholder />
 
 
-        <main>
-            <span class="error hide"></span>
-            <form class="login-form card-shadow" action="/php/utils/doAccedi.php" method="POST">
-                <h1 class="page-heading">Accedi</h1>
-                <div class="inputs-container flex-col-center">
-                    <label for="username" class="input-label">Nome utente</label>
-                    <input id="username" class="form-input" type="text" name="username" value="<usernamePlaceholder />" minlength="1"
-                        placeholder="Inserisci il nome utente" required aria-required="true">
-                    <label for="password" class="input-label"><span lang="en">Password</span></label>
-                    <input id="password" class="form-input" type="password" name="password" value="" minlength="1"
-                        placeholder="Inserisci la password" required aria-required="true">
-                    <span class="mostra-password-container">
-                        <input type="checkbox" id="mostra-password" />
-                        <label for="mostra-password" class="show-password-label">Mostra <span
-                                lang="en">Password</span></label>
-                    </span>
-                </div>
-                <div class="btns-container flex-row-center">
-                    <button class="btn primary-btn" type="submit" name="submit" id="accedi" value="Accedi">Accedi</button>
-                    <a class="btn secondary-btn" href="/php/registrati.php">Registrati</a>
-                </div>
-            </form>
-        </main>
-        <footerPlaceholder />
-        <script src="/scripts/loginChecker.js"></script>
-    </body>
+    <main>
+        <span class="error hide"></span>
+        <form class="login-form card-shadow" action="/php/utils/doAccedi.php" method="POST">
+            <h1 class="page-heading">Accedi</h1>
+            <div class="inputs-container flex-col-center">
+                <label for="username" class="input-label">Nome utente</label>
+                <input id="username" class="form-input" type="text" name="username" value="<usernamePlaceholder />"
+                    minlength="1" placeholder="Inserisci il nome utente" required aria-required="true">
+                <label for="password" class="input-label"><span lang="en">Password</span></label>
+                <input id="password" class="form-input" type="password" name="password" value="" minlength="1"
+                    placeholder="Inserisci la password" required aria-required="true">
+                <span class="mostra-password-container">
+                    <input type="checkbox" id="mostra-password" />
+                    <label for="mostra-password" class="show-password-label">Mostra <span
+                            lang="en">Password</span></label>
+                </span>
+            </div>
+            <div class="btns-container">
+                <button class="btn primary-btn" type="submit" name="submit" id="accedi" value="Accedi">Accedi</button>
+                <a class="btn secondary-btn" href="/php/registrati.php">Registrati</a>
+            </div>
+        </form>
+    </main>
+    <footerPlaceholder />
+    <script src="/scripts/loginChecker.js"></script>
+</body>
+
 </html>

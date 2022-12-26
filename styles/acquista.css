@@ -8,6 +8,7 @@
     border-radius: var(--card-b-radius);
     margin-top: 4vh;
     margin-bottom: 8vh;
+    padding: 20px;
 }
 
 .page-heading {
@@ -24,6 +25,11 @@
     margin-left: 1vw;
 }
 
+.form-input {
+    width: 20vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
 
 .btns-container {
     margin-top: 6vh;
