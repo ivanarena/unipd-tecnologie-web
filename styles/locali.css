@@ -48,3 +48,20 @@
 footer {
     margin-top: 6vh;
 }
+
+@media screen and (max-width: 728px) {
+    .h-card {
+        flex-direction: column;
+    }
+
+    .place-img {
+        align-self: center;
+        width: 90%;
+        margin-bottom: 4vh;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+    }
+}
