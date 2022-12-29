@@ -10,8 +10,8 @@ if (isset($_SESSION["Username"])){
         $dataInizio = date("Y-m-d");
         $dataScadenza = date('Y-m-d', strtotime($dataInizio. ' + 90 days'));
         $sql = 'INSERT INTO ABBONAMENTO_UTENTE VALUES(NULL, "'. $_GET["IdAbb"] .'", "'. $_SESSION["Username"] .'", "'. $numeroCarta .'", "'. $dataInizio .'", "'. $dataScadenza .'");';
-        $DBUsername = $pdo->prepare($sql);
-        $DBUsername->execute(array($username));
+        $query = $pdo->prepare($sql);
+        $query->execute();
         database::disconnect();
     } catch (PDOException $e) {
         echo 'Errore PDO e connessione DB: <br />';

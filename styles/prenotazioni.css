@@ -1,11 +1,15 @@
+main>a {
+    margin-bottom: 6vh;
+}
+
 .data-container {
     display: flex;
     flex-direction: column;
     border-radius: var(--card-b-radius);
     width: 80vw;
     padding: 40px;
-    margin-top: 8vh;
-    margin-bottom: 6vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 .data-row {
@@ -17,4 +21,6 @@
     font-weight: bold;
 }
 
-.data {}
+footer {
+    margin-top: 6vh;
+}
