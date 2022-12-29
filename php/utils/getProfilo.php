@@ -14,7 +14,8 @@ try {
         <div class="data-row"><label for="" class="data-label">Nome utente</label><span class="data">' . $utente["Username"] . '</span>
         </div>
         <span class="h-line"></span>
-        <div class="data-row"><label for="" class="data-label">Nome</label><span class="data">' . $utente["Nome"] . '</span></div>
+        <div class="data-row"><label for="" class="data-label">Nome</label><span class="data">' . $utente["Nome"] . '</span>
+        </div>
         <span class="h-line"></span>
         <div class="data-row"><label for="" class="data-label">Cognome</label><span class="data">' . $utente["Cognome"] . '</span>
         </div>
