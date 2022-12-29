@@ -24,7 +24,7 @@ function getEventi() {
                     <p class="event-desc">' . $evento["Descrizione"] . '</p>
                 </div>
                 <div class="booking-container flex-col-center">
-                    <a role="button" class="btn primary-btn booking-btn">Prenota</a>
+                    <a href="/php/utils/doPrenota.php" role="button" class="btn primary-btn booking-btn">Prenota</a>
                     <span class="spots-available">???</span>
                 </div>
             </div>
