@@ -40,7 +40,7 @@ CREATE TABLE CARTA(
     );
 
 CREATE TABLE ABBONAMENTO( /**togliere durata?*/
-    IdAbbonamento INT NOT NULL AUTO_INCREMENT,
+    IdAbbonamento CHAR(1) NOT NULL AUTO_INCREMENT,
     TitoloAbb VARCHAR(100) NOT NULL, 
     Descrizione VARCHAR(1024), 
     Prezzo DECIMAL(10,2) NOT NULL, 
@@ -83,7 +83,7 @@ CREATE TABLE PORTAFOGLIO(
 
 CREATE TABLE ABBONAMENTO_UTENTE(
     IdAbbUtente INT NOT NULL AUTO_INCREMENT,
-    IdAbbonamento INT NOT NULL,  
+    IdAbbonamento CHAR(1) NOT NULL,  
     Username VARCHAR(100) NOT NULL, 
     NumeroCarta VARCHAR(19) NOT NULL, 
     DataPagamento DATE NOT NULL, 

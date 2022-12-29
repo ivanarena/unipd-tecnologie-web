@@ -28,7 +28,7 @@ function getAbbonamenti(){
                             </li>
                         </ul>
                     </div>
-                    <a href="/php/acquista.php?id='.$abbonamento["IdAbbonamento"].'" class="buttonbtn primary-btn subscribe-btn flex-row-center flex-row-center"
+                    <a href="/php/acquista.php?IdAbb='.$abbonamento["IdAbbonamento"].'" class="buttonbtn primary-btn subscribe-btn flex-row-center flex-row-center"
                         text>Acquista</a>
                 </div>');
         }

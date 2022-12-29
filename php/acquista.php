@@ -7,6 +7,8 @@
     $desc = 'blabalb';
 
     $builder = new PageBuilder($fileName, $desc);
+    
+    $builder->setContent("<idAbbPlaceholder />", $_GET["IdAbb"]);
 
     $page = $builder->buildPage();
     echo $page;

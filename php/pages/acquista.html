@@ -6,7 +6,8 @@
     <headerPlaceholder />
 
     <main>
-        <form class="payment-form card-shadow" action="/php/utils/doAcquista.php" method="POST">
+        <form class="payment-form card-shadow" action="/php/utils/doAcquista.php?IdAbb=<idAbbPlaceholder />"
+            method="POST">
             <h1 class="page-heading">Stai per acquistare l'abbonamento X</h1>
             <div class="inputs-container flex-col-center">
                 <label for="numero-carta" class="input-label">Numero di carta di credito/debito</label>
