@@ -1,5 +1,7 @@
 @media print {
-      header, footer, nav {
-      display: none;
-    }
+
+  header,
+  footer {
+    display: none !important;
   }
+}

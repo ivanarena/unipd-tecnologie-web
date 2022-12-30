@@ -16,7 +16,7 @@ function getAbbonamenti(){
                         <ul class="plan-features">
                             <li class="plan-feature">
                                 <p class="feature-name">Durata <abbr title="abbonamento">abb</abbr>.</p>
-                                <p class="feature-desc">'.$abbonamento["DurataAbb"].'/mese</p>
+                                <p class="feature-desc">90 giorni</p>
                             </li>
                             <li class="plan-feature">
                                 <p class="feature-name">Eventi</p>
