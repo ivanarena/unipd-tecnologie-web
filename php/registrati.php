@@ -4,7 +4,7 @@
 
     // Page information 
     $fileName = 'registrati';
-    $desc = 'Crea il tuo account e inizia la tua esperienza a San Junipero';
+    $desc = 'Crea il tuo account e inizia la tua esperienza a San Junipero.';
 
     $builder = new PageBuilder($fileName, $desc);
 
