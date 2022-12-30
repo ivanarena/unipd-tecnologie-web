@@ -5,7 +5,7 @@
 
     // Page information 
     $fileName = 'abbonamenti';
-    $desc = 'blabalb';
+    $desc = 'Scegli il tipo di abbonamento che preferisci al nostro metaverso.';
 
     $builder = new PageBuilder($fileName, $desc);
     

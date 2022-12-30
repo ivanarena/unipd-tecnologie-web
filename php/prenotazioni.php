@@ -5,7 +5,7 @@
 
     // Page information 
     $fileName = 'prenotazioni';
-    $desc = 'blabalb';
+    $desc = 'Effettua la tua prenotazione agli eventi che desideri.';
 
     $builder = new PageBuilder($fileName, $desc);
 

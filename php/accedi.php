@@ -4,7 +4,7 @@
     
     // Page information 
     $fileName = 'accedi';
-    $desc = 'blabalb';
+    $desc = 'Accedi al sito dal tuo account e scopri tutte le novità disponibili sul tuo profilo.';
 
     $builder = new PageBuilder($fileName, $desc);
 

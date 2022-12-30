@@ -5,7 +5,7 @@
 
     // Page information 
     $fileName = 'locali';
-    $desc = 'blabalb';
+    $desc = 'Scopri i locali che ospitano i nostri eventi e che puoi frequentare a San Junipero.';
 
     $builder = new PageBuilder($fileName, $desc);
 
