@@ -6,7 +6,7 @@ function noAbbonamenti() {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $query = 'SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE Username="'. $_SESSION["Username"] .'";';
     $stmt = $pdo->prepare($query);
-    $stmt->execute(array($username));
+    $stmt->execute(array($IdAbb));
     $ret = $stmt->fetchColumn() <= 0;
     database::disconnect();
     return $ret;
@@ -19,7 +19,6 @@ function getAbbonamenti(){
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         $sql = "SELECT * FROM ABBONAMENTO;";
-        // $sqlCheck = 'SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE Username="'. $_SESSION["Username"] .'";';
         
         foreach ($pdo->query($sql)->fetchAll() as $abbonamento) {
             if (isset($_SESSION['Username']) && noAbbonamenti()) {
