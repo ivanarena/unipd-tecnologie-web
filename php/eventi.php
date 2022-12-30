@@ -5,7 +5,7 @@
 
     // Page information 
     $fileName = 'eventi';
-    $desc = 'blabalb';
+    $desc = 'Scopri tutti gli eventi disponibili a cui puoi partecipare nel nostro metaverso.';
 
     $builder = new PageBuilder($fileName, $desc);
 

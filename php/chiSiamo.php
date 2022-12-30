@@ -4,7 +4,7 @@
 
     // Page information 
     $fileName = 'chi-siamo';
-    $desc = 'blabalb';
+    $desc = 'Scopri qualcosa in più sugli sviluppatori di San Junipero.';
 
     $builder = new PageBuilder($fileName, $desc);
 

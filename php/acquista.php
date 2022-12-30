@@ -4,7 +4,7 @@
     
     // Page information 
     $fileName = 'acquista';
-    $desc = 'blabalb';
+    $desc = 'Effettua l &#39 acquisto del tuo abbonamento al metaverso.';
 
     $builder = new PageBuilder($fileName, $desc);
     

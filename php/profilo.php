@@ -5,7 +5,7 @@
 
     // Page information 
     $fileName = 'profilo';
-    $desc = 'blabalb';
+    $desc = 'Visualizza il tuo profilo nel metaverso.';
 
     $builder = new PageBuilder($fileName, $desc);
 

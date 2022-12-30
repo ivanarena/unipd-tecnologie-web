@@ -4,7 +4,7 @@
 
     // Page information 
     $fileName = 'contatti';
-    $desc = 'blabalb';
+    $desc = 'Contattaci per qualsiasi tuo dubbio o curiosità sul nostro servizio.';
 
     $builder = new PageBuilder($fileName, $desc);
 
