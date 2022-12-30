@@ -55,13 +55,6 @@
 
 .subscribe-btn,
 .subscribe-btn:visited {
-    width: var(--btn-w);
-    height: var(--btn-h);
-    border: none;
-    border-radius: var(--btn-b-radius);
-    background-color: var(--clr-btn);
-    color: var(--clr-btn-text);
-    font-weight: bold;
     align-self: center;
 }
 
@@ -74,5 +67,6 @@
     .plan-card {
         margin-bottom: 2vh;
         width: 90vw;
+        height: 60vh;
     }
 }
