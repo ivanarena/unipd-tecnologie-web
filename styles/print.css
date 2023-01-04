@@ -1,3 +1,9 @@
+*{
+  text-align: left;
+}
+
+
+
 header,
 footer,
 nav {
@@ -40,18 +46,19 @@ a:visited {
 
 .h-card {
   border-radius: 0%;
-}
-
-div {
-  text-align: left !important;
+  text-align: left;
 }
 
 .card-shadow {
-  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.13);
-  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.13);
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 0px 0px 0px;
+  -moz-box-shadow: 0px 0px 0px 0px;
+  box-shadow: 0px 0px 0px 0px;
 }
 
 button{
   display: none;
+}
+
+.h-card-text {
+  text-align: left;
 }
