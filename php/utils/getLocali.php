@@ -1,6 +1,25 @@
 <?php 
 require_once("database.php");
 
+function getLocaliAsOptions() {
+    $result = "";
+    try{
+        $pdo = database::connect();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        $sql = "SELECT * FROM LOCALE;";
+        foreach ($pdo->query($sql)->fetchAll() as $locale) {
+            $result.= strval('<option value="'. $locale["IdLocale"] . '">'. $locale["NomeLocale"] .'</option>');
+        }
+    database::disconnect();
+    } catch (PDOException $e) {
+    echo 'Errore PDO e connessione DB: <br />';
+    echo 'SQLQuery: ', $sql;
+    echo 'Errore: ' . $e->getMessage();
+    }
+    return $result;
+}
+
 function getLocali(){
     $result = "";
     try{

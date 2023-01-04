@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<headPlaceholder />
+
+<body>
+    <headerPlaceholder />
+
+    <main>
+        <form class="event-form card-shadow" action="/php/utils/doCreaEvento.php/>" method="POST">
+            <h1 class="page-heading">Stai per acquistare l'abbonamento X</h1>
+            <div class="inputs-container flex-col-center">
+                <label for="nome-evento" class="input-label">Nome evento</label>
+                <input id="nome-evento" class="form-input" type="text" name="nome-evento" value=""
+                    placeholder="Inserisci il nome dell'evento" required aria-required="true">
+                <label for="descrizione" class="input-label">Descrizione evento</label>
+                <input id="descrizione" class="form-input" type="text" name="descrizione" value=""
+                    placeholder="Inserisci il nome dell'evento" required aria-required="true">
+                <label for="locale">Luogo</label>
+                <select name="locale" id="locale">
+                    <getLocali />
+                </select>
+                <label for="data-inizio-evento" class="input-label">Data inizio evento</label>
+                <input id="data-inizio-evento" class="form-input" type="date" name="data-inizio-evento" value=""
+                    required aria-required="true">
+                <label for="data-fine-evento" class="input-label">Data fine evento</label>
+                <input id="data-fine-evento" class="form-input" type="date" name="data-fine-evento" value="" required
+                    aria-required="true">
+            </div>
+            <div class="btns-container flex-row-center">
+                <button class="btn primary-btn confirm-btn" name="submit" id="crea" value="Crea">Crea</button>
+                <a class="btn secondary-btn undo-btn" href="/php/eventi.php">Annulla</a>
+            </div>
+        </form>
+    </main>
+    <footerPlaceholder />
+</body>
+
+</html>

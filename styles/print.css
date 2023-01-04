@@ -1,3 +1,9 @@
+*{
+  text-align: left;
+}
+
+
+
 header,
 footer,
 nav {
@@ -22,12 +28,11 @@ h1 {
 
 h2 {
   font-size: 14pt;
-  margin-top: 25px;
+  
 }
 
-.place-img {
-  width: 30%;
-  margin-right: 20px
+img {
+  max-width: 500px;
 }
 
 .btn.primary-btn.place-events-btn {
@@ -41,10 +46,19 @@ a:visited {
 
 .h-card {
   border-radius: 0%;
+  text-align: left;
 }
 
 .card-shadow {
-  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.13);
-  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.13);
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 0px 0px 0px;
+  -moz-box-shadow: 0px 0px 0px 0px;
+  box-shadow: 0px 0px 0px 0px;
+}
+
+button{
+  display: none;
+}
+
+.h-card-text {
+  text-align: left;
 }
