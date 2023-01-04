@@ -23,7 +23,10 @@ function admin() {
 
 
 function getEventi() {
-    $result = "";
+    $result = '';
+    if (isset($_SESSION['Username']) && admin() == 1) {
+        $result = '<a href="/php/utils/creaEvento.php" role="button" class="btn primary-btn main-btn">Crea evento</a>';
+    } 
     try {
         $pdo = database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -34,7 +37,7 @@ function getEventi() {
             $sql = 'SELECT L.IdLocale, E.NomeEvento, L.NomeLocale, E.Descrizione AS DescrizioneEvento, E.IdEvento FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale AND E.IdLocale="'. $_GET["IdLocale"] .'";';
         }
         foreach ($pdo->query($sql)->fetchAll() as $evento) {
-            if (isset($_SESSION['Username']) && admin() == 1) { // NON FUNZIONA PD
+            if (isset($_SESSION['Username']) && admin() == 1) {
                 $result .= strval('<div class="h-card card-shadow events-container">
                 <div class="event-card">
                     <div class="event-text">

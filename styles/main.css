@@ -121,7 +121,8 @@ main {
     color: var(--clr-btn-text-alt);
 }
 
-input {
+input,
+select {
     margin-top: 1vh;
     margin-bottom: 2vh;
     border: none;

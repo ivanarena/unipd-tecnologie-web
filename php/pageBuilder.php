@@ -16,8 +16,8 @@ class PageBuilder {
     public function __construct(string $_fileName, string $_desc) {
         $this->htmlPath = '/pages/' . $_fileName . '.html';
         $this->cssPath = '/styles/' . $_fileName . '.css';
-        if ($_fileName == 'chi-siamo') {
-            $_fileName = 'chi siamo';
+        if (strpos($_fileName, '-') !== false) {
+            $_fileName = str_replace('-', ' ', $_fileName);
         }
         $this->title = ucfirst($_fileName);
         $this->desc = $_desc;
