@@ -1,41 +1,45 @@
-
-header, footer, nav {
+header,
+footer,
+nav {
   display: none !important;
-} 
+}
+
+p,
+h1,
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.5em;
+}
 
 
 p {
   font-size: 12pt;
-  font-family: 'Times New Roman', Times, serif;
-  line-height: 1.5em;
 }
 
 h1 {
   font-size: 24pt;
-  font-family: 'Times New Roman', Times, serif;
-  line-height: 1.5em;
 }
-  
+
 h2 {
   font-size: 14pt;
   margin-top: 25px;
-  font-family: 'Times New Roman', Times, serif;
 }
 
-.place-img{
+.place-img {
   width: 30%;
   margin-right: 20px
 }
 
-.btn.primary-btn.place-events-btn{
+.btn.primary-btn.place-events-btn {
   margin-top: 30px
 }
 
-a {
+a,
+a:visited {
   display: none;
 }
 
-.hcard {
+.h-card {
   border-radius: 0%;
 }
 
