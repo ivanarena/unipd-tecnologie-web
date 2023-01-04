@@ -20,6 +20,6 @@ if (isset($_SESSION["Username"])){
         echo 'Errore: ' . $e->getMessage();
     }
 }
-header('location: ../../index.php');
+header('location: doneAcquista.php');
 
 ?>

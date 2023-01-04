@@ -13,8 +13,7 @@ require_once("../session.php");
         echo 'SQLQuery: ', $sql;
         echo 'Errore: ' . $e->getMessage();
     }
-header('location: <div class="">
-<div class=""></div>/eventi.php');
+header('location: ../eventi.php');
 
 ?>
 
