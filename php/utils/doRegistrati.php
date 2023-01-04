@@ -82,7 +82,8 @@ if (isset($_SESSION['Username'])) {
                 echo 'Errore: ' . $e->getMessage();
             }
             if($registrazioneCompletata){
-                header('location: ../accedi.php?userRegistrato='.$username);
+                //header('location: ../accedi.php?userRegistrato='.$username);
+                header('location: ../registrati.php');
             }
         } else {
             if(!$dataCheck){
