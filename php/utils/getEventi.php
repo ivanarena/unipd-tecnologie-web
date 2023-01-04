@@ -20,9 +20,9 @@ function getEventi() {
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         if (empty($_GET)) {
-            $sql = "SELECT * FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale;";
+            $sql = "SELECT L.IdLocale, E.NomeEvento, L.NomeLocale, E.Descrizione AS DescrizioneEvento, E.IdEvento FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale;";
         } else {
-            $sql = 'SELECT * FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale AND E.IdLocale="'. $_GET["IdLocale"] .'";';
+            $sql = 'SELECT L.IdLocale, E.NomeEvento, L.NomeLocale, E.Descrizione AS DescrizioneEvento, E.IdEvento FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale AND E.IdLocale="'. $_GET["IdLocale"] .'";';
         }
         foreach ($pdo->query($sql)->fetchAll() as $evento) {
             if (isset($_SESSION['Username']) && abbonato()) {
@@ -34,7 +34,7 @@ function getEventi() {
                             <h2 class="event-place">'. $evento["NomeLocale"] .'</h2>
                             <h3 class="event-timestamp"><time datetime="2023-01-15">15/01/2023</time>, dalle 17 alle 19</h3>
                         </div>
-                        <p class="event-desc">' . $evento["Descrizione"] . '</p>
+                        <p class="event-desc">' . $evento["DescrizioneEvento"] . '</p>
                     </div>
                     <div class="booking-container flex-col-center">
                         <a href="/php/utils/doPrenota.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn primary-btn booking-btn">Prenota</a>
@@ -51,7 +51,7 @@ function getEventi() {
                             <h2 class="event-place">'. $evento["NomeLocale"] .'</h2>
                             <h3 class="event-timestamp"><time datetime="2023-01-15">15/01/2023</time>, dalle 17 alle 19</h3>
                         </div>
-                        <p class="event-desc">' . $evento["Descrizione"] . '</p>
+                        <p class="event-desc">' . $evento["DescrizioneEvento"] . '</p>
                     </div>
                     <div class="booking-container flex-col-center">
                         <a href="javascript:void(0)" role="button" class="btn secondary-btn booking-btn">Prenota</a>
