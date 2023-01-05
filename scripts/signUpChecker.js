@@ -45,8 +45,8 @@ function checkSurname() {
 
 function checkUsername() {
     let usernamev = userName.value;
-    if (usernamev == "" || usernamev.length > 20) {
-        alert("Inserisci il Nome Utente");
+    if (usernamev == "") {
+        document.getElementById("usernameErr").innerHTML = "Inserisci un nome utente";
         return false;
     }
     else if (usernamev.length > 20) {
@@ -54,6 +54,7 @@ function checkUsername() {
         return false;
     }
     else {
+        document.getElementById("usernameErr").innerHTML = "";
         return true;
         console.log('username ok');
     }
