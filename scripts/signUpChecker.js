@@ -3,19 +3,13 @@ const showPasswordButton = document.getElementById('mostra-password');
 const passwordInput = document.getElementById("password");
 const passwordRepeatInput = document.getElementById("password-repeat");
 
-
-
-let userName = document.getElementById('username').value;
+let userName = document.getElementById('username');
 let password = document.getElementById("password").value;
 let sname = document.getElementById("nome").value;
 let surname = document.getElementById("cognome").value;
 let dateOfBirth = document.getElementById("data").value;
 let password2 = document.getElementById("password-repeat").value;
 let email = document.getElementById("email").value;
-
-
-
-
 
 function checkName() {
     sname = document.getElementById("nome").value;
@@ -50,16 +44,17 @@ function checkSurname() {
 }
 
 function checkUsername() {
-    userName = document.getElementById('username').value;
-    if (userName == "" || userName.length > 20) {
-        alert("Inserisci il Nome Utente");
+    let usernamev = userName.value;
+    if (usernamev == "") {
+        document.getElementById("usernameErr").innerHTML = "Inserisci un nome utente";
         return false;
     }
-    else if (userName.length > 20) {
+    else if (usernamev.length > 20) {
         alert("Il nome utente deve avere massimo 20 caratteri");
         return false;
     }
     else {
+        document.getElementById("usernameErr").innerHTML = "";
         return true;
         console.log('username ok');
     }
@@ -148,4 +143,4 @@ function showPassword() {
 }
 
 showPasswordButton.addEventListener('change', showPassword);
-
+userName.addEventListener('focusout', checkUsername);
