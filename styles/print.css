@@ -1,5 +1,5 @@
 *{
-  text-align: left;
+  all:none  !important;
 }
 
 
@@ -62,3 +62,4 @@ button{
 .h-card-text {
   text-align: left;
 }
+
