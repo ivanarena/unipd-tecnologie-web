@@ -33,6 +33,11 @@
     margin-bottom: 2vh;
 }
 
+.unsubscribe-btn {
+    align-self: center;
+    margin-top: 4vh;
+}
+
 .data {
     font-weight: bold;
 }

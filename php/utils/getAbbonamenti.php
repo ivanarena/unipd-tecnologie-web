@@ -64,7 +64,7 @@ function getAbbonamenti(){
                             </li>
                         </ul>
                         </div>
-                    <a href="javascript:void(0)" class="btn secondary-btn subscribe-btn flex-row-center flex-row-center"
+                    <a href="javascript:void(0)" class="btn secondary-btn unsubscribe-btn flex-row-center flex-row-center"
                         text>Acquista</a>
                 </div>');
 

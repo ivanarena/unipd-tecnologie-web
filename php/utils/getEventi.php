@@ -1,6 +1,26 @@
 <?php 
 require_once("database.php");
 
+function nonPrenotato($id) {
+    $pdo = database::connect();
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = 'SELECT Count(*) FROM EVENTO_UTENTE WHERE Username="'. $_SESSION["Username"] .'" AND IdEvento = '. $id .';';
+    $stmt = $pdo->prepare($query);
+    $stmt->execute(array($prenotazioni));
+    $ret = $stmt->fetchColumn() <= 0;
+    database::disconnect();
+    return $ret;
+}
+
+function postiDisponibili() {
+    $pdo = database::connect();
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = 'SELECT Privilegio FROM UTENTE WHERE Username="'. $_SESSION["Username"] .'";';
+    $privilegio = $pdo->query($query)->fetchColumn();
+    database::disconnect();
+    return $privilegio;
+}
+
 function abbonato() {
     $pdo = database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -55,7 +75,7 @@ function getEventi() {
                     </div>
                 </div>
                 </div>');
-            } else if (isset($_SESSION['Username']) && abbonato()) {
+            } else if (isset($_SESSION['Username']) && abbonato() && nonPrenotato($evento["IdEvento"])) {
                 $result .= strval('<div class="h-card card-shadow events-container">
                 <div class="event-card">
                     <div class="event-text">

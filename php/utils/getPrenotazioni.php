@@ -1,6 +1,7 @@
 <?php 
 require_once("database.php");
 
+
 function getPrenotazioni() {
 $result = "";
 try {
@@ -11,23 +12,23 @@ try {
     foreach ($pdo->query($sql)->fetchAll() as $prenotazione) {
         $result .= strval(
             '<div class="data-container card-shadow">
-            <div class="data-row">
-            <label class="data-label">Evento</label>
-            <label class="data-label">Luogo</label>
-            <label class="data-label">Data</label>
-            <label class="data-label">Ora</label>
-            <label class="data-label">Durata</label>
-            </div>
-            <div class="data-row">
-            <span class="data">'. $prenotazione["NomeEvento"] .'</span>
-            <span class="data">'. $prenotazione["NomeLocale"] .'</span>
-            <span class="data">'. $prenotazione["DataOraInizio"] .'</span>
-            <span class="data">'. $prenotazione["DataOraFine"] .'</span>
-            <span class="data">'. strval($prenotazione["DataOraFine"]-$prenotazione["DataOraInizio"]) .'</span>
-            </div>
-            <span class="h-line"></span>
-            </div>'  
-        );
+        <div class="data-row"><label for="" class="data-label">Evento</label><span class="data">' . $prenotazione["NomeEvento"] . '</span>
+        </div>
+        <span class="h-line"></span>
+        <div class="data-row"><label for="" class="data-label">Luogo</label><span class="data">' . $prenotazione["NomeLocale"] . '</span>
+        </div>
+        <span class="h-line"></span>
+        <div class="data-row"><label for="" class="data-label">Data</label><span class="data">' . $prenotazione["DataOraInizio"] . '</span>
+        </div>
+        <span class="h-line"></span>
+        <div class="data-row"><label for="" class="data-label">Ora</label><span class="data">' . $prenotazione["DataOraFine"] . '</span>
+        </div>
+        <span class="h-line"></span>
+        <div class="data-row"><label for="" class="data-label">Durata</label><span class="data">' . strval($prenotazione["DataOraFine"]-$prenotazione["DataOraInizio"]) . '</span></div>
+        <a href="/php/utils/doEliminaEventoUtente.php?IdEvento='. $prenotazione["IdEvento"].'" class="btn primary-btn unsubscribe-btn flex-row-center flex-row-center"
+            text>Disdici</a>
+        </div>');
+        
     }
     database::disconnect();
     } catch (PDOException $e) {
