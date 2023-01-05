@@ -13,11 +13,11 @@ let email = document.getElementById("email");
 
 function checkName() {
     let snamev = sname.value;
-    if (sname == "") {
+    if (snamev == "") {
         document.getElementById("nameErr").innerHTML = "Inserisci il tuo nome";
         return false;
     }
-    else if (sname.length > 50) {
+    else if (snamev.length > 50) {
         document.getElementById("nameErr").innerHTML = "Inserisci un nome valido";
         return false;
     }
@@ -29,11 +29,11 @@ function checkName() {
 
 function checkSurname() {
     let surnamev = surname.value;
-    if (surname == "") {
+    if (surnamev == "") {
         document.getElementById("surnameErr").innerHTML = "Inserisci il tuo cognome";
         return false;
     }
-    else if (surname.length > 50) {
+    else if (surnamev.length > 50) {
         document.getElementById("surnameErr").innerHTML = "Inserisci un cognome valido";
         return false;
     }
@@ -61,7 +61,7 @@ function checkUsername() {
 
 function checkEmail() {
     let emailv = email.value;
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailv)) {
         document.getElementById("emailErr").innerHTML = ""
         return true;
     }
@@ -74,7 +74,7 @@ function checkEmail() {
 function checkDataNascita() {
     let dateOfBirthv = dateOfBirth.value;
     var today = new Date();
-    var birthDate = new Date(dateOfBirth);
+    var birthDate = new Date(dateOfBirthv);
     var age = today.getFullYear() - birthDate.getFullYear();
     var m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
@@ -92,15 +92,15 @@ function checkDataNascita() {
 
 function checkPassword() {
     let passwordv = password.value;
-    if (password == "") {
+    if (passwordv == "") {
         document.getElementById("passErr").innerHTML = "Inserisci la password";
         return false;
     }
-    else if (password.length < 8) {
+    else if (passwordv.length < 8) {
         document.getElementById("passErr").innerHTML = "La password deve essere lunga almeno 8 caratteri";
         return false;
     }
-    else if (password.length > 50) {
+    else if (passwordv.length > 50) {
         document.getElementById("passErr").innerHTML = "La password non può essere più lunga di 15 caratteri";
         return false;
     }
@@ -111,8 +111,8 @@ function checkPassword() {
 }
 
 function checkEqualPassword() {
-    let password2v = passoword2.value;
-    if (password == password2) {
+    let password2v = password2.value;
+    if (password2v == password2) {
         document.getElementById("pass2Err").innerHTML = "";
         return true;
     }

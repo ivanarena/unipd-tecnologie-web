@@ -36,7 +36,6 @@ try {
     return $result;
 }
 
-
 function getAbbonamentoUtente() {
     $result = "";
     try {
