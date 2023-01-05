@@ -76,9 +76,9 @@ function getEventi() {
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         if (empty($_GET)) {
-            $sql = "SELECT L.IdLocale, E.NomeEvento, L.NomeLocale, E.Descrizione AS DescrizioneEvento, E.IdEvento FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale;";
+            $sql = "SELECT L.IdLocale, E.NomeEvento, L.NomeLocale, E.Descrizione AS DescrizioneEvento, E.IdEvento, DATE_FORMAT(DataOraInizio,'%d/%m/%Y, dalle %H:%i ') as stampaInizio, DATE_FORMAT(DataOraFine,'alle %H:%i') as stampaFine FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale;";
         } else {
-            $sql = 'SELECT L.IdLocale, E.NomeEvento, L.NomeLocale, E.Descrizione AS DescrizioneEvento, E.IdEvento FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale AND E.IdLocale="'. $_GET["IdLocale"] .'";';
+            $sql = "SELECT L.IdLocale, E.NomeEvento, L.NomeLocale, E.Descrizione AS DescrizioneEvento, E.IdEvento, DATE_FORMAT(DataOraInizio,'%d %m %Y, dalle %H:%i ') as stampaInizio, DATE_FORMAT(DataOraFine,'alle %H:%i') as stampaFine FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale;";
         }
         $res_sql = $pdo->query($sql);
         foreach ($res_sql->fetchAll() as $evento) {
@@ -90,7 +90,7 @@ function getEventi() {
                         <div class="event-heading">
                             <h1 class="event-title">' . $evento["NomeEvento"] . '</h1>
                             <h2 class="event-place">'. $evento["NomeLocale"] .'</h2>
-                            <h3 class="event-timestamp"><time datetime="2023-01-15">15/01/2023</time>, dalle 17 alle 19</h3>
+                            <h3 class="event-timestamp">'.$evento["stampaInizio"].$evento["stampaFine"].'</h3>
                         </div>
                         <p class="event-desc">' . $evento["DescrizioneEvento"] . '</p>
                     </div>
@@ -108,7 +108,7 @@ function getEventi() {
                         <div class="event-heading">
                             <h1 class="event-title">' . $evento["NomeEvento"] . '</h1>
                             <h2 class="event-place">'. $evento["NomeLocale"] .'</h2>
-                            <h3 class="event-timestamp"><time datetime="2023-01-15">15/01/2023</time>, dalle 17 alle 19</h3>
+                            <h3 class="event-timestamp">'.$evento["stampaInizio"].$evento["stampaFine"].'</h3>
                         </div>
                         <p class="event-desc">' . $evento["DescrizioneEvento"] . '</p>
                     </div>
@@ -125,7 +125,7 @@ function getEventi() {
                         <div class="event-heading">
                             <h1 class="event-title">' . $evento["NomeEvento"] . '</h1>
                             <h2 class="event-place">'. $evento["NomeLocale"] .'</h2>
-                            <h3 class="event-timestamp"><time datetime="2023-01-15">15/01/2023</time>, dalle 17 alle 19</h3>
+                            <h3 class="event-timestamp">'.$evento["stampaInizio"].$evento["stampaFine"].'</h3>
                         </div>
                         <p class="event-desc">' . $evento["DescrizioneEvento"] . '</p>
                     </div>
