@@ -85,7 +85,7 @@ function checkDataNascita() {
         return true;
     }
     else {
-        document.getElementById("dateErr").innerHTML = "Ci dispiace, questo servizio è riservato ai maggiorenni!";
+        document.getElementById("dateErr").innerHTML = "Questo servizio è riservato ai maggiorenni!";
         return false;
     }
 }
@@ -97,7 +97,6 @@ function checkPassword() {
         return false;
     }
     else if (passwordv.length < 8) {
-        document.getElementById("passErr").innerHTML = "La password deve essere lunga almeno 8 caratteri";
         return false;
     }
     else if (passwordv.length > 50) {
@@ -105,7 +104,6 @@ function checkPassword() {
         return false;
     }
     else {
-        document.getElementById("passErr").innerHTML = "La password è corretta";
         return true;
     }
 }
@@ -117,8 +115,7 @@ function checkEqualPassword() {
         return true;
     }
     else {
-        document.getElementById("pass2Err").innerHTML = "La password è corretta";
-        alert("La password inserita non corrisponde alla precendente. Riprova");
+        document.getElementById("pass2Err").innerHTML = "La password non corrisponde";
         return false;
     }
 }
