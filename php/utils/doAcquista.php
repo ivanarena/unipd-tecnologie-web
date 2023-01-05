@@ -13,7 +13,6 @@ if (isset($_SESSION["Username"])){
         $query = $pdo->prepare($sql);
         $query->execute();
         database::disconnect();
-        header('location: ../../thankYouPayment.php');
     } catch (PDOException $e) {
         echo 'Errore PDO e connessione DB: <br />';
         echo 'SQLQuery: ', $sql;

@@ -12,10 +12,10 @@ function nonPrenotato($id) {
     return $ret;
 }
 
-function postiDisponibili() {
+function postiDisponibili($id) {
     $pdo = database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = 'SELECT Privilegio FROM UTENTE WHERE Username="'. $_SESSION["Username"] .'";';
+    $query = 'SELECT Count(*) FROM EVENTO_UTENTE AS EU, EVENTO AS E, LOCALE AS L WHERE E.IdEvento='. $id .' ;';
     $privilegio = $pdo->query($query)->fetchColumn();
     database::disconnect();
     return $privilegio;
