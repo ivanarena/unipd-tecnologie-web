@@ -16,7 +16,7 @@
             $builder->setError("Campi non validi!!!",$_GET["errGen"]); // TODO: Stilizzare meglio
         }
         if(array_key_exists("errAge", $_REQUEST) && !empty($_REQUEST["errAge"])){
-            $builder->setError("Campi non validi!!!",$_GET["errAge"]); // TODO: Stilizzare meglio
+            $builder->setError("Et&agrave; non valida, devi essere maggiorenne per usufruire del servizio.",$_GET["errAge"]); // TODO: Stilizzare meglio
         }
     }
 
