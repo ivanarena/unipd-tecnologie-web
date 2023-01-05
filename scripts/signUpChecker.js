@@ -3,6 +3,8 @@ const showPasswordButton = document.getElementById('mostra-password');
 const passwordInput = document.getElementById("password");
 const passwordRepeatInput = document.getElementById("password-repeat");
 
+
+
 let userName = document.getElementById('username').value;
 let password = document.getElementById("password").value;
 let sname = document.getElementById("nome").value;
@@ -146,3 +148,4 @@ function showPassword() {
 }
 
 showPasswordButton.addEventListener('change', showPassword);
+
