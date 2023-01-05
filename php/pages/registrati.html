@@ -17,11 +17,13 @@
                             <label for="nome" class="input-label">Nome:</label>
                             <input id="nome" type="text" class="form-input" name="nome" placeholder="Inserisci il tuo nome"
                                 required aria-required="true" />
+                                <p id="nameErr"></p>
                         </div>
                         <div class="inline-content">
                             <label for="cognome" class="input-label">Cognome:</label>
                             <input id="cognome" type="text" class="form-input" name="cognome"
                                 placeholder="Inserisci il tuo cognome" required aria-required="true" />
+                                <p id="surnameErr"></p>
                         </div>
                     </div>
 
@@ -36,21 +38,25 @@
                             <label for="data">Data di nascita:</label>
                             <input id="data" type="date" class="form-input" name="data"
                                 placeholder="Inserisci la tua data di nascita" required aria-required="true" />
+                                <p id="dateErr"></p>
                         </div>
                     </div>
                     <label for="email" class="input-label">Indirizzo <span lang="en">e-mail</span></label>
                     <input id="email" type="email" class="form-input" name="email"
                         placeholder="Inserisci il tuo indirizzo email" required aria-required="true" />
+                        <p id="emailErr"></p>
                     <div class="form-row">
                         <div class="inline-content">
                             <label for="password" class="input-label"><span lang="en">Password</span></label>
                             <input id="password" class="form-input" name="password" minlength="1" type="password"
                                 name="password" placeholder="Scegli una password" required aria-required="true" />
+                                <p id="passErr"></p>
                         </div>
                         <div class="inline-content">
                             <label for="password-repeat" class="input-label">Ripeti <span lang="en">password</span></label>
                             <input id="password-repeat" type="password" name="password-repeat" minlength="1"
                                 class="form-input" placeholder="Riscrivi la tua password" required aria-required="true" />
+                                <p id="pass2Err"></p>
                         </div>
                     </div>
                     <span class="mostra-password-container">
@@ -61,7 +67,7 @@
 
 
                 </div>
-                <button class="btn primary-btn">Registrati</button>
+                <button class="btn primary-btn" id="registrati">Registrati</button>
             </form>
         </main>
         <footerPlaceholder />
