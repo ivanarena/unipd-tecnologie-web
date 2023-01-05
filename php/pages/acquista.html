@@ -21,11 +21,13 @@
                     placeholder="intestatario" required aria-required="true">
                 <label for="scadenza">Data di scadenza:</label>
                 <input id="scadenza" type="date" class="form-input" name="scadenza" placeholder="" required
-                    aria-required="true" />
+                    aria-required="true" />     
             </div>
+            <input type="checkbox" name="savecard" id="savecard" /> 
+            <label for="savecard">Ricorda la tua carta</label>   
             <div class="btns-container flex-row-center">
                 <button class="btn primary-btn confirm-btn" name="submit" id="acquista"
-                    value="Acquista">Acquista</button>
+                value="Acquista">Acquista</button>
                 <a class="btn secondary-btn undo-btn" href="/php/abbonamenti.php">Annulla</a>
             </div>
         </form>
