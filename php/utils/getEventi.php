@@ -41,6 +41,30 @@ function admin() {
     return $privilegio;
 }
 
+function getPosti($idLocale){
+    try {
+        $pdo = database::connect();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql_Posti = "SELECT ((SELECT DISTINCT(Capienza)
+                    FROM EVENTO E JOIN LOCALE L on E.IdLocale = L.IdLocale
+                    WHERE IdEvento = ?)
+                    -
+                    (SELECT COUNT(username) as NumIscritti
+                    FROM EVENTO_UTENTE EU
+                    WHERE IdEvento = ?)) as PostiRim;";
+        $stmt = $pdo->prepare($sql_Posti); 
+        $stmt->execute([$idLocale,$idLocale]);
+        $posti = $stmt->fetch();
+        database::disconnect();
+        return $posti["PostiRim"];
+    } catch (PDOException $e) {
+        echo 'Errore PDO e connessione DB: <br />';
+        echo 'SQLQuery: ', $sql;
+        echo 'Errore: ' . $e->getMessage();
+    }
+    return -1;
+}
+
 
 function getEventi() {
     $result = '';
@@ -56,7 +80,9 @@ function getEventi() {
         } else {
             $sql = 'SELECT L.IdLocale, E.NomeEvento, L.NomeLocale, E.Descrizione AS DescrizioneEvento, E.IdEvento FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale AND E.IdLocale="'. $_GET["IdLocale"] .'";';
         }
-        foreach ($pdo->query($sql)->fetchAll() as $evento) {
+        $res_sql = $pdo->query($sql);
+        foreach ($res_sql->fetchAll() as $evento) {
+            $posti = getPosti($evento["IdEvento"]);
             if (isset($_SESSION['Username']) && admin() == 1) {
                 $result .= strval('<div class="h-card card-shadow events-container">
                 <div class="event-card">
@@ -71,7 +97,7 @@ function getEventi() {
                     <div class="booking-container flex-col-center">
                         <a href="/php/utils/doPrenota.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn primary-btn booking-btn">Prenota</a>
                         <a href="/php/utils/doEliminaEvento.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn secondary-btn booking-btn">Elimina Evento</a>
-                        <span class="spots-available">???</span>
+                        <span class="spots-available">Posti rimasti : '.$posti.'</span>
                     </div>
                 </div>
                 </div>');
@@ -88,7 +114,7 @@ function getEventi() {
                     </div>
                     <div class="booking-container flex-col-center">
                         <a href="/php/utils/doPrenota.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn primary-btn booking-btn">Prenota</a>
-                        <span class="spots-available">???</span>
+                        <span class="spots-available">Posti rimasti : '.$posti.'</span>
                     </div>
                 </div>
                 </div>');
@@ -105,7 +131,7 @@ function getEventi() {
                     </div>
                     <div class="booking-container flex-col-center">
                         <a href="javascript:void(0)" role="button" class="btn secondary-btn booking-btn">Prenota</a>
-                        <span class="spots-available">???</span>
+                        <span class="spots-available">Posti rimasti : '.$posti.'</span>
                     </div>
                 </div>
                 </div>');
