@@ -2,13 +2,14 @@ main>a {
     margin-bottom: 6vh;
 }
 
+
 .data-container {
     display: flex;
     flex-direction: column;
     border-radius: var(--card-b-radius);
-    width: 80vw;
+    width: 40vw;
     padding: 40px;
-    margin-top: 2vh;
+    margin-top: 4vh;
     margin-bottom: 2vh;
 }
 
@@ -17,10 +18,29 @@ main>a {
     justify-content: space-between;
 }
 
+.h-line {
+    background-color: gainsboro;
+    width: auto;
+    height: 0.2vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.unsubscribe-btn {
+    align-self: center;
+    margin-top: 4vh;
+}
+
 .data-label {
     font-weight: bold;
 }
 
 footer {
     margin-top: 6vh;
+}
+
+@media screen and (max-width: 920px) {
+    .data-container {
+        width: 80vw;
+    }
 }

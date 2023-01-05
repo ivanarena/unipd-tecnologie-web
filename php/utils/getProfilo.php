@@ -1,5 +1,6 @@
 <?php 
 require_once("database.php");
+require_once("getAbbonamenti.php");
 
 function getAnagrafica() {
 $result = "";
@@ -39,6 +40,7 @@ try {
 function getAbbonamentoUtente() {
     $result = "";
     try {
+        if (noAbbonamenti()) return '';
         $pdo = database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -53,6 +55,8 @@ function getAbbonamentoUtente() {
             </div>
             <span class="h-line"></span>
             <div class="data-row"><label for="" class="data-label">Scadenza</label><span class="data">' . $abbonamento["DataScadenza"] .'</span></div>
+            <a href="/php/utils/doEliminaAbbUtente.php?IdAbb='.$abbonamento["IdAbbUtente"].'" class="btn primary-btn unsubscribe-btn flex-row-center flex-row-center"
+            text>Disdici</a>
         </div>'  
         );
 
