@@ -12,15 +12,6 @@ function nonPrenotato($id) {
     return $ret;
 }
 
-function postiDisponibili($id) {
-    $pdo = database::connect();
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = 'SELECT Count(*) FROM EVENTO_UTENTE AS EU, EVENTO AS E, LOCALE AS L WHERE E.IdEvento='. $id .' ;';
-    $privilegio = $pdo->query($query)->fetchColumn();
-    database::disconnect();
-    return $privilegio;
-}
-
 function abbonato() {
     $pdo = database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -97,7 +88,7 @@ function getEventi() {
                     <div class="booking-container flex-col-center">
                         <a href="/php/utils/doPrenota.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn primary-btn booking-btn">Prenota</a>
                         <a href="/php/utils/doEliminaEvento.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn secondary-btn booking-btn">Elimina Evento</a>
-                        <span class="spots-available">Posti rimasti : '.$posti.'</span>
+                        <span class="spots-available">Posti rimasti: '.$posti.'</span>
                     </div>
                 </div>
                 </div>');
@@ -114,7 +105,7 @@ function getEventi() {
                     </div>
                     <div class="booking-container flex-col-center">
                         <a href="/php/utils/doPrenota.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn primary-btn booking-btn">Prenota</a>
-                        <span class="spots-available">Posti rimasti : '.$posti.'</span>
+                        <span class="spots-available">Posti rimasti: '.$posti.'</span>
                     </div>
                 </div>
                 </div>');
@@ -131,7 +122,7 @@ function getEventi() {
                     </div>
                     <div class="booking-container flex-col-center">
                         <a href="javascript:void(0)" role="button" class="btn secondary-btn booking-btn">Prenota</a>
-                        <span class="spots-available">Posti rimasti : '.$posti.'</span>
+                        <span class="spots-available">Posti rimasti: '.$posti.'</span>
                     </div>
                 </div>
                 </div>');

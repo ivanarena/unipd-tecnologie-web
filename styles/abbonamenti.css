@@ -65,6 +65,10 @@
     align-self: center;
 }
 
+.unsubscribe-btn {
+    align-self: center;
+}
+
 
 @media only screen and (max-width: 768px) {
     .plans-container {
