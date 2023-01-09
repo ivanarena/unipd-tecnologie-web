@@ -66,7 +66,6 @@ button{
 .plan-card {
   display: flex;
   flex-direction: column;
-  height: 50vh;
   width: 30vw;
 }
 
@@ -75,6 +74,3 @@ button{
   justify-content: space-between;
 }
 
-.plan-price {
-  display: flex;
-}
