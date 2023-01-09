@@ -63,3 +63,18 @@ button{
   text-align: left;
 }
 
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 30vw;
+}
+
+.plan-feature {
+  display: flex;
+  justify-content: space-between;
+}
+
+.plan-price {
+  display: flex;
+}
