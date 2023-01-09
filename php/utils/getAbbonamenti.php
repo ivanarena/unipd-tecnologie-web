@@ -41,8 +41,7 @@ function getAbbonamenti(){
                             </li>
                         </ul>
                         </div>
-                    <a href="/php/acquista.php?IdAbb='.$abbonamento["IdAbbonamento"].'" class="btn primary-btn subscribe-btn flex-row-center flex-row-center"
-                        text>Acquista</a>
+                    <a href="/php/acquista.php?IdAbb='.$abbonamento["IdAbbonamento"].'" class="btn primary-btn subscribe-btn flex-row-center flex-row-center">Acquista</a>
                 </div>');
             } else {
                 $result.= strval('<div class="plan-card card-shadow">
@@ -64,8 +63,8 @@ function getAbbonamenti(){
                             </li>
                         </ul>
                         </div>
-                    <a href="javascript:void(0)" class="btn secondary-btn unsubscribe-btn flex-row-center flex-row-center"
-                        text>Acquista</a>
+                        <span class="hide error-msg">Per acquistare un abbonamento devi prima registrarti. Ricorda che puoi sottoscrivere un solo abbonamento!</span>
+                        <button class="btn secondary-btn unsubscribe-btn flex-row-center flex-row-center">Acquista</button>
                 </div>');
 
             }

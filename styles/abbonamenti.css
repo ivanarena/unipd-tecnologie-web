@@ -9,7 +9,8 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    height: 50vh;
+    height: auto;
+    min-height: 47vh;
     width: 30vw;
     max-height: 500px;
     max-width: 350px;
@@ -19,6 +20,7 @@
     margin-right: 1vw;
     justify-content: space-between;
 }
+
 
 .plan-name {
     color: var(--clr-text);
@@ -67,6 +69,13 @@
 
 .unsubscribe-btn {
     align-self: center;
+}
+
+.error-msg {
+    color: red;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 
