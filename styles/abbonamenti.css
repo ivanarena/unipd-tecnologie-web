@@ -71,12 +71,7 @@
     align-self: center;
 }
 
-.error-msg {
-    color: red;
-    text-align: center;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-}
+
 
 
 @media only screen and (max-width: 768px) {
