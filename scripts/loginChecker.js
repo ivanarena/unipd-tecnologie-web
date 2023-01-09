@@ -8,7 +8,7 @@ let password = "";
 
 function printError(ElementId, result, errMessage) {
     if (!result) {
-        document.getElementById(ElementId).innerHTML = errMessage;
+        ElementId.innerHTML = errMessage;
     } else {
         document.getElementById(ElementId).innerHTML = "";
     }
@@ -17,7 +17,6 @@ function printError(ElementId, result, errMessage) {
 function checkUsername() {
     userName = document.getElementById('username').value;
     if (userName == "") {
-        alert("Inserisci il Nome Utente");
         printError(document.getElementById('username'), true, "Inserisci il Nome Utente");
         return false;
     }
@@ -30,7 +29,6 @@ function checkUsername() {
 function checkPassword() {
     password = document.getElementById("password").value;
     if (password == "") {
-        alert("Inserisci la password");
         return false;
     }
     else {
