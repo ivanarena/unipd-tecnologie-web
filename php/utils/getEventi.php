@@ -86,7 +86,6 @@ function getEventi() {
                         <p class="event-desc">' . $evento["DescrizioneEvento"] . '</p>
                     </div>
                     <div class="booking-container flex-col-center">
-                        <a href="/php/utils/doPrenota.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn primary-btn booking-btn">Prenota</a>
                         <a href="/php/utils/doEliminaEvento.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn secondary-btn booking-btn">Elimina Evento</a>
                         <span class="spots-available">Posti rimasti: '.$posti.'</span>
                     </div>
@@ -121,7 +120,8 @@ function getEventi() {
                         <p class="event-desc">' . $evento["DescrizioneEvento"] . '</p>
                     </div>
                     <div class="booking-container flex-col-center">
-                        <a href="javascript:void(0)" role="button" class="btn secondary-btn booking-btn">Prenota</a>
+                        <span class="hide error-msg">Per prenotare un evento devi essere abbonato. Ricorda che puoi prenotarti solo una volta per evento!</span>
+                        <button class="btn secondary-btn booking-btn">Prenota</button>
                         <span class="spots-available">Posti rimasti: '.$posti.'</span>
                     </div>
                 </div>
