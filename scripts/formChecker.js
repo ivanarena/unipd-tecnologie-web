@@ -4,6 +4,7 @@ let surname = document.getElementById("cognome").value;
 let email = document.getElementById("email").value;
 let message = document.getElementById("msg").value;
 
+
 function checkName() {
     sname = document.getElementById("nome").value;
     if (sname == "") {
@@ -65,5 +66,7 @@ function checkForm() {
     }
     console.log('bottone premuto');
 }
+
+
 
 sendButton.addEventListener('click', checkForm);
