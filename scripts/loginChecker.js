@@ -1,29 +1,27 @@
 const loginButton = document.getElementById('accedi');
 const showPasswordButton = document.getElementById('mostra-password');
 const passwordInput = document.getElementById("password");
-let userName = "";
-let password = "";
+const userName = document.getElementById('username').value;
 
 
 
-function printError(ElementId, result, errMessage) {
+/*function printError(ElementId, result, errMessage) {
     if (!result) {
         ElementId.innerHTML = errMessage;
     } else {
         document.getElementById(ElementId).innerHTML = "";
     }
-}
+}*/
 
 function checkUsername() {
-    userName = document.getElementById('username').value;
-    if (userName == "") {
+    let userNamev = userName.value;
+    if (userNamev == "") {
         printError(document.getElementById('username'), true, "Inserisci il Nome Utente");
         return false;
     }
     else {
         return true;
     }
-    console.log('username ok');
 }
 
 function checkPassword() {
