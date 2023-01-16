@@ -173,4 +173,21 @@ input[type=checkbox] {
     .page-desc {
         width: 70vw;
     }
+
+    p {
+        font-size: var(--fs-p-m);
+    }
+
+    .page-heading {
+        font-size: var(--fs-h1-m);
+    }
+
+    .h-card-title {
+        font-size: var(--fs-h1-m);
+    }
+
+    .btn,
+    .btn:visited {
+        font-size: var(--fs-btn-m);
+    }
 }

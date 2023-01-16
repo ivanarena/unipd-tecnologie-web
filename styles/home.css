@@ -73,6 +73,16 @@
         padding-right: 0;
         align-self: center;
     }
+
+    .gradient-card {
+        font-size: var(--fs-h1-m);
+    }
+
+    .card-text,
+    .card-link,
+    .card-link:visited {
+        font-size: var(--fs-home-p-m);
+    }
 }
 
 @keyframes gradient {

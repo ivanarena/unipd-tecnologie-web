@@ -78,6 +78,10 @@
     .plans-container {
         flex-direction: column;
     }
+    
+    .plan-price {
+        font-size: var(--fs-h1-m);
+    }
 
     .plan-card {
         margin-bottom: 2vh;

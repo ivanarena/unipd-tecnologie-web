@@ -54,6 +54,14 @@ footer {
         flex-direction: column;
     }
 
+    .place-desc {
+        font-size: var(--fs-p-m);
+    }
+
+    .place-name {
+        font-size: var(--fs-h1-m);
+    }
+
     .place-img {
         align-self: center;
         width: 90%;
