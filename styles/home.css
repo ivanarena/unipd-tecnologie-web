@@ -57,6 +57,10 @@
     text-decoration: underline;
 }
 
+.warning-banner{
+    text-align: center;
+}
+
 @media screen and (max-width: 728px) {
     .gradient-card {
         height: 60vh;
@@ -74,7 +78,7 @@
         align-self: center;
     }
 
-    .gradient-card {
+    .gradient-card h1{
         font-size: var(--fs-h1-m);
     }
 
