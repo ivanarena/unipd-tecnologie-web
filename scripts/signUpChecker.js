@@ -14,15 +14,15 @@ let email = document.getElementById("email");
 function checkName() {
     let snamev = sname.value;
     if (snamev == "") {
-        document.getElementById("nameErr").innerHTML = "Inserisci il tuo nome";
+        document.getElementById("nameErr").classList.remove('hide');
         return false;
     }
     else if (snamev.length > 50) {
-        document.getElementById("nameErr").innerHTML = "Inserisci un nome valido";
+        document.getElementById("nameErr").classList.remove('hide');
         return false;
     }
     else {
-        document.getElementById("nameErr").innerHTML = ""
+        document.getElementById("nameErr").classList.add('hide');
         return true;
     }
 }
@@ -30,15 +30,15 @@ function checkName() {
 function checkSurname() {
     let surnamev = surname.value;
     if (surnamev == "") {
-        document.getElementById("surnameErr").innerHTML = "Inserisci il tuo cognome";
+        document.getElementById("surnameErr").classList.remove('hide');
         return false;
     }
     else if (surnamev.length > 50) {
-        document.getElementById("surnameErr").innerHTML = "Inserisci un cognome valido";
+        document.getElementById("surnameErr").classList.remove('hide');
         return false;
     }
     else {
-        document.getElementById("surnameErr").innerHTML = ""
+        document.getElementById("surnameErr").classList.add('hide');
         return true; 
     }
 }
@@ -46,15 +46,15 @@ function checkSurname() {
 function checkUsername() {
     let usernamev = userName.value;
     if (usernamev == "") {
-        document.getElementById("usernameErr").innerHTML = "Inserisci un nome utente";
+        document.getElementById("usernameErr").classList.remove('hide');
         return false;
     }
     else if (usernamev.length > 20) {
-        document.getElementById("usernameErr").innerHTML = "Il nome utente deve avere massimo 20 caratteri";
+        document.getElementById("usernameErr").classList.remove('hide');
         return false;
     }
     else {
-        document.getElementById("usernameErr").innerHTML = "";
+        document.getElementById("usernameErr").classList.add('hide');
         return true;
     }
 }
@@ -62,11 +62,11 @@ function checkUsername() {
 function checkEmail() {
     let emailv = email.value;
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailv)) {
-        document.getElementById("emailErr").innerHTML = ""
+        document.getElementById("emailErr").classList.add('hide');
         return true;
     }
     else {
-        document.getElementById("emailErr").innerHTML = "Indirizzo email non valido, riprova";
+        document.getElementById("emailErr").classList.remove('hide');
         return false;
     }
 }
@@ -81,11 +81,11 @@ function checkDataNascita() {
         age--;
     }
     if (age > 17) {
-        document.getElementById("dateErr").innerHTML = "";
+        document.getElementById("dateErr").classList.add('hide');;
         return true;
     }
     else {
-        document.getElementById("dateErr").innerHTML = "Questo servizio è riservato ai maggiorenni!";
+        document.getElementById("dateErr").classList.remove('hide');
         return false;
     }
 }
@@ -93,29 +93,31 @@ function checkDataNascita() {
 function checkPassword() {
     let passwordv = password.value;
     if (passwordv == "") {
-        document.getElementById("passErr").innerHTML = "Inserisci la password";
+        document.getElementById("passErr").classList.remove('hide');
         return false;
     }
     else if (passwordv.length < 8) {
+        document.getElementById("passErr").classList.remove('hide');
         return false;
     }
     else if (passwordv.length > 50) {
-        document.getElementById("passErr").innerHTML = "La password non può essere più lunga di 15 caratteri";
+        document.getElementById("passErr").classList.remove('hide');
         return false;
     }
     else {
+        document.getElementById("passErr").classList.add('hide');
         return true;
     }
 }
 
 function checkEqualPassword() {
     let password2v = password2.value;
-    if (password2v == password2) {
-        document.getElementById("pass2Err").innerHTML = "";
+    if (password2v == password.value) {
+        document.getElementById("pass2Err").classList.add('hide');
         return true;
     }
     else {
-        document.getElementById("pass2Err").innerHTML = "La password non corrisponde";
+        document.getElementById("pass2Err").classList.remove('hide');
         return false;
     }
 }
@@ -127,7 +129,6 @@ function checkEqualPassword() {
 }*/
 
 function showPassword() {
-    console.log(passwordInput)
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
         passwordRepeatInput.type = "text";

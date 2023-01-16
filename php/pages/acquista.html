@@ -13,6 +13,7 @@
                 <label for="numero-carta" class="input-label">Numero di carta di credito/debito</label>
                 <input id="n-carta" class="form-input" type="text" name="numero-carta" value="" minlength="8"
                     placeholder="Inserisci il numero della tua carta" required aria-required="true">
+                    <span id="cardErr" class='hide error-msg'>Inserisci un numero valido</span>
                 <label for="ccv" class="input-label"><span lang="en">CCV</span></label>
                 <input id="ccv" class="form-input" type="text" name="ccv" value="" minlength="3" placeholder="CCV"
                     required aria-required="true">
@@ -22,6 +23,7 @@
                 <label for="scadenza">Data di scadenza:</label>
                 <input id="scadenza" type="date" class="form-input" name="scadenza" placeholder="" required
                     aria-required="true" />
+                    <span id="dateErr" class='hide error-msg'>La carta risulta scaduta</span>
             </div>
             <div class="card-checkbox-container flex-row-center">
                 <input type="checkbox" name="savecard" id="savecard" />

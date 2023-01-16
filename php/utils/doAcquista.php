@@ -9,6 +9,9 @@ if (isset($_SESSION["Username"])){
         $numeroCarta = $_POST["numero-carta"];
         $dataInizio = date("Y-m-d");
         $dataScadenza = date('Y-m-d', strtotime($dataInizio. ' + 90 days'));
+        $sql = 'INSERT INTO CARTA VALUES("'.$numeroCarta.'", "VISA", "'.$_POST["ccv"].'", "'.$_POST["scadenza"].'", "'.$_POST["intestatario"].'")';
+        $query = $pdo->prepare($sql);
+        $query->execute();
         $sql = 'INSERT INTO ABBONAMENTO_UTENTE VALUES(NULL, "'. $_GET["IdAbb"] .'", "'. $_SESSION["Username"] .'", "'. $numeroCarta .'", "'. $dataInizio .'", "'. $dataScadenza .'");';
         $query = $pdo->prepare($sql);
         $query->execute();

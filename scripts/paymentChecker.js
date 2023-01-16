@@ -8,10 +8,11 @@ function cardNumberIsValid() {
     const visa = /^4[0-9]{12}(?:[0-9]{3})?$/;
     const amex = /^3[47][0-9]{13}$/;
     if (cardv.match(mastercard) || cardv.match(visa) || cardv.match(amex)) {
+        document.getElementById("cardErr").classList.add('hide');
         return true;
     }
     else {
-        alert("Inserisci un numero valido");
+        document.getElementById("cardErr").classList.remove('hide');
         return false;
     }
 }
@@ -20,10 +21,11 @@ function dateIsValid() {
     let expireDatev = expireDate.value;
     const today = new Date();
     // console.log(today); 
-    if (expireDatev > today.getDate()) { // getDate e' sbagliato, googla come trovare la data in formato giusto
-        alert('La carta di credito &egrave scaduta');
+    if ((new Date(expireDate.value)).getTime() < today.getTime()) { 
+        document.getElementById("dateErr").classList.remove('hide');
         return false;
     }
+    document.getElementById("dateErr").classList.add('hide');
     return true;
 }
 

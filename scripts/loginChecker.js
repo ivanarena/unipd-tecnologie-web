@@ -2,8 +2,8 @@ const loginButton = document.getElementById('accedi');
 const showPasswordButton = document.getElementById('mostra-password');
 const passwordInput = document.getElementById("password");
 
-let userName = document.getElementById('username').value;
-let password = document.getElementById("password").value;
+let userName = document.getElementById('username');
+let password = document.getElementById("password");
 
 
 /*function printError(ElementId, result, errMessage) {
@@ -17,10 +17,11 @@ let password = document.getElementById("password").value;
 function checkUsername() {
     let userNamev = userName.value;
     if (userNamev == "") {
-        document.getElementById("usernameErr").innerHTML = "Inserisci il tuo nome utente";
+        document.getElementById("usernameErr").classList.remove('hide');
         return false;
     }
     else {
+        document.getElementById("usernameErr").classList.add('hide');
         return true;
     }
 }
@@ -28,20 +29,22 @@ function checkUsername() {
 function checkPassword() {
     let passwordv = password.value;
     if (passwordv == "") {
-        document.getElementById("passwordErr").innerHTML = "Inserisci la password";
+        document.getElementById("passwordErr").classList.remove('hide');
         return false;
     }
     else {
+        document.getElementById("passwordErr").classList.add('hide');
         return true;
     }
 }
 
 function checkForm() {
     if (checkUsername() && checkPassword()) {
+        document.getElementById("formErr").classList.add('hide');
         return true;
     }
     else{
-        document.getElementById("formErr").innerHTML = "O il nome utente o la password sono scorretti";
+        document.getElementById("formErr").classList.remove('hide');
     }
 }
 

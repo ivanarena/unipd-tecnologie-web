@@ -1,58 +1,62 @@
 const sendButton = document.getElementById('invia-messaggio');
-let sname = document.getElementById("nome").value;
-let surname = document.getElementById("cognome").value;
-let email = document.getElementById("email").value;
-let message = document.getElementById("msg").value;
+let sname = document.getElementById("nome");
+let surname = document.getElementById("cognome");
+let email = document.getElementById("email");
+let message = document.getElementById("msg");
 
 
 function checkName() {
-    sname = document.getElementById("nome").value;
-    if (sname == "") {
-
+    let snamev  = sname.value;
+    if (snamev == "") {
+        document.getElementById("nomeErr").classList.remove('hide');
         return false;
     }
-    else if (sname.length > 50) {
-
+    else if (snamev.length > 50) {
+        document.getElementById("nomeErr").classList.remove('hide');
         return false;
     }
     else {
+        document.getElementById("nomeErr").classList.add('hide');
         return true;
     }
 }
 
 function checkSurname() {
-    surname = document.getElementById("cognome").value;
-    if (surname == "") {
-
+    let surnamev = surname.value;
+    if (surnamev == "") {
+        document.getElementById("cognomeErr").classList.remove('hide');
         return false;
     }
-    else if (surname.length > 50) {
-
+    else if (surnamev.length > 50) {
+        document.getElementById("cognomeErr").classList.remove('hide');
         return false;
     }
     else {
-        return true; s
+        document.getElementById("cognomeErr").classList.add('hide');
+        return true; 
     }
 }
 
 function checkEmail() {
-    email = document.getElementById("email").value;
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    let semail = email.value;
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(semail)) {
+        document.getElementById("emailErr").classList.add('hide');
         return true;
     }
     else {
-
+        document.getElementById("emailErr").classList.remove('hide');
         return false;
     }
 }
 
 function checkMessage() {
-    message = document.getElementById("msg").value;
-    if (message == "") {
-
+    let smessage = message.value;
+    if (smessage == "") {
+        document.getElementById("messageErr").classList.remove('hide');
         return false;
     }
     else {
+        document.getElementById("messageErr").classList.add('hide');
         return true;
     }
 }
@@ -65,3 +69,7 @@ function checkForm() {
 
 
 sendButton.addEventListener('click', checkForm);
+sname.addEventListener('focusout', checkName);
+surname.addEventListener('focusout', checkSurname);
+email.addEventListener('focusout', checkEmail);
+message.addEventListener('focusout', checkMessage);

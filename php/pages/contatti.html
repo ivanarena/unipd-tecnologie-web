@@ -12,13 +12,17 @@
         <form class="contact-form card-shadow">
             <label class="input-label" for="nome">Nome:</label>
             <input class="form-input-small" type="text" placeholder="Inserisci il tuo nome" id="nome" required aria-required="true" minlength="1" />
+            <span id="nomeErr" class='hide error-msg'>Inserisci il nome</span>
             <label class="input-label" for="cognome">Cognome:</label>
             <input class="form-input-small" type="text" placeholder="Inserisci il tuo cognome" id="cognome" required aria-required="true" minlength="1"/>
+            <span id="cognomeErr" class='hide error-msg'>Inserisci il cognome</span>
             <label class="input-label" for="email"><span lang="en">Email</span>:</label>
             <input class="form-input-medium" type="email" placeholder="Inserisci la tua email" id="email" required aria-required="true" minlength="1"/>
+            <span id="emailErr" class='hide error-msg'>Inserisci la mail</span>
             <label class="input-label" for="messaggio">Il tuo messaggio:</label>
             <textarea class="form-input" id="msg" placeholder="Scrivi il tuo messaggio" required aria-required="true" cols="70" rows="10"
                 maxlength="500"></textarea>
+                <span id="messageErr" class='hide error-msg'>Inserisci il messaggio di errore</span>
             <input class="btn primary-btn submit-btn" id="invia-messaggio" type="submit" value="Invia" />
         </form>
     </main>
