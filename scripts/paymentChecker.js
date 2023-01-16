@@ -1,5 +1,5 @@
-const card = document.getElementById('n-carta');
-const expireDate = document.getElementById('scadenza');
+let card = document.getElementById('n-carta');
+let expireDate = document.getElementById('scadenza');
 
 function cardNumberIsValid() {
     let cardv = card.value;

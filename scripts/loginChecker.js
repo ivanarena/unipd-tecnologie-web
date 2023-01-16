@@ -1,8 +1,9 @@
 const loginButton = document.getElementById('accedi');
 const showPasswordButton = document.getElementById('mostra-password');
 const passwordInput = document.getElementById("password");
-const userName = document.getElementById('username').value;
 
+let userName = document.getElementById('username').value;
+let password = document.getElementById("password").value;
 
 
 /*function printError(ElementId, result, errMessage) {
@@ -16,7 +17,7 @@ const userName = document.getElementById('username').value;
 function checkUsername() {
     let userNamev = userName.value;
     if (userNamev == "") {
-        printError(document.getElementById('username'), true, "Inserisci il Nome Utente");
+        document.getElementById("usernameErr").innerHTML = "Inserisci il tuo nome utente";
         return false;
     }
     else {
@@ -25,21 +26,23 @@ function checkUsername() {
 }
 
 function checkPassword() {
-    password = document.getElementById("password").value;
-    if (password == "") {
+    let passwordv = password.value;
+    if (passwordv == "") {
+        document.getElementById("passwordErr").innerHTML = "Inserisci la password";
         return false;
     }
     else {
         return true;
     }
-    console.log('password ok');
 }
 
 function checkForm() {
     if (checkUsername() && checkPassword()) {
-        console.log('ok');
+        return true;
     }
-    console.log('bottone premuto');
+    else{
+        document.getElementById("formErr").innerHTML = "O il nome utente o la password sono scorretti";
+    }
 }
 
 function showPassword() {
@@ -52,3 +55,5 @@ function showPassword() {
 
 loginButton.addEventListener('click', checkForm);
 showPasswordButton.addEventListener('change', showPassword);
+userName.addEventListener('focusout', checkUsername);
+password.addEventListener('focusout', checkPassword);
