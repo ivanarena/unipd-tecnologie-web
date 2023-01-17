@@ -17,6 +17,7 @@
     --clr-d-secondary: #ce84eb;
     --clr-d-card: rgb(62, 62, 62);
     --clr-d-hcard: black;
+    --clr-d-a-visited: hsl(195, 88%, 74%);
 
     /* FONT SIZES -- d = desktop, m = mobile */
     --fs-h1-d: 48px;

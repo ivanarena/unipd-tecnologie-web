@@ -9,6 +9,10 @@ footer {
     color: var(--clr-d-text);
 }
 
+a:visited {
+    color: var(--clr-d-a-visited);
+}
+
 .menu-toggle .bar {
     background-color: var(--clr-d-text);
 }
