@@ -22,7 +22,7 @@ footer {
 
 /* ABBONAMENTI */
 .plan-card {
-    background-color: var(--clr-d-background);
+    background-color: var(--clr-d-hcard);
 }
 
 .plan-name {
@@ -33,4 +33,25 @@ footer {
 .place-street,
 .event-place {
     color: var(--clr-d-secondary);
+}
+
+.h-card {
+    background-color: var(--clr-d-hcard);
+}
+
+/*Contatti*/
+
+.contact-form {
+    background-color: var(--clr-d-hcard);
+}
+
+/*profilo*/
+
+.data-container {
+    background-color: var(--clr-d-hcard);
+}
+
+/*crea evento*/
+.event-form {
+    background-color: var(--clr-d-hcard);
 }

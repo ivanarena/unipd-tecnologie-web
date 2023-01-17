@@ -53,6 +53,8 @@
     font-size: var(--fs-home-p-d);
 }
 
+
+
 .card-link:hover {
     text-decoration: underline;
 }
