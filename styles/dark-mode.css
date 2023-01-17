@@ -60,3 +60,9 @@ a:visited {
 .event-form {
     background-color: var(--clr-d-hcard);
 }
+
+/*registrati*/
+
+.login-form {
+    background-color: var(--clr-d-hcard);
+}
