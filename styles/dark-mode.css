@@ -5,6 +5,7 @@ body,
 
 body,
 .menu-link a,
+.menu-link a:visited,
 footer {
     color: var(--clr-d-text);
 }
