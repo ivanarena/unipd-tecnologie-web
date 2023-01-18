@@ -1,5 +1,7 @@
 let card = document.getElementById('n-carta');
 let expireDate = document.getElementById('scadenza');
+let cvv = document.getElementById('ccv');
+let intestatario = document.getElementById('intestatario');
 
 
 function cardNumberIsValid() {
@@ -14,6 +16,30 @@ function cardNumberIsValid() {
     else {
         document.getElementById("cardErr").classList.remove('hide');
         return false;
+    }
+}
+
+function ccvIsValid() {
+    let cvvv = cvv.value;
+    if (cvvv.match(/^[0-9]{3}$/)){
+        document.getElementById("cvvErr").classList.add('hide')
+        return true;
+    }
+    else {
+        document.getElementById("cvvErr").classList.remove('hide')
+        return false;
+    }
+}
+
+function intestatarioIsValid(){
+    let intestatariov = intestatario.value;
+    if (intestatariov == ""){
+        document.getElementById("intestatarioErr").classList.remove('hide');
+        return false;
+    }
+    else {
+        document.getElementById("intestatarioErr").classList.add('hide');
+        return true;
     }
 }
 

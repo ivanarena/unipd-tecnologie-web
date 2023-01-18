@@ -20,8 +20,10 @@ function getLocaliAsOptions() {
     return $result;
 }
 
+
 function getLocali(){
     $result = "";
+
     try{
         $pdo = database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -2,9 +2,9 @@
     /* COLORS */
     --clr-text: black;
     --clr-headings: #C933BA;
-    --clr-secondary: rgb(59, 0, 83);
+    --clr-secondary: #7c03ac;
     --clr-a: #007faa;
-    --clr-a-visited: #3b0053;
+    --clr-a-visited: #7c03ac;
     --clr-btn: #C933BA;
     --clr-btn-alt: gainsboro;
     --clr-btn-text: white;
@@ -16,7 +16,8 @@
     --clr-d-text: white;
     --clr-d-secondary: #ce84eb;
     --clr-d-card: rgb(62, 62, 62);
-
+    --clr-d-hcard: black;
+    --clr-d-a-visited: rgb(48, 203, 255);
     /* FONT SIZES -- d = desktop, m = mobile */
     --fs-h1-d: 48px;
     --fs-p-d: 20px;
