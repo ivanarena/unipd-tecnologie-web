@@ -145,7 +145,7 @@ INSERT INTO EVENTO VALUES("1", "Salone del libro", "Il salone del libro è un ev
                             esperti del settore e partecipare
                             a interessanti dibattiti su temi culturali e sociali. Inoltre, il salone del libro offre
                             l'opportunità di acquistare libri a
-                            prezzi scontati e di partecipare a <span lang=""en'"">workshop</span> e laboratori dedicati
+                            prezzi scontati e di partecipare a <span lang=""en"">workshop</span> e laboratori dedicati
                             alla
                             scrittura e all'editoria. Insomma, il salone del libro
                             è un appuntamento imperdibile per gli appassionati di lettura e per chi vuole essere sempre
@@ -155,35 +155,35 @@ INSERT INTO EVENTO VALUES("2", "Vida Loca", "Vieni a scatenarti al ritmo del rag
                             La
                             nostra discoteca
                             si trasformerà in un'arena dove potrai ballare e cantare insieme ai tuoi amici alle <span
-                                lang=""en'"">hit</span> del momento e alle canzoni
+                                lang=""en"">hit</span> del momento e alle canzoni
                             storiche del genere. Le luci e le decorazioni a tema ti faranno immergere completamente
                             nell'atmosfera latina,
-                            mentre il <span lang=""en'""><abbr title=""disc jockey"">DJ</abbr></span> mixerà le canzoni per
+                            mentre il <span lang=""en""><abbr title=""disc jockey"">DJ</abbr></span> mixerà le canzoni per
                             creare una serata indimenticabile. Ma non è tutto: durante la serata ci saranno
                             anche animazioni e performance di ballo per rendere la festa ancora più coinvolgente. Non
                             perdere l'occasione
                             di vivere una notte indimenticabile all'insegna del divertimento e della musica latina!", "2", "2023-01-02 22:00:00", "2023-02-03 06:00:00");
 INSERT INTO EVENTO VALUES("3", "Spirit techno", "Venite a vivere la notte più emozionante della vostra vita al nostro
                             evento
-                            <span lang=""en'"">techno</span> in discoteca!
+                            <span lang=""en"">techno</span> in discoteca!
                             Preparatevi a sentire il battito delle vostre pulsazioni al ritmo delle migliori tracce
-                            <span lang=""en'"">techno</span>, mentre vi lasciate
+                            <span lang=""en"">techno</span>, mentre vi lasciate
                             trasportare dalle luci stroboscopiche e dall'atmosfera elettrizzante della nostra pista da
-                            ballo. Con i nostri <span lang=""en'""><abbr title=""disc jockey"">DJ</abbr></span>
+                            ballo. Con i nostri <span lang=""en""><abbr title=""disc jockey"">DJ</abbr></span>
                             di fama internazionale ai piatti, questa è una serata che non dimenticherete facilmente. Non
                             perdete l'opportunità
-                            di unirvi a noi e scatenarvi al ritmo della <span lang=""en'"">techno</span> più pura!", "2", "2022-12-26 22:00:00", "2022-12-27 06:00:00");
-INSERT INTO EVENTO VALUES("4", "Ride", "Vieni a vivere l'adrenalina delle corse sui <span lang=""en'"">kart</span> in
+                            di unirvi a noi e scatenarvi al ritmo della <span lang=""en"">techno</span> più pura!", "2", "2022-12-26 22:00:00", "2022-12-27 06:00:00");
+INSERT INTO EVENTO VALUES("4", "Ride", "Vieni a vivere l'adrenalina delle corse sui <span lang=""en"">kart</span> in
                             una
-                            <span lang=""en'"">location</span> mozzafiato! In <span lang=""en'"">indoor</span> e <span
-                                lang=""en'"">oudoor</span>,
+                            <span lang=""en"">location</span> mozzafiato! In <span lang=""en"">indoor</span> e <span
+                                lang=""en"">oudoor</span>,
                             potrai sfrecciare su piste sinuose e sfidare gli avversari in emozionanti gare. Con la
                             nostra
                             struttura
                             all'avanguardia e il personale altamente qualificato, ti garantiamo sicurezza e divertimento
                             assoluti.
                             Non perdere l'occasione di vivere una giornata indimenticabile alla guida dei nostri <span
-                                lang=""en'"">kart</span> performanti.
+                                lang=""en"">kart</span> performanti.
                             Prenota subito la tua esperienza di corse mozzafiato!", "3", "2022-12-29 09:00:00", "2022-12-29 20:00:00");
 INSERT INTO EVENTO VALUES("5", "Day Spa", "Una giornata in spa è il modo perfetto per rilassarsi e coccolarsi.
                             Immagina
@@ -197,7 +197,7 @@ INSERT INTO EVENTO VALUES("5", "Day Spa", "Una giornata in spa è il modo perfet
                             corpo e
                             la mente.
                             E per rendere la tua giornata ancora più speciale, c'è anche un open bar con bevande
-                            rinfrescanti e <span lang=""en'"">snack</span>
+                            rinfrescanti e <span lang=""en"">snack</span>
                             leggeri, perfetti per rilassarsi al sole. Tutto questo ti aspetta in una giornata in spa,
                             dove
                             potrai godere
