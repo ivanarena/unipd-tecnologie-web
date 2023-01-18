@@ -15,14 +15,13 @@ const toFix = [sanJuniperoLogo, menuToggle];
 
 let smallDesktopToggled = false;
 let mobileToggled = false;
-if (smallDesktop.matches) {
+if (mobile.matches) {
+    menuToggle.classList.toggle('hide');
+    mobileToggled = true;
+    toggleHideElements();
+} if (smallDesktop.matches) {
     smallDesktopToggled = true;
     sanJunipero.classList.toggle('hide');
-}
-else if (mobile.matches) {
-    mobileToggled = true;
-    menuToggle.classList.toggle('hide');
-    toggleHideElements();
 }
 
 function mobileViewToggle() {
@@ -69,3 +68,14 @@ function toggleHideElements() {
 
 menuToggle.addEventListener('click', toggleMenu);
 window.addEventListener('resize', mobileViewToggle, true);
+
+document.querySelectorAll('div[role="button"]').forEach(el => {
+    el.addEventListener('keydown', e => {
+        const keyDown = e.key !== undefined ? e.key : e.keyCode;
+        if ((keyDown === 'Enter' || keyDown === 13) || (['Spacebar', ' '].indexOf(keyDown) >= 0 || keyDown === 32)) {
+            // (prevent default so the page doesn't scroll when pressing space)
+            e.preventDefault();
+            el.click();
+        }
+    });
+});
