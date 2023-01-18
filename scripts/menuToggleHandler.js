@@ -19,7 +19,7 @@ if (mobile.matches) {
     menuToggle.classList.toggle('hide');
     mobileToggled = true;
     toggleHideElements();
-} if (smallDesktop.matches) {
+} else if (smallDesktop.matches) {
     smallDesktopToggled = true;
     sanJunipero.classList.toggle('hide');
 }
