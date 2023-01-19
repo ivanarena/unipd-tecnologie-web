@@ -68,28 +68,28 @@ function getAbbonamentoUtente() {
     return $result;
 }
 
-function getCarte() {
-    $result = "";
-    try {
-        $pdo = database::connect();
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        $sql = "SELECT * FROM PORTAFOGLIO WHERE Username='". $_SESSION["Username"] . "';";
-        foreach ($pdo->query($sql)->fetchAll() as $carta) {
-            $result .= strval(
-                '<div class="data-container card-shadow">
-                <div class="data-row"><label for="" class="data-label">Carta</label><span class="data">'. $carta["NumeroCarta"] .'</span>
-                </div>
-            </div>'  );
-        }
+// function getCarte() {
+//     $result = "";
+//     try {
+//         $pdo = database::connect();
+//         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+//         $sql = "SELECT * FROM PORTAFOGLIO WHERE Username='". $_SESSION["Username"] . "';";
+//         foreach ($pdo->query($sql)->fetchAll() as $carta) {
+//             $result .= strval(
+//                 '<div class="data-container card-shadow">
+//                 <div class="data-row"><label for="" class="data-label">Carta</label><span class="data">'. $carta["NumeroCarta"] .'</span>
+//                 </div>
+//             </div>'  );
+//         }
 
-        database::disconnect();
-    } catch (PDOException $e) {
-                echo 'Errore PDO e connessione DB: <br />';
-                echo 'SQLQuery: ', $sql;
-                echo 'Errore: ' . $e->getMessage();
-    }
-    return $result;
-}
+//         database::disconnect();
+//     } catch (PDOException $e) {
+//                 echo 'Errore PDO e connessione DB: <br />';
+//                 echo 'SQLQuery: ', $sql;
+//                 echo 'Errore: ' . $e->getMessage();
+//     }
+//     return $result;
+// }
 
 ?>
