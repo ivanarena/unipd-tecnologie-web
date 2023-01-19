@@ -2,6 +2,8 @@ let card = document.getElementById('n-carta');
 let expireDate = document.getElementById('scadenza');
 let cvv = document.getElementById('ccv');
 let intestatario = document.getElementById('intestatario');
+const purchaseButton = document.getElementById('acquista');
+const form = document.getElementById('payment-form');
 
 
 function cardNumberIsValid() {
@@ -21,7 +23,7 @@ function cardNumberIsValid() {
 
 function ccvIsValid() {
     let cvvv = cvv.value;
-    if (cvvv.match(/^[0-9]{3}$/)){
+    if (cvvv.match(/^[0-9]{3}$/)) {
         document.getElementById("cvvErr").classList.add('hide')
         return true;
     }
@@ -31,9 +33,9 @@ function ccvIsValid() {
     }
 }
 
-function intestatarioIsValid(){
+function intestatarioIsValid() {
     let intestatariov = intestatario.value;
-    if (intestatariov == ""){
+    if (!intestatariov.match(/^\w+/)) {
         document.getElementById("intestatarioErr").classList.remove('hide');
         return false;
     }
@@ -46,8 +48,7 @@ function intestatarioIsValid(){
 function dateIsValid() {
     let expireDatev = expireDate.value;
     const today = new Date();
-    // console.log(today); 
-    if ((new Date(expireDate.value)).getTime() < today.getTime()) { 
+    if ((new Date(expireDate.value)).getTime() < today.getTime()) {
         document.getElementById("dateErr").classList.remove('hide');
         return false;
     }
@@ -55,5 +56,22 @@ function dateIsValid() {
     return true;
 }
 
+
+function checkForm(e) {
+    e.preventDefault();
+    if (cardNumberIsValid() && dateIsValid() && ccvIsValid() && intestatarioIsValid()) {
+        document.getElementById("formErr").classList.add('hide');
+        console.log(document.forms["payment-form"]);
+        document.forms["payment-form"].submit();
+    }
+    else {
+        document.getElementById("formErr").classList.remove('hide');
+        return false;
+    }
+}
+
 card.addEventListener('focusout', cardNumberIsValid);
 expireDate.addEventListener('focusout', dateIsValid);
+ccv.addEventListener('focusout', ccvIsValid);
+intestatario.addEventListener('focusout', intestatarioIsValid);
+purchaseButton.addEventListener('click', checkForm);
