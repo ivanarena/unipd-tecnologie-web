@@ -3,6 +3,12 @@ let date2 = document.getElementById("data-fine-evento").value;
 
 function checkDate() {
     if(date1.getDate() > date2.getDate()){
-        alert("La data di fine evento non può essere prima dell'inizio dell'evento")
+        document.getElementById("dateErr").classList.add('hide');
+        return true;
+    }
+    else {
+        document.getElementById("dateErr").classList.remove('hide');
+        return false;
     }
 }
+;

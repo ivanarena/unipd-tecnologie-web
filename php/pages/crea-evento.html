@@ -24,7 +24,8 @@
                     required aria-required="true" />
                 <label for="data-fine-evento" class="input-label">Data fine evento</label>
                 <input id="data-fine-evento" class="form-input" type="date" name="data-fine-evento" value="" required
-                    aria-required="true" onchange="checkDate()" />
+                    aria-required="true" />
+                <span id="dateErr" class='hide error-msg'>La data di inizio evento non può essere dopo la sua fine</span>
             </div>
             <div class="btns-container flex-row-center">
                 <button class="btn primary-btn confirm-btn" name="submit" id="crea" value="Crea">Crea</button>
