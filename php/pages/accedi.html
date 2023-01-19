@@ -7,19 +7,18 @@
 
 
     <main>
-        <span class="error hide"></span>
         <form class="login-form card-shadow" action="/php/utils/doAccedi.php" method="POST">
             <h1 class="page-heading">Accedi</h1>
             <div class="inputs-container flex-col-center">
                 <label for="username" class="input-label">Nome utente</label>
-                <input id="username" class="form-input" type="text" name="username" value=""
-                    minlength="1" placeholder="Inserisci il nome utente" required aria-required="true">
-                    <span id="usernameErr" class="hide error-msg">Inserisci il nome utente</span>
+                <input id="username" class="form-input" type="text" name="username" value="" minlength="1"
+                    placeholder="Inserisci il nome utente" required aria-required="true">
+                <span id="usernameErr" class="hide error-msg">Inserisci il nome utente</span>
                 <label for="password" class="input-label"><span lang="en">Password</span></label>
                 <input id="password" class="form-input" type="password" name="password" value="" minlength="1"
                     placeholder="Inserisci la password" required aria-required="true">
-                    <span id="passwordErr" class='hide error-msg'>Inserisci la password</span>
-                    <span id="formErr" class='hide error-msg'>O il nome utente o la password non sono corretti</span>
+                <span id="passwordErr" class='hide error-msg'>Inserisci la password</span>
+                <span id="formErr" class='hide error-msg'>O il nome utente o la password non sono corretti</span>
                 <span class="mostra-password-container">
                     <input type="checkbox" id="mostra-password" />
                     <label for="mostra-password" class="show-password-label">Mostra <span

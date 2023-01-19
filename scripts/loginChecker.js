@@ -6,14 +6,6 @@ let userName = document.getElementById('username');
 let password = document.getElementById("password");
 
 
-/*function printError(ElementId, result, errMessage) {
-    if (!result) {
-        ElementId.innerHTML = errMessage;
-    } else {
-        document.getElementById(ElementId).innerHTML = "";
-    }
-}*/
-
 function checkUsername() {
     let userNamev = userName.value;
     if (userNamev == "") {
@@ -43,7 +35,7 @@ function checkForm() {
         document.getElementById("formErr").classList.add('hide');
         return true;
     }
-    else{
+    else {
         document.getElementById("formErr").classList.remove('hide');
     }
 }
