@@ -1,8 +1,11 @@
 let date1 = document.getElementById("data-inizio-evento").value;
 let date2 = document.getElementById("data-fine-evento").value;
 
+let d1 = Date.parse(date1);
+let d2 = Date.parse(date2);
+
 function checkDate() {
-    if(date1.getDate() > date2.getDate()){
+    if(d1 > d2){
         document.getElementById("dateErr").classList.add('hide');
         return true;
     }
