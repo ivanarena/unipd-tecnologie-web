@@ -6,7 +6,7 @@
     <headerPlaceholder />
 
     <main>
-        <form class="event-form card-shadow" action="/php/utils/doCreaEvento.php/>" method="POST">
+        <form class="event-form card-shadow" action="/php/utils/doCreaEvento.php" method="POST">
             <h1 class="page-heading">Aggiungi l'evento</h1>
             <div class="inputs-container flex-col-center">
                 <label for="nome-evento" class="input-label">Nome evento</label>
@@ -20,12 +20,12 @@
                     <getLocali />
                 </select>
                 <label for="data-inizio-evento" class="input-label">Data inizio evento</label>
-                <input id="data-inizio-evento" class="form-input" type="date" name="data-inizio-evento" value=""
-                    required aria-required="true" />
+                <input id="data-inizio-evento" class="form-input" type="datetime-local" name="data-inizio-evento"
+                    value="" required aria-required="true" />
                 <label for="data-fine-evento" class="input-label">Data fine evento</label>
-                <input id="data-fine-evento" class="form-input" type="date" name="data-fine-evento" value="" required
-                    aria-required="true" />
-                <span id="dateErr" class='hide error-msg'>La data di inizio evento non può essere dopo la sua fine</span>
+                <input id="data-fine-evento" class="form-input" type="datetime-local" name="data-fine-evento" value=""
+                    required aria-required="true" />
+                <span id="dateErr" class='hide error-msg'>La data inserita non è valida</span>
             </div>
             <div class="btns-container flex-row-center">
                 <button class="btn primary-btn confirm-btn" name="submit" id="crea" value="Crea">Crea</button>
