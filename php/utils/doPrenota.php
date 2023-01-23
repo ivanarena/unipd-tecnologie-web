@@ -8,9 +8,9 @@ if (isset($_SESSION["Username"])){
 
         $dataScadenza = date('Y-m-d', strtotime($dataInizio. ' + 90 days'));
         /**Non puoi prendere direttamente i valori così, serve una prepared statement per evitare sql injection, vedi la funzione getPosti in getEventi.php*/
-        $sql = 'INSERT INTO EVENTO_UTENTE VALUES("'. $_SESSION["Username"] .'", "'. $_GET["IdEvento"] .'",  "'. date("Y-m-d") .'");';
+        $sql = 'INSERT INTO EVENTO_UTENTE (Username, IdEvento, DataIscrizione) VALUES(?, ?, ?);';
         $query = $pdo->prepare($sql);
-        $query->execute();
+        $query->execute(array($_SESSION["Username"], $_GET["IdEvento"], date("Y-m-d")));
         database::disconnect();
     } catch (PDOException $e) {
         echo 'Errore PDO e connessione DB: <br />';

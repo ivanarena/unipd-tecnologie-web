@@ -10,9 +10,9 @@ require_once("../session.php");
         $dataOraFine = $dataOraInizio->createFromFormat('Y-m-d*H:i', $_POST['data-fine-evento']);
         $dataOraInizio = $dataOraInizio->format('Y-m-d H:i:s');
         $dataOraFine = $dataOraFine->format('Y-m-d H:i:s');
-        $sql = 'INSERT INTO EVENTO VALUES(NULL, "'. $_POST["nome-evento"] .'", "'. $_POST["descrizione"] .'", "'. $_POST["locale"] .'", "' . $dataOraInizio . '", "' . $dataOraFine . '");';
+        $sql = 'INSERT INTO EVENTO (NomeEvento, Descrizione, IdLocale, DataOraInizio, DataOraFine) VALUES(?, ?, ?, ?, ?);';
         $query = $pdo->prepare($sql);
-        $query->execute();
+        $query->execute(array($_POST["nome-evento"], $_POST["descrizione"], $_POST["locale"], $dataOraInizio, $dataOraFine));
         database::disconnect();
     } catch (PDOException $e) {
         echo 'Errore PDO e connessione DB: <br />';
