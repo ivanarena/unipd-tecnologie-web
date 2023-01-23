@@ -3,7 +3,7 @@ require_once("../session.php");
 require_once("./getAbbonamenti.php");
 if (isset($_SESSION["Username"])&& noAbbonamenti()){
     $pagamentoEffettuato = false;
-    if (!empty($_POST) && isset($_GET["IdAbb"])) {
+    if (!empty($_POST) && isset($_GET["IdAbb"])&& isset($_GET["nomeAbb"])) {
         $cartaError = null;
         $ccvError = null;
         $intestatarioError = null;
@@ -79,13 +79,16 @@ if (isset($_SESSION["Username"])&& noAbbonamenti()){
             }
             if($pagamentoEffettuato){
                 header('location: doneAcquista.php');
+                die();
             }
         }
         if($pagamentoEffettuato == false){
             header('location: ../acquista.php?IdAbb='.$_GET["IdAbb"].'&nomeAbb='.$_GET["nomeAbb"].'&errGen=1');
+            die();
         }
     }
+}else{
+    header('location: ../../index.php');
 }
-
 
 ?>

@@ -119,9 +119,9 @@ INSERT INTO CARTA VALUES("783584310000", "Maestro", "021", "2023-01-01", "Luca G
 INSERT INTO CARTA VALUES("111562587000", "Maestro", "057", "2025-05-12", "Mario Rossi");
 
 /**ABBONAMENTI**/
-INSERT INTO ABBONAMENTO VALUES("1", "Basic", "NULL", "100", "1", "1000");
+INSERT INTO ABBONAMENTO VALUES("1", "Base", "NULL", "100", "1", "1000");
 INSERT INTO ABBONAMENTO VALUES("2", "Pro", "NULL", "220", "5", "3000");
-INSERT INTO ABBONAMENTO VALUES("3", "Superior", "NULL", "365", "10", "7000");
+INSERT INTO ABBONAMENTO VALUES("3", "Super", "NULL", "365", "10", "7000");
 
 /**LOCALI **/
 INSERT INTO LOCALE VALUES("1", "Fluido Caf&egrave;", "Via Pirandello, 65", "Caffetteria con un'ampia selezione di libri da cui attingere per immergersi in una rilassante lettura mentre si assaporano caffè e dolci fatti in casa.", "50", "/images/locali/fluido_cafe.webp");
