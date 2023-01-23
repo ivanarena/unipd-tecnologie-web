@@ -15,9 +15,9 @@ function nonPrenotato($id) {
 function abbonato() {
     $pdo = database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = 'SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE Username="'. $_SESSION["Username"] .'";';
+    $query = 'SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE Username=?;';
     $stmt = $pdo->prepare($query);
-    $stmt->execute(array($username));
+    $stmt->execute(array($_SESSION["Username"]));
     $ret = $stmt->fetchColumn() > 0;
     database::disconnect();
     return $ret;
