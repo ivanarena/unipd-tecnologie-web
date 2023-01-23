@@ -10,6 +10,7 @@
     $builder = new PageBuilder($fileName, $desc);
 
     $builder->setContent("<eventiPlaceholder />", getEventi());
+    $builder->setContent("<eventiRimPlaceholder />", nEventiRimanenti());
 
     $page = $builder->buildPage();
     echo $page;
