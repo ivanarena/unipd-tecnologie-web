@@ -3,18 +3,16 @@
 require_once("database.php");
 
 function noAbbonamenti() {
-    $ret=false;
-    echo $_SESSION["Username"];
+    $ret=0;
     $pdo = database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $query = "SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE Username=? AND CURDATE()<=DataScadenza;";
     $stmt = $pdo->prepare($query);
     $stmt->execute(array($_SESSION["Username"]));
     if($stmt->fetchColumn() <= 0){
-        $ret = true;
+        $ret = 1;
     }
     database::disconnect();
-    echo $ret;
     return $ret;
 }
 
