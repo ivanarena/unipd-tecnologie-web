@@ -1,7 +1,8 @@
 <?php require_once('session.php'); ?>
 <?php 
-    require_once(__DIR__.'/pageBuilder.php');
-    
+require_once(__DIR__.'/pageBuilder.php');
+require_once(__DIR__.'/utils/getAbbonamenti.php');
+if(isset($_SESSION["Username"]) && noAbbonamenti()){
     // Page information 
     $fileName = 'acquista';
     $desc = 'Effettua l &#39 acquisto del tuo abbonamento al metaverso.';
@@ -20,4 +21,7 @@
 
     $page = $builder->buildPage();
     echo $page;
+}else{
+    header('location: ./utils/error403.php');
+}
 ?>

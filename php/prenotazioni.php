@@ -1,5 +1,6 @@
 <?php require_once('session.php'); ?>
 <?php 
+if(isset($_SESSION["Username"])){
     require_once(__DIR__.'/pageBuilder.php');
     require_once(__DIR__.'/utils/getPrenotazioni.php');
 
@@ -13,4 +14,7 @@
 
     $page = $builder->buildPage();
     echo $page;
+}else{
+    header('location: error403.php');
+}
 ?>

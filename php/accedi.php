@@ -21,7 +21,7 @@ if(!isset($_SESSION["Username"])){
     $page = $builder->buildPage();
     echo $page;
 }else{
-    header('location: ../index.php')
+    header('location: ../index.php');
     die();
 }
 ?>

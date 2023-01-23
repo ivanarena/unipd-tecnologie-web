@@ -1,0 +1,3 @@
+DirectoryIndex index.php
+ErrorDocument 403 /php/utils/error403.php
+ErrorDocument 404 /php/utils/error404.php
