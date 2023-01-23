@@ -1,10 +1,7 @@
 <?php
 require_once("../session.php");
 require_once("./getAbbonamenti.php");
-echo "32";
-echo noAbbonamenti();
-if (isset($_SESSION["Username"])&& !noAbbonamenti()){
-    echo noAbbonamenti();
+if (isset($_SESSION["Username"])&& noAbbonamenti()){
     $pagamentoEffettuato = false;
     if (!empty($_POST) && isset($_GET["IdAbb"])) {
         $cartaError = null;
