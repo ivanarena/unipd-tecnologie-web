@@ -1,14 +1,20 @@
 <?php 
+
 require_once("database.php");
 
 function noAbbonamenti() {
+    $ret=false;
+    echo $_SESSION["Username"];
     $pdo = database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = 'SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE Username="'. $_SESSION["Username"] .'";';
+    $query = "SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE Username=? AND CURDATE()<=DataScadenza;";
     $stmt = $pdo->prepare($query);
-    $stmt->execute(array($IdAbb));
-    $ret = $stmt->fetchColumn() <= 0;
+    $stmt->execute(array($_SESSION["Username"]));
+    if($stmt->fetchColumn() <= 0){
+        $ret = true;
+    }
     database::disconnect();
+    echo $ret;
     return $ret;
 }
 
@@ -41,7 +47,7 @@ function getAbbonamenti(){
                             </li>
                         </ul>
                         </div>
-                    <a href="/php/acquista.php?IdAbb='.$abbonamento["IdAbbonamento"].'" class="btn primary-btn subscribe-btn flex-row-center flex-row-center">Acquista</a>
+                    <a href="/php/acquista.php?IdAbb='.$abbonamento["IdAbbonamento"].'&nomeAbb='.$abbonamento["TitoloAbb"].'" class="btn primary-btn subscribe-btn flex-row-center flex-row-center">Acquista</a>
                 </div>');
             } else {
                 $result.= strval('<div class="plan-card card-shadow">

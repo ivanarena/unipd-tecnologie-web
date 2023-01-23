@@ -10,6 +10,7 @@ if (isset($_SESSION['Username'])) {
         $nomeError = null;
         $cognomeError = null;
         $dataCheck = false;
+        $dataError = null;
         $valid = true;
         if (array_key_exists("username", $_REQUEST) && !empty($_REQUEST["username"]) && strlen($_REQUEST["username"]) <= 50) {
             $username = $_POST['username'];

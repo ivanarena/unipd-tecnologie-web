@@ -4,9 +4,9 @@ require_once("database.php");
 function nonPrenotato($id) {
     $pdo = database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = 'SELECT Count(*) FROM EVENTO_UTENTE WHERE Username="'. $_SESSION["Username"] .'" AND IdEvento = '. $id .';';
+    $query = 'SELECT Count(*) FROM EVENTO_UTENTE WHERE Username=? AND IdEvento =?;';
     $stmt = $pdo->prepare($query);
-    $stmt->execute(array($prenotazioni));
+    $stmt->execute(array($_SESSION["Username"],$id));
     $ret = $stmt->fetchColumn() <= 0;
     database::disconnect();
     return $ret;
