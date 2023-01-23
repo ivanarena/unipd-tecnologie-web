@@ -8,7 +8,7 @@ try {
     $pdo = database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    $sql = "SELECT E.NomeEvento, L.NomeLocale, DATE_FORMAT(E.DataOraInizio,'%d/%m/%Y') as dataInizio, DATE_FORMAT(DataOraInizio,'%H:%i') as oraInizio, DATE_FORMAT(DataOraFine,'%H:%i') as oraFine FROM EVENTO_UTENTE AS EU, EVENTO AS E, LOCALE AS L WHERE Username='". $_SESSION["Username"] . "' AND EU.IdEvento = E.IdEvento AND L.IdLocale = E.IdLocale;";
+    $sql = "SELECT EU.IdEvento, E.NomeEvento, L.NomeLocale, DATE_FORMAT(E.DataOraInizio,'%d/%m/%Y') as dataInizio, DATE_FORMAT(DataOraInizio,'%H:%i') as oraInizio, DATE_FORMAT(DataOraFine,'%H:%i') as oraFine FROM EVENTO_UTENTE AS EU, EVENTO AS E, LOCALE AS L WHERE Username='". $_SESSION["Username"] . "' AND EU.IdEvento = E.IdEvento AND L.IdLocale = E.IdLocale;";
     foreach ($pdo->query($sql)->fetchAll() as $prenotazione) {
         $result .= strval(
             '<div class="data-container card-shadow">
