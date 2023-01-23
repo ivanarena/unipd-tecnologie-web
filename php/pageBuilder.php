@@ -1,7 +1,7 @@
 <?php require_once('session.php'); ?>
 <?php
-if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/utils/pageBuilder.php') {
-    header("location: ./error403.php");
+if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
+    header("location: ./utils/error403.php");
 } else { 
     class PageBuilder {
         private $hostName = 'San Junipero';

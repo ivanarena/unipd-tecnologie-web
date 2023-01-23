@@ -24,7 +24,7 @@ if(!isset($_SESSION["Username"])){
     $page = $builder->buildPage();
     echo $page;
 }else{
-    header('location: ../error403.php');
+    header('location: ../index.php');
     die();
 }
 ?>
