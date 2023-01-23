@@ -23,7 +23,8 @@ if (isset($_SESSION["Username"])&& isset($_SESSION["admin"])){
         }
     }
 }
-header('location: ../eventi.php');
+header('location: ./error403.php');
+die();
 
 ?>
 

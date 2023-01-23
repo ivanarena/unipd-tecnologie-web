@@ -88,7 +88,8 @@ if (isset($_SESSION["Username"])&& noAbbonamenti()){
         }
     }
 }else{
-    header('location: ../../index.php');
+    header('location: ./error403.php');
+    die();
 }
 
 ?>

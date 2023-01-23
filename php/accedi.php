@@ -1,5 +1,6 @@
 <?php require_once('session.php'); ?>
 <?php 
+if(!isset($_SESSION["Username"])){
     require_once(__DIR__.'/pageBuilder.php');
     
     // Page information 
@@ -19,4 +20,8 @@
     
     $page = $builder->buildPage();
     echo $page;
+}else{
+    header('location: ../index.php')
+    die();
+}
 ?>

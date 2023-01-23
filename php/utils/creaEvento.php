@@ -16,5 +16,8 @@ if (isset($_SESSION["Username"])&& isset($_SESSION["admin"])){
         $page = $builder->buildPage();
         echo $page;
     }
+}else{
+    header('location: ./error403.php');
+    die();
 }
 ?>
