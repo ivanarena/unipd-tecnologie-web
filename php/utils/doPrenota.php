@@ -12,28 +12,31 @@ if (isset($_SESSION["Username"])&& !noAbbonamenti()){
             $stmt = $pdo->prepare("SELECT Count(*) FROM EVENTO WHERE IdEvento=?;");
             $stmt->execute(array($_GET["IdEvento"]));
             if ($stmt->fetchColumn() > 0) {
-                $stmt = $pdo->prepare("SELECT Count(*) FROM EVENTO_UTENTE WHERE Username=? AND IdEvento=?;");
-                $stmt->execute(array($_SESSION["Username"],$_GET["IdEvento"]));
-                if ($stmt->fetchColumn() <= 0) {
-                    $stmt = $pdo->prepare("SELECT COUNT(YEARWEEK(DataIscrizione)) as NumEventiIscritti FROM EVENTO_UTENTE WHERE YEARWEEK(DataIscrizione) = YEARWEEK(NOW()) AND Username = ? GROUP BY YEARWEEK(DataIscrizione)");
-                    $stmt->execute(array($_SESSION["Username"]));
-                    $numEventiIscrittiUt = $stmt->fetch()["NumEventiIscritti"];
-                    $query = "SELECT EventiSettimanali FROM ABBONAMENTO_UTENTE AU JOIN ABBONAMENTO A ON AU.IdAbbonamento = A.IdAbbonamento WHERE Username=? AND CURDATE()<=DataScadenza;";
-                    $stmt = $pdo->prepare($query);
-                    $stmt->execute(array($_SESSION["Username"]));
-                    $eventiLimiteUt = $stmt->fetch()["EventiSettimanali"];
-                    if($numEventiIscrittiUt<$eventiLimiteUt){
-                        $sql = "INSERT INTO EVENTO_UTENTE(Username, IdEvento, DataIscrizione) VALUES(?,?,?);";
-                        $q = $pdo->prepare($sql);
-                        $q->execute(array($_SESSION["Username"],$_GET["IdEvento"],date("Y-m-d")));
-                        $prenotaEffettuato = true;
+                if(getPosti($_GET["IdEvento"])>0){
+                    $stmt = $pdo->prepare("SELECT Count(*) FROM EVENTO_UTENTE WHERE Username=? AND IdEvento=?;");
+                    $stmt->execute(array($_SESSION["Username"],$_GET["IdEvento"]));
+                    if ($stmt->fetchColumn() <= 0) {
+                        $stmt = $pdo->prepare("SELECT COUNT(YEARWEEK(DataIscrizione)) as NumEventiIscritti FROM EVENTO_UTENTE WHERE YEARWEEK(DataIscrizione) = YEARWEEK(NOW()) AND Username = ? GROUP BY YEARWEEK(DataIscrizione)");
+                        $stmt->execute(array($_SESSION["Username"]));
+                        $numEventiIscrittiUt = $stmt->fetch()["NumEventiIscritti"];
+                        $query = "SELECT EventiSettimanali FROM ABBONAMENTO_UTENTE AU JOIN ABBONAMENTO A ON AU.IdAbbonamento = A.IdAbbonamento WHERE Username=? AND CURDATE()<=DataScadenza;";
+                        $stmt = $pdo->prepare($query);
+                        $stmt->execute(array($_SESSION["Username"]));
+                        $eventiLimiteUt = $stmt->fetch()["EventiSettimanali"];
+                        if($numEventiIscrittiUt<$eventiLimiteUt){
+                            $sql = "INSERT INTO EVENTO_UTENTE(Username, IdEvento, DataIscrizione) VALUES(?,?,?);";
+                            $q = $pdo->prepare($sql);
+                            $q->execute(array($_SESSION["Username"],$_GET["IdEvento"],date("Y-m-d")));
+                            $prenotaEffettuato = true;
+                        }else{
+                            $prenotaError = "Limite di eventi prenotabili superato.";
+                        }
                     }else{
-                        $prenotaError = "Limite di eventi prenotabili superato.";
+                        $prenotaError = "Evento già prenotato";
                     }
                 }else{
-                    $prenotaError = "Evento già prenotato";
+                    $prenotaError = "Impossibile prenotare, capienza al limite.";
                 }
-
             }
             database::disconnect();
         } catch (PDOException $e) {
