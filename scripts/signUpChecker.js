@@ -81,7 +81,7 @@ function checkDataNascita() {
         age--;
     }
     if (age > 17) {
-        document.getElementById("dateErr").classList.add('hide');;
+        document.getElementById("dateErr").classList.add('hide');
         return true;
     }
     else {
@@ -93,14 +93,6 @@ function checkDataNascita() {
 function checkPassword() {
     let passwordv = password.value;
     if (passwordv == "") {
-        document.getElementById("passErr").classList.remove('hide');
-        return false;
-    }
-    else if (passwordv.length < 8) {
-        document.getElementById("passErr").classList.remove('hide');
-        return false;
-    }
-    else if (passwordv.length > 50) {
         document.getElementById("passErr").classList.remove('hide');
         return false;
     }
