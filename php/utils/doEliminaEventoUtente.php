@@ -6,9 +6,13 @@ if (isset($_SESSION["Username"])){
         include_once('./database.php');
         $pdo = database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "DELETE FROM EVENTO_UTENTE WHERE Username = '". $_SESSION["Username"] ."' AND IdEvento = '". $_GET["IdEvento"] ."';";
-        $query = $pdo->prepare($sql);
-        $query->execute();
+        $stmt = $pdo->prepare("SELECT Count(*) FROM EVENTO_UTENTE WHERE Username = ? AND IdEvento = ?;");
+        $stmt->execute(array($_SESSION["Username"],$_GET["IdEvento"]));
+        if ($stmt->fetchColumn() > 0) {
+            $sql = "DELETE FROM EVENTO_UTENTE WHERE Username = ? AND IdEvento = ?;";
+            $query = $pdo->prepare($sql);
+            $query->execute($_SESSION["Username"],$_GET["IdEvento"]);
+        }
         database::disconnect();
     } catch (PDOException $e) {
         echo 'Errore PDO e connessione DB: <br />';

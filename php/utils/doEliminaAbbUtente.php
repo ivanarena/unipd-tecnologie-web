@@ -23,10 +23,14 @@ if (isset($_SESSION["Username"])){
         include_once('./database.php');
         $pdo = database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "DELETE FROM ABBONAMENTO_UTENTE WHERE IdAbbUtente =?;";
-        $query = $pdo->prepare($sql);
-        $query->execute(array($_GET["IdAbb"]));
-        eliminaPrenotazioni();
+        $stmt = $pdo->prepare("SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE IdAbbUtente = ?;");
+        $stmt->execute(array($_GET["IdAbb"]));
+        if ($stmt->fetchColumn() > 0) {
+            $sql = "DELETE FROM ABBONAMENTO_UTENTE WHERE IdAbbUtente =?;";
+            $query = $pdo->prepare($sql);
+            $query->execute(array($_GET["IdAbb"]));
+            eliminaPrenotazioni();
+        }
         database::disconnect();
     } catch (PDOException $e) {
         echo 'Errore PDO e connessione DB: <br />';

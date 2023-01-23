@@ -5,12 +5,12 @@ if (isset($_SESSION["Username"])){
         include_once('./database.php');
         $pdo = database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "DELETE FROM UTENTE WHERE Username = '". $_SESSION["Username"] ."';";
+        $sql = "DELETE FROM UTENTE WHERE Username = ?;";
         $DBUsername = $pdo->prepare($sql);
-        $DBUsername->execute(array($username));
+        $DBUsername->execute(array($_SESSION["Username"]));
         database::disconnect();
-        session_destroy();
-        unset($_SESSION['Username']);
+        header('location: ./doDisconettiti.php');
+        die();
     } catch (PDOException $e) {
         echo 'Errore PDO e connessione DB: <br />';
         echo 'SQLQuery: ', $sql;
