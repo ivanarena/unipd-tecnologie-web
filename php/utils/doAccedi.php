@@ -48,6 +48,7 @@ if (isset($_SESSION['Username'])) {
             }
             if (isset($_SESSION['Username'])) {
                 header("location: ../../index.php");
+                die();
             }
         } else {
             header("location: ../accedi.php?errGen=1");

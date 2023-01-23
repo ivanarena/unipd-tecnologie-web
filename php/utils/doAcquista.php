@@ -79,11 +79,12 @@ if (isset($_SESSION["Username"])&& noAbbonamenti()){
             }
             if($pagamentoEffettuato){
                 header('location: doneAcquista.php');
+                die();
             }
         }
         if($pagamentoEffettuato == false){
             header('location: ../acquista.php?IdAbb='.$_GET["IdAbb"].'&nomeAbb='.$_GET["nomeAbb"].'&errGen=1');
-            
+            die();
         }
     }
 }else{
