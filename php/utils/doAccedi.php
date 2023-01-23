@@ -27,6 +27,7 @@ if (isset($_SESSION['Username'])) {
                 if ($stmt->fetchColumn() <= 0) {
                     header_remove();
                     header("location: ../accedi.php?errUser=1");
+                    die();
                 } else {
                     $sql = "SELECT * from UTENTE WHERE Username = ?";
                     $DBUsername = $pdo->prepare($sql);
@@ -38,6 +39,7 @@ if (isset($_SESSION['Username'])) {
                     } else {
                         header_remove();
                         header("location: ../accedi.php?errPass=1");
+                        die();
                     }
                 }
                 database::disconnect();
