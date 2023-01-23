@@ -6,9 +6,9 @@ function eliminaPrenotazioni() {
         include_once('./database.php');
         $pdo = database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "DELETE FROM EVENTO_UTENTE WHERE Username = '". $_SESSION["Username"] ."';";
+        $sql = "DELETE FROM EVENTO_UTENTE WHERE Username=?;";
         $query = $pdo->prepare($sql);
-        $query->execute();
+        $query->execute(array($_SESSION["Username"]));
         database::disconnect();
     } catch (PDOException $e) {
         echo 'Errore PDO e connessione DB: <br />';
@@ -23,9 +23,9 @@ if (isset($_SESSION["Username"])){
         include_once('./database.php');
         $pdo = database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "DELETE FROM ABBONAMENTO_UTENTE WHERE IdAbbUtente = '". $_GET["IdAbb"] ."';";
+        $sql = "DELETE FROM ABBONAMENTO_UTENTE WHERE IdAbbUtente =?;";
         $query = $pdo->prepare($sql);
-        $query->execute();
+        $query->execute(array($_GET["IdAbb"]));
         eliminaPrenotazioni();
         database::disconnect();
     } catch (PDOException $e) {

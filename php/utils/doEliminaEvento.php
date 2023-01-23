@@ -4,9 +4,9 @@ require_once("../session.php");
         include_once('./database.php');
         $pdo = database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "DELETE FROM EVENTO WHERE IdEvento = '". $_GET["IdEvento"] ."';";
+        $sql = "DELETE FROM EVENTO WHERE IdEvento = ?;";
         $query = $pdo->prepare($sql);
-        $query->execute();
+        $query->execute(array($_GET["IdEvento"]));
         database::disconnect();
     } catch (PDOException $e) {
         echo 'Errore PDO e connessione DB: <br />';
