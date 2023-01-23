@@ -37,11 +37,11 @@ function getAbbonamenti(){
                             </li>
                             <li class="plan-feature">
                                 <p class="feature-name">Eventi</p>
-                                <p class="feature-desc">'.$abbonamento["EventiSettimanali"].'/sett</p>
+                                <p class="feature-desc">'.$abbonamento["EventiSettimanali"].'/settimana</p>
                             </li>
                             <li class="plan-feature">
                                 <p class="feature-name">Borsellino</p>
-                                <p class="feature-desc">'.$abbonamento["MetaCoin"].'/giorno</p>
+                                <p class="feature-desc">'.substr($abbonamento["MetaCoin"], 0, -3).'€/giorno</p>
                             </li>
                         </ul>
                         </div>
@@ -59,11 +59,11 @@ function getAbbonamenti(){
                             </li>
                             <li class="plan-feature">
                                 <p class="feature-name">Eventi</p>
-                                <p class="feature-desc">'.$abbonamento["EventiSettimanali"].'/sett</p>
+                                <p class="feature-desc">'.$abbonamento["EventiSettimanali"].'/settimana</p>
                             </li>
                             <li class="plan-feature">
                                 <p class="feature-name">Borsellino</p>
-                                <p class="feature-desc">'.$abbonamento["MetaCoin"].'/giorno</p>
+                                <p class="feature-desc">'.substr($abbonamento["MetaCoin"], 0, -3).'€/giorno</p>
                             </li>
                         </ul>
                         </div>

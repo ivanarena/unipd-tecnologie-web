@@ -15,21 +15,12 @@ function nonPrenotato($id) {
 function abbonato() {
     $pdo = database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = 'SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE Username=?;';
+    $query = 'SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE Username=? AND CURDATE()<=DataScadenza;';
     $stmt = $pdo->prepare($query);
     $stmt->execute(array($_SESSION["Username"]));
     $ret = $stmt->fetchColumn() > 0;
     database::disconnect();
     return $ret;
-}
-
-function admin() {
-    $pdo = database::connect();
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = 'SELECT Privilegio FROM UTENTE WHERE Username="'. $_SESSION["Username"] .'";';
-    $privilegio = $pdo->query($query)->fetchColumn();
-    database::disconnect();
-    return $privilegio;
 }
 
 function getPosti($idLocale){
@@ -81,7 +72,7 @@ function nEventiRimanenti(){
 
 function getEventi() {
     $result = '';
-    if (isset($_SESSION['Username']) && admin() == 1) {
+    if (isset($_SESSION['Username']) && $_SESSION["admin"] == 1) {
         $result = '<a href="/php/utils/creaEvento.php" role="button" class="btn primary-btn main-btn">Crea evento</a>';
     } 
     try {
@@ -96,7 +87,7 @@ function getEventi() {
         $res_sql = $pdo->query($sql);
         foreach ($res_sql->fetchAll() as $evento) {
             $posti = getPosti($evento["IdEvento"]);
-            if (isset($_SESSION['Username']) && admin() == 1) {
+            if (isset($_SESSION['Username']) && $_SESSION["admin"] == 1) {
                 $result .= strval('<div class="h-card card-shadow events-container">
                 <div class="event-card">
                     <div class="event-text">
