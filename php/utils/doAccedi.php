@@ -54,6 +54,9 @@ if (isset($_SESSION['Username'])) {
             }
         } else {
             header("location: ../accedi.php?errGen=1");
+            die();
         }
     }
+    header('location: ./error403.php');
+    die();
 }?>
