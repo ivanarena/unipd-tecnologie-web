@@ -64,7 +64,7 @@ class PageBuilder {
 
     public function setError($msg, $isError) {
         if($isError == 1){
-            $this->content = str_replace('<span class="error hide"></span>', '<span class="error">' . $msg . '</span>', $this->content);
+            $this->content = str_replace('<span class="error-msg hide"></span>', '<span class="error-msg">' . $msg . '</span>', $this->content);
         }
     }
 
