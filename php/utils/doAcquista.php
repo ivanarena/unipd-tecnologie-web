@@ -6,7 +6,7 @@ if (isset($_SESSION["Username"])){
             include_once('./database.php');
             $pdo = database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+            
             $numeroCarta = $_POST["numero-carta"];
             $dataInizio = date("Y-m-d");
             $dataScadenza = date('Y-m-d', strtotime($dataInizio. ' + 90 days'));
