@@ -1,6 +1,7 @@
 <?php
 require_once("../session.php");
 require_once("./getAbbonamenti.php");
+require_once("./getEventi.php");
 if (isset($_SESSION["Username"])&& !noAbbonamenti()){
     $prenotaEffettuato = false;
     $prenotaError=null;
