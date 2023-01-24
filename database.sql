@@ -150,7 +150,7 @@ INSERT INTO EVENTO VALUES("1", "Salone del libro", "Il salone del libro è un ev
                             scrittura e all'editoria. Insomma, il salone del libro
                             è un appuntamento imperdibile per gli appassionati di lettura e per chi vuole essere sempre
                             aggiornato sull'evoluzione del mondo
-                            dell'editoria.", "1", "2023-01-15 17:00:00", "2023-01-15 19:00:00");
+                            dell'editoria.", "1", "2023-02-15 17:00:00", "2023-03-15 19:00:00");
 INSERT INTO EVENTO VALUES("2", "Vida Loca", "Vieni a scatenarti al ritmo del raggaeton più travolgente della stagione!
                             La
                             nostra discoteca
@@ -162,7 +162,7 @@ INSERT INTO EVENTO VALUES("2", "Vida Loca", "Vieni a scatenarti al ritmo del rag
                             creare una serata indimenticabile. Ma non è tutto: durante la serata ci saranno
                             anche animazioni e performance di ballo per rendere la festa ancora più coinvolgente. Non
                             perdere l'occasione
-                            di vivere una notte indimenticabile all'insegna del divertimento e della musica latina!", "2", "2023-01-02 22:00:00", "2023-02-03 06:00:00");
+                            di vivere una notte indimenticabile all'insegna del divertimento e della musica latina!", "2", "2023-02-25 22:00:00", "2023-02-25 06:00:00");
 INSERT INTO EVENTO VALUES("3", "Spirit techno", "Venite a vivere la notte più emozionante della vostra vita al nostro
                             evento
                             <span lang=""en"">techno</span> in discoteca!
@@ -172,7 +172,7 @@ INSERT INTO EVENTO VALUES("3", "Spirit techno", "Venite a vivere la notte più e
                             ballo. Con i nostri <span lang=""en""><abbr title=""disc jockey"">DJ</abbr></span>
                             di fama internazionale ai piatti, questa è una serata che non dimenticherete facilmente. Non
                             perdete l'opportunità
-                            di unirvi a noi e scatenarvi al ritmo della <span lang=""en"">techno</span> più pura!", "2", "2022-12-26 22:00:00", "2022-12-27 06:00:00");
+                            di unirvi a noi e scatenarvi al ritmo della <span lang=""en"">techno</span> più pura!", "2", "2023-02-22 22:00:00", "2023-02-22 06:00:00");
 INSERT INTO EVENTO VALUES("4", "Ride", "Vieni a vivere l'adrenalina delle corse sui <span lang=""en"">kart</span> in
                             una
                             <span lang=""en"">location</span> mozzafiato! In <span lang=""en"">indoor</span> e <span
@@ -184,7 +184,7 @@ INSERT INTO EVENTO VALUES("4", "Ride", "Vieni a vivere l'adrenalina delle corse 
                             assoluti.
                             Non perdere l'occasione di vivere una giornata indimenticabile alla guida dei nostri <span
                                 lang=""en"">kart</span> performanti.
-                            Prenota subito la tua esperienza di corse mozzafiato!", "3", "2022-12-29 09:00:00", "2022-12-29 20:00:00");
+                            Prenota subito la tua esperienza di corse mozzafiato!", "3", "2023-02-20 09:00:00", "2023-02-20 20:00:00");
 INSERT INTO EVENTO VALUES("5", "Day Spa", "Una giornata in spa è il modo perfetto per rilassarsi e coccolarsi.
                             Immagina
                             di passare
@@ -201,7 +201,7 @@ INSERT INTO EVENTO VALUES("5", "Day Spa", "Una giornata in spa è il modo perfet
                             leggeri, perfetti per rilassarsi al sole. Tutto questo ti aspetta in una giornata in spa,
                             dove
                             potrai godere
-                            di momenti di benessere e <span lang=""en"">relax</span> assoluti.", "4", "2022-12-30 08:00:00", "2022-12-30 23:00:00");
+                            di momenti di benessere e <span lang=""en"">relax</span> assoluti.", "4", "2023-02-17 08:00:00", "2023-02-17 23:00:00");
 INSERT INTO EVENTO VALUES("6", "Lotta alla mafia con Saviano", "Vi invitiamo a unirvi a noi per ascoltare Roberto Saviano, autore e
                             giornalista italiano che
                             ha dedicato la sua carriera a denunciare il potere e la violenza della camorra e della
@@ -209,7 +209,7 @@ INSERT INTO EVENTO VALUES("6", "Lotta alla mafia con Saviano", "Vi invitiamo a u
                             Durante il suo
                             comizio, Saviano condividerà la sua profonda conoscenza della storia e delle dinamiche della
                             camorra,
-                            e racconterà le sue personali esperienze nella lotta contro queste organizzazioni criminali.", "5", "2023-01-05 17:00:00", "2023-01-05 20:30:00");
+                            e racconterà le sue personali esperienze nella lotta contro queste organizzazioni criminali.", "5", "2023-02-09 17:00:00", "2023-02-09 20:30:00");
 
 /**PORTAFOGLI**/
 INSERT INTO PORTAFOGLIO VALUES("Alyon", "3704061262648614");
