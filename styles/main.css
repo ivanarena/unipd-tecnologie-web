@@ -118,6 +118,7 @@ main {
     background: linear-gradient(128deg, #67007e 18%, #9038e5 50%, #ba14f6 74%, #9d2dea 98%);
     background-size: 500%;
     background-position: 60%;
+    text-decoration: underline;
 }
 
 .secondary-btn,
