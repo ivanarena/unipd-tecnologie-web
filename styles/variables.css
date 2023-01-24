@@ -33,9 +33,9 @@
 
     /* b = button, w = width, h = height */
     --card-width: 85%;
-    --card-b-radius: 40px;
+    --card-b-radius: 2.5em;
 
-    --btn-b-radius: 40px;
-    --btn-w: 120px;
-    --btn-h: 60px;
+    --btn-b-radius: 2.5em;
+    --btn-w: 7.5em;
+    --btn-h: 3.75em;
 }
