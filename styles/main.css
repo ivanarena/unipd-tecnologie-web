@@ -109,8 +109,8 @@ main {
 }
 
 .primary-btn:hover {
-    background: rgb(209, 0, 255);
-    background: linear-gradient(128deg, rgba(209, 0, 255, 1) 18%, rgba(144, 56, 229, 1) 50%, rgba(186, 20, 246, 1) 74%, rgba(157, 45, 234, 1) 98%);
+    background: #C400F0;
+    background: linear-gradient(128deg, #67007e 18%, #9038e5 50%, #ba14f6 74%, #9d2dea 98%);
     background-size: 500%;
     background-position: 60%;
 }
