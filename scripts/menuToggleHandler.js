@@ -6,8 +6,8 @@ const sanJunipero = document.getElementById('san-junipero');
 const sanJuniperoLogo = document.getElementById('san-junipero-logo');
 const darkModeToggle = document.getElementById('dark-mode-toggle')
 
-const mobile = window.matchMedia("(max-width: 1200px)");
-const smallDesktop = window.matchMedia("(max-width: 1400px)");
+const mobile = window.matchMedia("(max-width: 1300px)");
+const smallDesktop = window.matchMedia("(max-width: 1500px)");
 // const desktop = window.matchMedia("(min-width: 729px)");
 
 const toHide = [pagesMenu, userMenu];
