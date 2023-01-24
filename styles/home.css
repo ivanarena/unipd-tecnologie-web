@@ -1,6 +1,6 @@
-
 .gradient-card {
-    background: linear-gradient(-45deg, #DB3B0A, #E31C68, #1A7EA2, #1D8500);
+    background: #C400F0;
+    background: linear-gradient(-45deg, #1A7EA2, #E31C68, #1A7EA2, #E31C68);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 40vh;
@@ -60,7 +60,7 @@
     text-decoration: underline;
 }
 
-.warning-banner{
+.warning-banner {
     text-align: center;
 }
 
@@ -81,7 +81,7 @@
         align-self: center;
     }
 
-    .gradient-card h1{
+    .gradient-card h1 {
         font-size: var(--fs-h1-m);
     }
 
@@ -105,4 +105,3 @@
         background-position: 0% 50%;
     }
 }
-

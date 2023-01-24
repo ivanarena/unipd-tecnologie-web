@@ -48,25 +48,28 @@ function getPosti($idLocale){
 }
 
 function nEventiRimanenti(){
-    $ret=0;
-    try {
-        $pdo = database::connect();
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        $stmt = $pdo->prepare("SELECT COUNT(YEARWEEK(DataIscrizione)) as NumEventiIscritti FROM EVENTO_UTENTE WHERE YEARWEEK(DataIscrizione) = YEARWEEK(NOW()) AND Username = ? GROUP BY YEARWEEK(DataIscrizione)");
-        $stmt->execute(array($_SESSION["Username"]));
-        $numEventiIscrittiUt = $stmt->fetch()["NumEventiIscritti"];
-        $query = "SELECT EventiSettimanali FROM ABBONAMENTO_UTENTE AU JOIN ABBONAMENTO A ON AU.IdAbbonamento = A.IdAbbonamento WHERE Username=? AND CURDATE()<=DataScadenza;";
-        $stmt = $pdo->prepare($query);
-        $stmt->execute(array($_SESSION["Username"]));
-        $eventiLimiteUt = $stmt->fetch()["EventiSettimanali"];
-        $ret= $eventiLimiteUt-$numEventiIscrittiUt;
-        database::disconnect();
-    } catch (PDOException $e) {
-                echo 'Errore PDO e connessione DB: <br />';
-                echo 'SQLQuery: ', $sql;
-                echo 'Errore: ' . $e->getMessage();
+    $ret='';
+    if (abbonato()) {
+        try {
+            $pdo = database::connect();
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            $stmt = $pdo->prepare("SELECT COUNT(YEARWEEK(DataIscrizione)) as NumEventiIscritti FROM EVENTO_UTENTE WHERE YEARWEEK(DataIscrizione) = YEARWEEK(NOW()) AND Username = ? GROUP BY YEARWEEK(DataIscrizione)");
+            $stmt->execute(array($_SESSION["Username"]));
+            $numEventiIscrittiUt = $stmt->fetch()["NumEventiIscritti"];
+            $query = "SELECT EventiSettimanali FROM ABBONAMENTO_UTENTE AU JOIN ABBONAMENTO A ON AU.IdAbbonamento = A.IdAbbonamento WHERE Username=? AND CURDATE()<=DataScadenza;";
+            $stmt = $pdo->prepare($query);
+            $stmt->execute(array($_SESSION["Username"]));
+            $eventiLimiteUt = $stmt->fetch()["EventiSettimanali"];
+            $eventiRimanenti= $eventiLimiteUt-$numEventiIscrittiUt;
+            $ret =  '<span class="events-count">Hai ancora a disposizione '. $eventiRimanenti .' eventi per questa settimana.</span>';
+            database::disconnect();
+        } catch (PDOException $e) {
+            echo 'Errore PDO e connessione DB: <br />';
+            echo 'SQLQuery: ', $sql;
+            echo 'Errore: ' . $e->getMessage();
         }
+    }
     return $ret;
 }
 

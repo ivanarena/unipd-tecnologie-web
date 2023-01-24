@@ -2,6 +2,13 @@
     margin-bottom: 4vh;
 }
 
+.events-count {
+    color: var(--clr-a-visited);
+    font-weight: bold;
+    margin-bottom: 6vh;
+    font-size: var(--fs-home-p-d);
+}
+
 .event-card {
     width: 100%;
     display: flex;
@@ -27,6 +34,8 @@
 .event-desc {
     margin-top: 2vh;
     text-align: justify;
+    line-height: 1.5em;
+
 }
 
 .event-timestamp {
