@@ -20,14 +20,14 @@
     --clr-d-a-visited: #0A89FF;
     --clr-d-a: #33FFE7;
     /* FONT SIZES -- d = desktop, m = mobile */
-    --fs-h1-d: 48px;
-    --fs-p-d: 20px;
-    --fs-home-p-d: 30px;
-    --fs-btn-d: 16px;
-    --fs-h1-m: 36px;
-    --fs-p-m: 16px;
-    --fs-home-p-m:24;
-    --fs-btn-m: 14px;
+    --fs-h1-d: 3em;
+    --fs-p-d: 1.25em;
+    --fs-home-p-d: 1.875em;
+    --fs-btn-d: 1em;
+    --fs-h1-m: 2.25em;
+    --fs-p-m: 1em;
+    --fs-home-p-m: 1.5em;
+    --fs-btn-m: 0.875em;
 
     /* --fs-h2: 18px; */
 
