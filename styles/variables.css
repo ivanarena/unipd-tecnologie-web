@@ -12,7 +12,7 @@
     --clr-input-bg: #dcdcdc;
 
     /* COLORS DARK MODE */
-    --clr-d-background: #181818;
+    --clr-d-background: #070707;
     --clr-d-text: white;
     --clr-d-secondary: #ce84eb;
     --clr-d-card: rgb(62, 62, 62);
@@ -22,7 +22,7 @@
     /* FONT SIZES -- d = desktop, m = mobile */
     --fs-h1-d: 3em;
     --fs-p-d: 1.25em;
-    --fs-home-p-d: 1.875em;
+    --fs-home-p-d: 1.6em;
     --fs-btn-d: 1em;
     --fs-h1-m: 2.25em;
     --fs-p-m: 1em;
