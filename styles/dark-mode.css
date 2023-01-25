@@ -79,3 +79,10 @@ a:visited {
 .login-form {
     background-color: var(--clr-d-hcard);
 }
+
+@media screen and (max-width: 1300px) {
+    header,
+    .menu-is-mobile {
+        background-color: var(--clr-d-background);
+    }
+}
