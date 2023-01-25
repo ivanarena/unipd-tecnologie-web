@@ -32,7 +32,7 @@ function getAbbonamenti(){
                         <span class="plan-price"><span class="euro">&#8364;</span>'.$abbonamento["Prezzo"].'</span>
                         <ul class="plan-features">
                             <li class="plan-feature">
-                                <p class="feature-name">Durata <abbr title="abbonamento">abb</abbr>.</p>
+                                <p class="feature-name">Durata abbonamento</p>
                                 <p class="feature-desc">90 giorni</p>
                             </li>
                             <li class="plan-feature">
@@ -54,7 +54,7 @@ function getAbbonamenti(){
                         <span class="plan-price"><span class="euro">&#8364;</span>'.$abbonamento["Prezzo"].'</span>
                         <ul class="plan-features">
                             <li class="plan-feature">
-                                <p class="feature-name">Durata <abbr title="abbonamento">abb</abbr>.</p>
+                                <p class="feature-name">Durata abbonamento</p>
                                 <p class="feature-desc">90 giorni</p>
                             </li>
                             <li class="plan-feature">

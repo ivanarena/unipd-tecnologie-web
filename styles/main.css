@@ -247,3 +247,7 @@ main {
         font-size: var(--fs-btn-m);
     }
 }
+
+abbr.no-underline{
+    text-decoration: none;
+}
