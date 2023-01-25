@@ -140,41 +140,61 @@ header {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* MOBILE MENUs */
-.menu-is-mobile {
-    display: flex !important;
-    background-color: white;
-    height: 80vh;
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-}
 
-.menu-is-mobile .menu-links-list {
-    margin-top: 5vh;
-    margin-left: 10vw;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: larger;
-}
+@media screen and (max-width: 1300px) {
+    header {
+        top: 0;
+        height: 12vh;
+        background-color: white;
+        box-shadow: 0 6px 15px -12px gray;
+        position: fixed;
+    }
 
-.menu-is-mobile .menu-link {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-}
+    .breadcrumb-container {
+        margin-top: 17vh;
+    }
 
-.user-menu-is-mobile {
-    display: flex !important;
-    position: fixed;
-    top: 63%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    justify-content: flex-end;
-    padding-right: 8vw;
+    .logo {
+        position: fixed;
+        top: 2.5vh;
+    }
+
+    /* MOBILE MENUs */
+    .menu-is-mobile {
+        display: flex !important;
+        background-color: white;
+        height: 80vh;
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+    }
+
+    .menu-is-mobile .menu-links-list {
+        margin-top: 5vh;
+        margin-left: 10vw;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: larger;
+    }
+
+    .menu-is-mobile .menu-link {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+
+    .user-menu-is-mobile {
+        display: flex !important;
+        position: fixed;
+        top: 63%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        justify-content: flex-end;
+        padding-right: 8vw;
+    }
 }
 
 
@@ -242,11 +262,9 @@ input:checked+.slider:before {
 }
 
 @media screen and (max-width: 1500px) {
-
     #san-junipero {
         display: none;
     }
-
 }
 
 @media screen and (max-width: 1300px) {
@@ -256,10 +274,4 @@ input:checked+.slider:before {
     #user-menu-nav {
         display: none;
     }
-
-    /* 
-    #menu-nav .mobile-flex {
-        display: flex;
-    } */
-
 }

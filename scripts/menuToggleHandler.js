@@ -26,6 +26,7 @@ function mobileViewToggle() {
     } else if (!mobile.matches && mobileToggled) {
         mobileToggled = false;
         menuToggle.classList.toggle('hide');
+
     }
 }
 
@@ -35,10 +36,6 @@ function toggleMenu() {
     menuToggle.classList.toggle('is-active');
     pagesMenu.classList.toggle('menu-is-mobile');
     userMenu.classList.toggle('user-menu-is-mobile');
-    // breadcrumb.classList.toggle('hide');
-    darkModeToggle.classList.toggle('hide');
-    menuToggle.classList.toggle('fix-toggle');
-    toFix.forEach(x => x.classList.toggle('fixate'));
 }
 
 menuToggle.addEventListener('click', toggleMenu);
