@@ -48,11 +48,14 @@
 
 .card-link,
 .card-link:visited {
-    color: var(--clr-headings);
+    color: var(--clr-a);
     font-weight: bold;
     font-size: var(--fs-home-p-d);
 }
 
+.card-link:visited {
+    color: var(--clr-a-visited);
+}
 
 
 .card-link:hover {

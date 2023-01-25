@@ -42,14 +42,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;  
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.5em;
 }
 
 .aiuti {
-    position:absolute;
+    position: absolute;
     height: 0em;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 h1,
@@ -66,7 +66,7 @@ a {
     color: var(--clr-a);
     text-decoration: none;
     cursor: pointer;
-    
+
 }
 
 a:hover {
@@ -117,9 +117,7 @@ main {
     text-align: justify;
 }
 
-a.card-link:visited{
-    color: var(--clr-a-visited);
-}
+
 
 /* UTILITIES */
 .flex-row-center {
@@ -164,13 +162,14 @@ a.card-link:visited{
     background: linear-gradient(128deg, #67007e 18%, #9038e5 50%, #ba14f6 74%, #9d2dea 98%);
     background-size: 500%;
     background-position: 60%;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .secondary-btn,
 .secondary-btn:visited {
     background-color: var(--clr-btn-alt);
     color: var(--clr-btn-text-alt);
+    text-decoration: none;
 }
 
 input,
@@ -248,6 +247,6 @@ main {
     }
 }
 
-abbr.no-underline{
+abbr.no-underline {
     text-decoration: none;
 }

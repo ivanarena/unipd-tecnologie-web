@@ -18,6 +18,16 @@ a:visited {
     color: var(--clr-d-a-visited);
 }
 
+
+.card-link {
+    color: var(--clr-d-a);
+}
+
+.card-link:visited {
+    color: var(--clr-d-a-visited);
+}
+
+
 .menu-toggle .bar {
     background-color: var(--clr-d-text);
 }
@@ -66,7 +76,6 @@ a:visited {
 }
 
 /*registrati*/
-
 .login-form {
     background-color: var(--clr-d-hcard);
 }
