@@ -14,7 +14,7 @@ if(current == "Abbonamenti"){
     cont.setAttribute("id", "contenuto");
 }
 if(current == "Locali"){
-    var d = document.getElementsByClassName("page")[2];
+    var d = document.getElementsByClassName("page")[1];
     d.className += " current-page";
     var cont = document.getElementsByTagName("main")[0];
     cont.setAttribute("id", "contenuto");
@@ -37,3 +37,59 @@ if(current == "Contatti"){
     var cont = document.getElementsByTagName("main")[0];
     cont.setAttribute("id", "contenuto");
 }
+
+if(current == "Registrati"){
+    var cont = document.getElementsByTagName("main")[0];
+    cont.setAttribute("id", "contenuto");
+}
+
+if(current == "Profilo"){
+    var cont = document.getElementsByTagName("main")[0];
+    cont.setAttribute("id", "contenuto");
+}
+
+if(current == "Pagameto"){
+    var cont = document.getElementsByTagName("main")[0];
+    cont.setAttribute("id", "contenuto");
+}
+
+if(current == "Prenotazione"){
+    var cont = document.getElementsByTagName("main")[0];
+    cont.setAttribute("id", "contenuto");
+}
+
+if(current == "Crea evento"){
+    var cont = document.getElementsByTagName("main")[0];
+    cont.setAttribute("id", "contenuto");
+}
+
+if(current == "Prenotazioni"){
+    var cont = document.getElementsByTagName("main")[0];
+    cont.setAttribute("id", "contenuto");
+}
+
+if(current == "Accedi"){
+    var cont = document.getElementsByTagName("main")[0];
+    cont.setAttribute("id", "contenuto");
+}
+
+if(current == "Acquista"){
+    var cont = document.getElementsByTagName("main")[0];
+    cont.setAttribute("id", "contenuto");
+}
+
+if(current == "Eliminato"){
+    var cont = document.getElementsByTagName("main")[0];
+    cont.setAttribute("id", "contenuto");
+}
+
+if(current == "Registrazione"){
+    var cont = document.getElementsByTagName("main")[0];
+    cont.setAttribute("id", "contenuto");
+}
+
+
+
+
+
+
