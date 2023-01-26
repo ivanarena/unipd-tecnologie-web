@@ -45,8 +45,15 @@
     padding-bottom: 1vh;
 }
 
+
+
 .feature-name {
     font-weight: bold;
+    font-size: var(--fs-p-abb-d);
+}
+
+.feature-desc {
+    font-size: var(--fs-p-abb-d);
 }
 
 .euro {
@@ -86,5 +93,14 @@
     .plan-card {
         margin-bottom: 2vh;
         width: 90vw;
+    }
+
+    .feature-name {
+        font-weight: bold;
+        font-size: var(--fs-p-abb-m);
+    }
+    
+    .feature-desc {
+        font-size: var(--fs-p-abb-m);
     }
 }
