@@ -17,7 +17,8 @@ if (isset($_SESSION["Username"])&& isset($_SESSION["admin"])){
             $query->execute(array($_POST["nome-evento"], $_POST["descrizione"], $_POST["locale"], $dataOraInizio, $dataOraFine));
             database::disconnect();
             header('location: ../eventi.php');
-        } catch (PDOException $e) {
+        } 
+        catch (PDOException $e) {
             echo 'Errore PDO e connessione DB: <br />';
             echo 'SQLQuery: ', $sql;
             echo 'Errore: ' . $e->getMessage();
