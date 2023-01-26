@@ -59,7 +59,7 @@
 
 
 .card-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .warning-banner {
