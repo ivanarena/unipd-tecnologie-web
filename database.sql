@@ -56,6 +56,7 @@ CREATE TABLE LOCALE(
     Descrizione VARCHAR(1024), 
     Capienza INT NOT NULL, 
     LinkImg VARCHAR(512),
+    AltImg VARCHAR(512),
     PRIMARY KEY(IdLocale)
     );
 
@@ -124,11 +125,11 @@ INSERT INTO ABBONAMENTO VALUES("2", "Pro", "NULL", "220", "5", "3000");
 INSERT INTO ABBONAMENTO VALUES("3", "Super", "NULL", "365", "10", "7000");
 
 /**LOCALI **/
-INSERT INTO LOCALE VALUES("1", "Fluido Caf&egrave;", "Via Pirandello, 65", "Caffetteria con un'ampia selezione di libri da cui attingere per immergersi in una rilassante lettura mentre si assaporano caffè e dolci fatti in casa.", "50", "/images/locali/fluido_cafe.webp");
-INSERT INTO LOCALE VALUES("2", "Extra Extra", 'Via Umberto <abbr title="primo">I</abbr>, 75', 'Discoteca più <span lang="en">In</span> del Metaverso, con <span lang="en">djset</span> ed eventi per tutti i gusti. Ambiente <span lang="en">chic</span> ed elegante, ma senza selezione all&#39;ingresso.', "700", "/images/locali/extra_extra.webp");
-INSERT INTO LOCALE VALUES("3", 'Rush IN', "Via della Croce Verde, 2", 'Pista per <span lang="en">Kart</span> con circuito sia <span lang="en">indoor</span> che <span lang="en">outdoor</span>. I <span lang="en">kart</span> sono noleggiabili per il tempo desiderato e se siete amanti della guida sportiva il divertimento è assicurato.', "100", "/images/locali/rush_in.webp");
-INSERT INTO LOCALE VALUES("4", "Bagni Venere", "Via Fratelli Cervi, 73", 'Piscine <span lang="en">indoor</span> e <span lang="en">outdoor</span>, termali e olimpioniche, con idromassaggio e senza, insomma... per tutti i gusti. è possibile accedere alla SPA per usufruire di saune, massaggi rilassanti e trattamenti. Il bar offre servizio <span lang="en">open</span> bar dalle 18 alle 23.', "150", "/images/locali/bagni_venere.webp");
-INSERT INTO LOCALE VALUES("5", "Sala Conferenze Dante Alighieri", "Via Dante Alighieri, 1", 'Sala conferenze che ospita presentazioni di libri, comizi, interviste e addirittura numerosi <span lang="en">TedX</span>. Posto perfetto per ampliare la propria cultura e i propri orizzonti.', "300", "/images/locali/sala_conferenze_dante_a.webp");
+INSERT INTO LOCALE VALUES("1", "Fluido Caf&egrave;", "Via Pirandello, 65", "Caffetteria con un'ampia selezione di libri da cui attingere per immergersi in una rilassante lettura mentre si assaporano caffè e dolci fatti in casa.", "50", "/images/locali/fluido_cafe.webp", "Bar molto luminoso con tavolini in legno e un bancone lungo sempre in legno");
+INSERT INTO LOCALE VALUES("2", "Extra Extra", 'Via Umberto <abbr title="primo">I</abbr>, 75', 'Discoteca più <span lang="en">In</span> del Metaverso, con <span lang="en">djset</span> ed eventi per tutti i gusti. Ambiente <span lang="en">chic</span> ed elegante, ma senza selezione all&#39;ingresso.', "700", "/images/locali/extra_extra.webp", "Discoteca con una grande sala da ballo con palco in posizione centrale e ai lati zone con divanetti. Grandi luci luminose sul soffitto");
+INSERT INTO LOCALE VALUES("3", 'Rush IN', "Via della Croce Verde, 2", 'Pista per <span lang="en">Kart</span> con circuito sia <span lang="en">indoor</span> che <span lang="en">outdoor</span>. I <span lang="en">kart</span> sono noleggiabili per il tempo desiderato e se siete amanti della guida sportiva il divertimento è assicurato.', "100", "/images/locali/rush_in.webp", "Pista di Kart su più livelli all'interno di una struttura coperta molto luminosa");
+INSERT INTO LOCALE VALUES("4", "Bagni Venere", "Via Fratelli Cervi, 73", 'Piscine <span lang="en">indoor</span> e <span lang="en">outdoor</span>, termali e olimpioniche, con idromassaggio e senza, insomma... per tutti i gusti. è possibile accedere alla SPA per usufruire di saune, massaggi rilassanti e trattamenti. Il bar offre servizio <span lang="en">open</span> bar dalle 18 alle 23.', "150", "/images/locali/bagni_venere.webp", "Piscine e terme all'interno di una grotta. L'area è illuminata grazie a dei fori che si trovano nel soffitto dalla luce naturale");
+INSERT INTO LOCALE VALUES("5", "Sala Conferenze Dante Alighieri", "Via Dante Alighieri, 1", 'Sala conferenze che ospita presentazioni di libri, comizi, interviste e addirittura numerosi <span lang="en">TedX</span>. Posto perfetto per ampliare la propria cultura e i propri orizzonti.', "300", "/images/locali/sala_conferenze_dante_a.webp", "Sala conferenze ricca di postazioni per sedersi con una forma a semicirconfernza. Le sedie sono poste su più livelli accessibili da una scala che sale al centro della sala");
 
 /**EVENTI **/ 
 INSERT INTO EVENTO VALUES("1", "Salone del libro", "Il salone del libro è un evento frequentemente tenuto al Fluido Cafè e che
