@@ -17,6 +17,6 @@ if (isset($_SESSION["Username"])){
         echo 'Errore: ' . $e->getMessage();
     }
 }
-header('location: ../contatti.php')
+
 
 ?>
