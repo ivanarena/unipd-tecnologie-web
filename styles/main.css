@@ -64,13 +64,11 @@ p {
 
 a {
     color: var(--clr-a);
-    text-decoration: none;
     cursor: pointer;
-
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -169,7 +167,6 @@ main {
 .secondary-btn:visited {
     background-color: var(--clr-btn-alt);
     color: var(--clr-btn-text-alt);
-    text-decoration: none;
 }
 
 input,
