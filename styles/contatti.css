@@ -37,8 +37,12 @@
     margin-top: 2vh;
     width: 120px;
     align-self: flex-end;
+    text-decoration: underline;
 }
 
+.submit-btn:hover {
+    text-decoration: none;
+}
 
 
 
