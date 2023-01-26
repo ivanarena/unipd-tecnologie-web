@@ -98,9 +98,3 @@ if(current == "Registrazione"){
     var cont = document.getElementsByTagName("main")[0];
     cont.setAttribute("id", "contenuto");
 }
-
-
-
-
-
-
