@@ -12,12 +12,12 @@
         // username => root
         // password => empty
         // database name => staff
-        $conn = mysql_connect("127.0.0.1", "root", "password", "sanjunipero");
+        $conn = mysqli_connect("localhost", "root", "password", "sanjunipero");
          
         // Check connection
         if($conn === false){
             die("ERROR: Could not connect. "
-                . mysql_connect_error());
+                . mysqli_connect_error());
         }
          
         // Taking all 5 values from the form data(input)
@@ -31,17 +31,20 @@
         $sql = "INSERT INTO FORM  VALUES ('$Nome',
             '$Cognome','$Email','$Msg')";
          
-        if(mysql_query($conn, $sql)){
+        if(mysqli_query($conn, $sql)){
             echo "<h3>data stored in a database successfully."
                 . " Please browse your localhost php my admin"
                 . " to view the updated data</h3>";
+ 
+            echo nl2br("\n$first_name\n $last_name\n "
+                . "$gender\n $address\n $email");
         } else{
             echo "ERROR: Hush! Sorry $sql. "
-                . mysql_error($conn);
+                . mysqli_error($conn);
         }
          
         // Close connection
-        mysql_close($conn);
+        mysqli_close($conn);
         ?>
 </body>
  
