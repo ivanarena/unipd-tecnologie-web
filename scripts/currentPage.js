@@ -5,7 +5,6 @@ if(current == "Home"){
     var d = document.getElementsByClassName("page")[0];
     
     d.removeAttribute("href");
-    a.hover.style.textDecoration = none;
     var cont = document.getElementsByTagName("main")[0];
     cont.setAttribute("id", "contenuto");
 }
