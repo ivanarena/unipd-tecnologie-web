@@ -81,8 +81,9 @@ a:visited {
 }
 
 @media screen and (max-width: 1300px) {
+
     header,
     .menu-is-mobile {
-        background-color: var(--clr-d-hcard);
+        background-color: var(--clr-d-background);
     }
 }

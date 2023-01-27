@@ -16,6 +16,8 @@
         /* Safari, Android, iOS */
         url('../fonts/montserrat-v25-latin-regular.svg#Montserrat') format('svg');
     /* Legacy iOS */
+    font-display: swap;
+
 }
 
 /* montserrat-700 - latin */
@@ -36,6 +38,7 @@
         /* Safari, Android, iOS */
         url('../fonts/montserrat-v25-latin-700.svg#Montserrat') format('svg');
     /* Legacy iOS */
+    font-display: swap;
 }
 
 * {
@@ -86,7 +89,7 @@ main {
     font-size: var(--fs-h1-d);
     margin-bottom: 8vh;
     width: 30vw;
-    min-width: 400px;
+    min-width: 320px;
     text-align: center;
 }
 

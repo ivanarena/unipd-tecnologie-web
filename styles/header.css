@@ -150,6 +150,10 @@ header {
         position: fixed;
     }
 
+    .r-container {
+        margin-top: 0;
+    }
+
     .breadcrumb-container {
         margin-top: 17vh;
     }

@@ -8,7 +8,9 @@
     <main>
         <form id="payment-form" class="payment-form card-shadow"
             action="/php/utils/doAcquista.php?IdAbb=<idAbbPlaceholder />&nomeAbb=<nameAbbPlaceholder />" method="POST">
-            <h1 class="page-heading">Stai per acquistare l'abbonamento <nameAbbPlaceholder /></h1>
+            <h1 class="page-heading">Stai per acquistare l'abbonamento
+                <nameAbbPlaceholder />
+            </h1>
             <div class="inputs-container flex-col-center">
                 <label for="numero-carta" class="input-label">Numero di carta di credito/debito</label>
                 <input id="n-carta" class="form-input" type="text" name="numero-carta" value="" minlength="8"
@@ -23,8 +25,7 @@
                     placeholder="Intestatario" required aria-required="true">
                 <span id="intestatarioErr" class='hide error-msg'>Inserisci l'intestatario</span>
                 <label for="scadenza">Data di scadenza:</label>
-                <input id="scadenza" type="date" class="form-input" name="scadenza" placeholder="" required
-                    aria-required="true" />
+                <input id="scadenza" type="date" class="form-input" name="scadenza" required aria-required="true" />
                 <span id="dateErr" class='hide error-msg'>La carta risulta scaduta</span>
             </div>
             <!-- <div class="card-checkbox-container flex-row-center">
