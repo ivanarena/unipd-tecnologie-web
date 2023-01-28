@@ -58,6 +58,10 @@ footer {
     margin-top: 6vh;
 }
 
+.secondary-btn.booking-btn {
+    text-decoration: none;
+}
+
 @media screen and (max-width: 928px) {
 
     .event-card,
