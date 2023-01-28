@@ -94,6 +94,6 @@ a:visited {
 
     header,
     .menu-is-mobile {
-        background-color: var(--clr-d-background);
+        background-color: var(--clr-d-hcard);
     }
 }
