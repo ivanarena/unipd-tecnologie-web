@@ -45,7 +45,7 @@ function getAbbonamenti(){
                             </li>
                         </ul>
                         </div>
-                    <a href="/php/acquista.php?IdAbb='.$abbonamento["IdAbbonamento"].'&nomeAbb='.$abbonamento["TitoloAbb"].'" class="btn primary-btn subscribe-btn flex-row-center flex-row-center">Acquista</a>
+                    <a href="/php/acquista.php?IdAbb='.$abbonamento["IdAbbonamento"].'&nomeAbb='.$abbonamento["TitoloAbb"].'" class="btn primary-btn subscribe-btn flex-row-center" aria-label="acquista abbonamento '.$abbonamento["TitoloAbb"].'">Acquista</a>
                 </div>');
             } else {
                 $result.= strval('<div class="plan-card card-shadow">
@@ -68,7 +68,7 @@ function getAbbonamenti(){
                         </ul>
                         </div>
                         <span class="hide error-msg">Per acquistare un abbonamento devi prima registrarti. Ricorda che puoi sottoscrivere un solo abbonamento!</span>
-                        <button class="btn secondary-btn unsubscribe-btn flex-row-center flex-row-center">Acquista</button>
+                        <button class="btn secondary-btn unsubscribe-btn flex-row-center" aria-label="acquista abbonamento '.$abbonamento["TitoloAbb"].'">Acquista</button>
                 </div>');
 
             }
