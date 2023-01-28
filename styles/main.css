@@ -88,7 +88,7 @@ main {
 .page-heading {
     font-size: var(--fs-h1-d);
     margin-bottom: 8vh;
-    width: 30vw;
+    width: 35vw;
     min-width: 320px;
     text-align: center;
 }
@@ -156,6 +156,7 @@ main {
     transition: background 0.4s ease-out;
     transition: background-position 0.4s ease-out;
     font-size: var(--fs-btn-d);
+    text-decoration: none;
 }
 
 .primary-btn:hover {
@@ -163,13 +164,20 @@ main {
     background: linear-gradient(128deg, #67007e 18%, #9038e5 50%, #ba14f6 74%, #9d2dea 98%);
     background-size: 500%;
     background-position: 60%;
-    text-decoration: none;
 }
 
 .secondary-btn,
 .secondary-btn:visited {
     background-color: var(--clr-btn-alt);
     color: var(--clr-btn-text-alt);
+}
+
+.secondary-btn:hover {
+    background: #0A89FF;
+    background: linear-gradient(128deg, #0A89FF 18%, #33FFE7 50%, #007faa 74%, #0A89FF 98%);
+    background-size: 500%;
+    background-position: 60%;
+
 }
 
 input,

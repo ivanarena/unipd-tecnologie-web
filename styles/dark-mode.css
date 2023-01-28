@@ -8,10 +8,16 @@ body,
 .menu-link a:visited,
 footer {
     color: var(--clr-d-text);
+    text-decoration: none;
+}
+
+.menu-link a:hover {
+    text-decoration: underline;
 }
 
 a {
     color: var(--clr-d-a);
+    text-decoration: none;
 }
 
 a:visited {

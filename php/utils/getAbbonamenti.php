@@ -29,7 +29,7 @@ function getAbbonamenti(){
                 $result.= strval('<div class="plan-card card-shadow">
                 <div class="plan-card-content">
                         <h1 class="plan-name"><span lang="en">'.$abbonamento["TitoloAbb"].'</span></h1>
-                        <span class="plan-price"><span class="euro">&#8364;</span>'.$abbonamento["Prezzo"].'</span>
+                        <span class="plan-price"><span class="euro">&#8364;</span>'.substr($abbonamento["Prezzo"], 0, -3).'</span>
                         <ul class="plan-features">
                             <li class="plan-feature">
                                 <p class="feature-name">Durata abbonamento</p>
@@ -51,7 +51,7 @@ function getAbbonamenti(){
                 $result.= strval('<div class="plan-card card-shadow">
                 <div class="plan-card-content">
                         <h1 class="plan-name"><span lang="en">'.$abbonamento["TitoloAbb"].'</span></h1>
-                        <span class="plan-price"><span class="euro">&#8364;</span>'.$abbonamento["Prezzo"].'</span>
+                        <span class="plan-price"><span class="euro">&#8364;</span>'.substr($abbonamento["Prezzo"], 0, -3).'</span>
                         <ul class="plan-features">
                             <li class="plan-feature">
                                 <p class="feature-name">Durata abbonamento</p>

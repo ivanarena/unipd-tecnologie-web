@@ -10,9 +10,9 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    min-height: 47vh;
+    min-height: 50vh;
     width: 30vw;
-    max-height: 500px;
+    max-height: 650px;
     max-width: 350px;
     border-radius: var(--card-b-radius);
     padding: 40px;
@@ -85,7 +85,7 @@
     .plans-container {
         flex-direction: column;
     }
-    
+
     .plan-price {
         font-size: var(--fs-h1-m);
     }
@@ -99,7 +99,7 @@
         font-weight: bold;
         font-size: var(--fs-p-abb-m);
     }
-    
+
     .feature-desc {
         font-size: var(--fs-p-abb-m);
     }
