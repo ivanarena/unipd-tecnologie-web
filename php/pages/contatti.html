@@ -10,16 +10,16 @@
         <h1 class="page-heading">Hai domande&quest; Contattaci subito&excl;</h1>
 
         <form class="contact-form card-shadow" action="/php/utils/getForm.php" method="post">
-            <label class="input-label" for="Nome">Nome:</label>
-            <input class="form-input-small" type="text" placeholder="Inserisci il tuo nome" id="nome" aria-required="true" minlength="1" />
+            <label class="input-label" for="nome" aria-label="campo nome">Nome:</label>
+            <input class="form-input-small" type="text" placeholder="Inserisci il tuo nome" id="nome" aria-required="true" minlength="1"/>
             <span id="nomeErr" class='hide error-msg'>Inserisci il nome</span>
-            <label class="input-label" for="Cognome">Cognome:</label>
+            <label class="input-label" for="cognome"  aria-label="campo cognome">Cognome:</label>
             <input class="form-input-small" type="text" placeholder="Inserisci il tuo cognome" id="cognome" aria-required="true" minlength="1"/>
             <span id="cognomeErr" class='hide error-msg'>Inserisci il cognome</span>
-            <label class="input-label" for="Email"><span lang="en">Email</span>:</label>
+            <label class="input-label" for="email" aria-label="campo email"><span lang="en">Email</span>:</label>
             <input class="form-input-medium" type="email" placeholder="Inserisci la tua email" id="email" aria-required="true" minlength="1"/>
             <span id="emailErr" class='hide error-msg'>Inserisci la mail</span>
-            <label class="input-label" for="Msg">Il tuo messaggio:</label>
+            <label class="input-label" for="msg">Il tuo messaggio:</label>
             <textarea class="form-input" id="msg" placeholder="Scrivi il tuo messaggio" aria-required="true" cols="70" rows="10"
                 maxlength="500"></textarea>
                 <span id="messageErr" class='hide error-msg'>Inserisci il messaggio</span>
