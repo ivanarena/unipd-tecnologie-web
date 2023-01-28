@@ -9,7 +9,7 @@ if (isset($_SESSION["Username"])){
         $DBUsername = $pdo->prepare($sql);
         $DBUsername->execute(array($_SESSION["Username"]));
         database::disconnect();
-        header('location: ./doDisconettiti.php');
+        header('location: ./doneElimina.php');
         die();
     } catch (PDOException $e) {
         echo 'Errore PDO e connessione DB: <br />';
