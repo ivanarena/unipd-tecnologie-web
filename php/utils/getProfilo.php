@@ -12,19 +12,19 @@ try {
     $utente = $pdo->query($sql)->fetch();
     $result = strval(
         '<div class="data-container card-shadow">
-        <div class="data-row"><label for="" class="data-label">Nome utente</label><span class="data">' . $utente["Username"] . '</span>
+        <div class="data-row"><label for="" class="data-label">Nome utente</label><span class="data">' . $utente["Username"] . ' </span>
         </div>
         <span class="h-line"></span>
-        <div class="data-row"><label for="" class="data-label">Nome</label><span class="data">' . $utente["Nome"] . '</span>
+        <div class="data-row"><label for="" class="data-label">Nome</label><span class="data">' . $utente["Nome"] . ' </span>
         </div>
         <span class="h-line"></span>
-        <div class="data-row"><label for="" class="data-label">Cognome</label><span class="data">' . $utente["Cognome"] . '</span>
+        <div class="data-row"><label for="" class="data-label">Cognome</label><span class="data">' . $utente["Cognome"] . ' </span>
         </div>
         <span class="h-line"></span>
-        <div class="data-row"><label for="" class="data-label">Data di nascita</label><span class="data">' . $utente["DataNascita"] . '</span>
+        <div class="data-row"><label for="" class="data-label">Data di nascita</label><span class="data">' . $utente["DataNascita"] . ' </span>
         </div>
         <span class="h-line"></span>
-        <div class="data-row"><label for="" class="data-label">E-mail</label><span class="data">' . $utente["Email"] . '</span></div>
+        <div class="data-row"><label for="" class="data-label">E-mail</label><span class="data">' . $utente["Email"] . ' </span></div>
         </div>'  
         );
     database::disconnect();
@@ -47,13 +47,13 @@ function getAbbonamentoUtente() {
         $abbonamento = $pdo->query($sql)->fetch();
         $result = strval(
             '<div class="data-container card-shadow">
-            <div class="data-row"><label for="" class="data-label">Tipo abbonamento</label><span class="data">' . $abbonamento["TitoloAbb"] .'</span>
+            <div class="data-row"><label for="" class="data-label">Tipo abbonamento</label><span class="data">' . $abbonamento["TitoloAbb"] .' </span>
             </div>
             <span class="h-line"></span>
-            <div class="data-row"><label for="" class="data-label">Data sottoscrizione</label><span class="data">' . $abbonamento["DataPagamento"] .'</span>
+            <div class="data-row"><label for="" class="data-label">Data sottoscrizione</label><span class="data">' . $abbonamento["DataPagamento"] .' </span>
             </div>
             <span class="h-line"></span>
-            <div class="data-row"><label for="" class="data-label">Scadenza</label><span class="data">' . $abbonamento["DataScadenza"] .'</span></div>
+            <div class="data-row"><label for="" class="data-label">Scadenza</label><span class="data">' . $abbonamento["DataScadenza"] .' </span></div>
             <a href="/php/utils/doEliminaAbbUtente.php?IdAbb='.$abbonamento["IdAbbUtente"].'" class="btn primary-btn unsubscribe-btn flex-row-center flex-row-center"
             text>Disdici</a>
         </div>'  

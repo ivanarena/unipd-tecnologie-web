@@ -86,6 +86,10 @@ a:visited {
     background-color: var(--clr-d-hcard);
 }
 
+.events-count {
+    color: var(--clr-d-secondary);
+}
+
 @media screen and (max-width: 1300px) {
 
     header,
