@@ -51,7 +51,7 @@
     color: var(--clr-a);
     font-weight: bold;
     font-size: var(--fs-home-p-d);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .card-link:visited {
@@ -60,7 +60,7 @@
 
 
 .card-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .warning-banner {

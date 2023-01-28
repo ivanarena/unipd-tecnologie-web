@@ -37,11 +37,11 @@
     margin-top: 2vh;
     width: 120px;
     align-self: flex-end;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .submit-btn:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 
