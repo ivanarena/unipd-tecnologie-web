@@ -16,7 +16,6 @@ footer {
 
 a {
     color: var(--clr-d-a);
-    text-decoration: underline;
 }
 
 a:visited {
