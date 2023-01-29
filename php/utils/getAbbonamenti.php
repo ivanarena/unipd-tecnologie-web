@@ -37,11 +37,11 @@ function getAbbonamenti(){
                             </li>
                             <li class="plan-feature">
                                 <p class="feature-name">Eventi</p>
-                                <p class="feature-desc">'.$abbonamento["EventiSettimanali"].'/settimana</p>
+                                <p class="feature-desc">'.$abbonamento["EventiSettimanali"].' a settimana</p>
                             </li>
                             <li class="plan-feature">
                                 <p class="feature-name">Borsellino</p>
-                                <p class="feature-desc">'.substr($abbonamento["MetaCoin"], 0, -3).'€/giorno</p>
+                                <p class="feature-desc">'.substr($abbonamento["MetaCoin"], 0, -3).'&euro; al giorno</p>
                             </li>
                         </ul>
                         </div>
@@ -59,15 +59,15 @@ function getAbbonamenti(){
                             </li>
                             <li class="plan-feature">
                                 <p class="feature-name">Eventi</p>
-                                <p class="feature-desc">'.$abbonamento["EventiSettimanali"].'/settimana</p>
+                                <p class="feature-desc">'.$abbonamento["EventiSettimanali"].' a settimana</p>
                             </li>
                             <li class="plan-feature">
                                 <p class="feature-name">Borsellino</p>
-                                <p class="feature-desc">'.substr($abbonamento["MetaCoin"], 0, -3).'€/giorno</p>
+                                <p class="feature-desc">'.substr($abbonamento["MetaCoin"], 0, -3).'&euro; al giorno</p>
                             </li>
                         </ul>
                         </div>
-                        <span class="hide error-msg">Per acquistare un abbonamento devi prima registrarti. Ricorda che puoi sottoscrivere un solo abbonamento!</span>
+                        <span class="hide error-msg">Per acquistare un abbonamento devi prima registrarti. Ricorda che puoi sottoscrivere un solo abbonamento&excl;</span>
                         <button class="btn secondary-btn unsubscribe-btn flex-row-center" aria-label="acquista abbonamento '.$abbonamento["TitoloAbb"].'">Acquista</button>
                 </div>');
 
