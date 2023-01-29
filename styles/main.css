@@ -201,7 +201,7 @@ input[type=checkbox] {
 }
 
 .hide {
-    display: none !important;
+    display: none;
 }
 
 .error-msg {

@@ -165,7 +165,7 @@ header {
 
     /* MOBILE MENUs */
     .menu-is-mobile {
-        display: flex !important;
+        display: flex;
         background-color: white;
         height: 80vh;
         position: fixed;
@@ -190,7 +190,7 @@ header {
     }
 
     .user-menu-is-mobile {
-        display: flex !important;
+        display: flex;
         position: fixed;
         top: 63%;
         left: 50%;
