@@ -23,7 +23,7 @@ try {
         <span class="h-line"></span>
         <div class="data-row"><label for="" class="data-label">Orario</label><span class="data">dalle ' . $prenotazione["oraInizio"] . ' alle ' . $prenotazione["oraFine"] . '</span>
         </div>
-        <a href="/php/utils/doEliminaEventoUtente.php?IdEvento='. $prenotazione["IdEvento"].'" class="btn primary-btn unsubscribe-btn flex-row-center flex-row-center"
+        <a href="<urlPrefixPlaceholder/>/php/utils/doEliminaEventoUtente.php?IdEvento='. $prenotazione["IdEvento"].'" class="btn primary-btn unsubscribe-btn flex-row-center flex-row-center"
             text>Disdici</a>
         </div>');
         

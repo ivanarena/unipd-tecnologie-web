@@ -54,7 +54,7 @@ function getAbbonamentoUtente() {
             </div>
             <span class="h-line"></span>
             <div class="data-row"><label for="" class="data-label">Scadenza</label><span class="data">' . $abbonamento["DataScadenza"] .' </span></div>
-            <a href="/php/utils/doEliminaAbbUtente.php?IdAbb='.$abbonamento["IdAbbUtente"].'" class="btn primary-btn unsubscribe-btn flex-row-center flex-row-center"
+            <a href="<urlPrefixPlaceholder/>/php/utils/doEliminaAbbUtente.php?IdAbb='.$abbonamento["IdAbbUtente"].'" class="btn primary-btn unsubscribe-btn flex-row-center flex-row-center"
             text>Disdici</a>
         </div>'  
         );

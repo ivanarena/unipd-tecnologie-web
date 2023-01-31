@@ -6,7 +6,7 @@
     <headerPlaceholder />
 
     <main>
-        <form class="event-form card-shadow" action="/php/utils/doCreaEvento.php" method="POST">
+        <form class="event-form card-shadow" action="<urlPrefixPlaceholder/>/php/utils/doCreaEvento.php" method="POST">
             <h1 class="page-heading">Aggiungi l'evento</h1>
             <div class="inputs-container flex-col-center">
                 <label for="nome-evento" class="input-label">Nome evento</label>
@@ -29,12 +29,12 @@
             </div>
             <div class="btns-container flex-row-center">
                 <button class="btn primary-btn confirm-btn" name="submit" id="crea" value="Crea">Crea</button>
-                <a class="btn secondary-btn undo-btn" href="/php/eventi.php">Annulla</a>
+                <a class="btn secondary-btn undo-btn" href="<urlPrefixPlaceholder/>/php/eventi.php">Annulla</a>
             </div>
         </form>
     </main>
     <footerPlaceholder />
-    <script src="/scripts/creaEventiChecker.js"></script>
+    <script src="<urlPrefixPlaceholder/>/scripts/creaEventiChecker.js"></script>
 </body>
 
 </html>

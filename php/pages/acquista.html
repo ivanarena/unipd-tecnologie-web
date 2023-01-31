@@ -7,7 +7,7 @@
 
     <main>
         <form id="payment-form" class="payment-form card-shadow"
-            action="/php/utils/doAcquista.php?IdAbb=<idAbbPlaceholder />&nomeAbb=<nameAbbPlaceholder />" method="POST">
+            action="<urlPrefixPlaceholder/>/php/utils/doAcquista.php?IdAbb=<idAbbPlaceholder />&nomeAbb=<nameAbbPlaceholder />" method="POST">
             <h1 class="page-heading">Stai per acquistare l'abbonamento
                 <nameAbbPlaceholder />
             </h1>
@@ -37,12 +37,12 @@
             <div class="btns-container flex-row-center">
                 <button class="btn primary-btn confirm-btn" name="submitBtn" id="acquista"
                     value="Acquista">Acquista</button>
-                <a class="btn secondary-btn undo-btn" href="/php/abbonamenti.php">Annulla</a>
+                <a class="btn secondary-btn undo-btn" href="<urlPrefixPlaceholder/>/php/abbonamenti.php">Annulla</a>
             </div>
         </form>
     </main>
     <footerPlaceholder />
-    <script src="/scripts/paymentChecker.js"></script>
+    <script src="<urlPrefixPlaceholder/>/scripts/paymentChecker.js"></script>
 </body>
 
 </html>

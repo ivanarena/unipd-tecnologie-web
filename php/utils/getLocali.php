@@ -40,7 +40,7 @@ function getLocali(){
                     <p class="place-desc">' . $locale["Descrizione"] . '</p>
                 </div>
                 <div class="btn-container">
-                    <a class="btn primary-btn place-events-btn" href="/php/eventi.php?IdLocale='. $locale["IdLocale"] .'">Controlla gli eventi</a>
+                    <a class="btn primary-btn place-events-btn" href="<urlPrefixPlaceholder/>/php/eventi.php?IdLocale='. $locale["IdLocale"] .'">Controlla gli eventi</a>
                 </div>
             </div>
         </div>');
