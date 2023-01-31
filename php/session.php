@@ -6,7 +6,7 @@
         } 
         
         
-function get_pref(){
+function get_prefix(){
     return trim(file_get_contents(__DIR__ ."/../url_prefix")) ?? "";
 }    
 ?>
