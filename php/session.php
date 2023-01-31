@@ -3,4 +3,10 @@
 } else { ?><?php if (session_id() == '') {
                 session_start();
             }
-        } ?>
+        } 
+        
+        
+function get_pref(){
+    return trim(file_get_contents(__DIR__ ."/../url_prefix")) ?? "";
+}    
+?>

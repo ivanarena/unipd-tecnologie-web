@@ -14,7 +14,6 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
         private $head; 
         private $header; 
         private $footer; 
-        private $prefix; 
 
 
         public function __construct(string $_fileName, string $_desc) {
@@ -26,7 +25,6 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
             $this->title = ucfirst($_fileName);
             $this->desc = $_desc;
             
-            $this->content = trim(file_get_contents(__DIR__ ."/../url_prefix"));
             $this->content = file_get_contents(__DIR__ . $this->htmlPath);
             $this->head = file_get_contents(__DIR__."/pages/components/head.html");
             $this->header = file_get_contents(__DIR__."/pages/components/header.html");
@@ -36,7 +34,7 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
 
         public function setHead() {
             $this->head = str_replace('<titlePlaceholder />', $this->title . ' | ' . $this->hostName, $this->head);
-            $this->head = str_replace('<pageCssPlaceholder />', '<link type="text/css" rel="stylesheet" href="' . $this->cssPath . '" media="screen" />', $this->head);
+            $this->head = str_replace('<pageCssPlaceholder />', '<link type="text/css" rel="stylesheet" href="' . get_pref().$this->cssPath . '" media="screen" />', $this->head);
             $this->head = str_replace('<meta name="description" content="" />', '<meta name="description" content="' . $this->desc . '" />', $this->head);
             $this->content = str_replace('<headPlaceholder />', $this->head, $this->content);
         }
