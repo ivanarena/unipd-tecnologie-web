@@ -1,42 +1,42 @@
-body,
+body.dark,
 .menu-is-mobile {
     background-color: var(--clr-d-background);
 }
 
-body,
-.menu-link a,
-.menu-link a:visited,
-footer {
+body.dark,
+body.dark .menu-link a,
+body.dark .menu-link a:visited,
+body.dark footer {
     color: var(--clr-d-text);
 }
 
-.menu-link a:hover {
+body.dark .menu-link a:hover {
     text-decoration: none;
 }
 
-a {
+body.dark a {
     color: var(--clr-d-a);
 }
 
-a:visited {
+body.dark a:visited {
     color: var(--clr-d-a-visited);
 }
 
 
-.card-link {
+body.dark .card-link {
     color: var(--clr-d-a);
 }
 
-.card-link:visited {
+body.dark .card-link:visited {
     color: var(--clr-d-a-visited);
 }
 
 
-.menu-toggle .bar {
+body.dark .menu-toggle .bar {
     background-color: var(--clr-d-text);
 }
 
-.card-shadow {
+body.dark .card-shadow {
     -webkit-box-shadow: 0px 0px 32px 8px rgba(255, 255, 255, 0.06);
     -moz-box-shadow: 0px 0px 32px 8px rgba(255, 255, 255, 0.06);
     box-shadow: 0px 0px 32px 8px rgba(255, 255, 255, 0.06);
@@ -44,54 +44,54 @@ a:visited {
 
 
 /* ABBONAMENTI */
-.plan-card {
+body.dark .plan-card {
     background-color: var(--clr-d-hcard);
 }
 
-.plan-name {
+body.dark .plan-name {
     color: var(--clr-d-text);
 }
 
 /* LOCALI, EVENTI */
-.place-street,
-.event-place {
+body.dark .place-street,
+body.dark .event-place {
     color: var(--clr-d-secondary);
 }
 
-.h-card {
+body.dark .h-card {
     background-color: var(--clr-d-hcard);
 }
 
 /*Contatti*/
 
-.contact-form {
+body.dark .contact-form {
     background-color: var(--clr-d-hcard);
 }
 
 /*profilo*/
 
-.data-container {
+body.dark .data-container {
     background-color: var(--clr-d-hcard);
 }
 
 /*crea evento*/
-.event-form {
+body.dark .event-form {
     background-color: var(--clr-d-hcard);
 }
 
 /*registrati*/
-.login-form {
+body.dark .login-form {
     background-color: var(--clr-d-hcard);
 }
 
-.events-count {
+body.dark .events-count {
     color: var(--clr-d-secondary);
 }
 
 @media screen and (max-width: 1300px) {
 
-    header,
-    .menu-is-mobile {
+    body.dark header,
+    body.dark  .menu-is-mobile {
         background-color: var(--clr-d-hcard);
     }
 }
