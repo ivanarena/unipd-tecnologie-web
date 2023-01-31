@@ -103,6 +103,16 @@ CREATE TABLE EVENTO_UTENTE(
     FOREIGN KEY (IdEvento) REFERENCES EVENTO(IdEvento) ON DELETE CASCADE ON UPDATE CASCADE
     );
 
+CREATE TABLE FORM(
+    IdForm INT NOT NULL AUTO_INCREMENT,
+    Nome VARCHAR(50),
+    Cognome VARCHAR(50),
+    Email VARCHAR(100),
+    Msg VARCHAR(2048),
+    PRIMARY KEY(IdForm)
+    );
+
+
 /**UTENTI**/
 INSERT INTO UTENTE VALUES("admin", "$2y$10$wrvZiy1egezeMrYQ.LIvAe64zjSZHUnmhOU/n4xFZCFML9kVRKnRe", "admin@gmail.com", "Mario", "Rossi", '1992-01-23', 1); 
 INSERT INTO UTENTE VALUES("user", "$2y$10$V0IDAKje8lFy8BCCac/YZ.SPERXNWh2onazKJ3U6pTgxNP4PhaHOS", "user@gmail.com", "Luca", "Galeazzo", '1975-06-11', 0); 
