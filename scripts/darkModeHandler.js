@@ -2,7 +2,7 @@ const darkModeSwitch = document.getElementById('dark-mode-switch');
 const darkModeLink = document.createElement("link");
 darkModeLink.type = "text/css";
 darkModeLink.rel = "stylesheet";
-darkModeLink.href = '/styles/dark-mode.css';
+darkModeLink.href = './styles/dark-mode.css';
 
 // cambiare con dark -- sto usando questo per testare
 
