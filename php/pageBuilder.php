@@ -76,7 +76,7 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
             $this->setHeader();
             $this->setBreadcrumb();
             $this->setFooter();
-            $this->content = str_replace("<urlPrefixPlaceholder/>", get_prefix(),$this->content)
+            $this->content = str_replace("<urlPrefixPlaceholder/>", get_prefix(),$this->content);
             return $this->content;
         }
     }
