@@ -9,18 +9,18 @@
     <main>
         <h1 class="page-heading">Hai domande&quest; Contattaci subito&excl;</h1>
 
-        <form class="contact-form card-shadow" action="/php/utils/doForm.php" method="post">
-            <label class="input-label" for="nome" aria-label="campo nome">Nome:</label>
-            <input class="form-input-small" type="text" placeholder="Inserisci il tuo nome" id="nome" aria-required="true" minlength="1"/>
-            <span id="nomeErr" class='hide error-msg'>Inserisci il nome</span>
-            <label class="input-label" for="cognome"  aria-label="campo cognome">Cognome:</label>
-            <input class="form-input-small" type="text" placeholder="Inserisci il tuo cognome" id="cognome" aria-required="true" minlength="1"/>
-            <span id="cognomeErr" class='hide error-msg'>Inserisci il cognome</span>
+        <form class="contact-form card-shadow" action="/php/utils/doForm.php" method="POST">
+            <label for="nome" class="input-label">Nome:</label>
+            <input id="nome" type="text" class="form-input-small" name="nome" placeholder="Inserisci il tuo nome" aria-required="true"  minlength="1"/>
+            <span id="nameErr" class='hide error-msg'>Inserisci un nome</span>
+            <label for="cognome" class="input-label">Cognome:</label>
+            <input id="cognome" type="text" class="form-input-small" name="cognome" placeholder="Inserisci il tuo cognome" aria-required="true" minlength="1" />
+            <span id="cognomeErr" class='hide error-msg'>Inserisci un cognome</span>
             <label class="input-label" for="email" aria-label="campo email"><span lang="en">Email</span>:</label>
-            <input class="form-input-medium" type="email" placeholder="Inserisci la tua email" id="email" aria-required="true" minlength="1"/>
+            <input class="form-input-medium" type="email" placeholder="Inserisci la tua email" name="email" id="email" aria-required="true" minlength="1"/>
             <span id="emailErr" class='hide error-msg'>Inserisci la mail</span>
             <label class="input-label" for="msg">Il tuo messaggio:</label>
-            <textarea class="form-input" id="msg" placeholder="Scrivi il tuo messaggio" aria-required="true" cols="70" rows="10"
+            <textarea class="form-input" id="msg" placeholder="Scrivi il tuo messaggio" name="msg" aria-required="true" cols="70" rows="10"
                 maxlength="500"></textarea>
                 <span id="messageErr" class='hide error-msg'>Inserisci il messaggio</span>
             <input class="btn primary-btn submit-btn" id="invia-messaggio" type="submit" value="Invia" title="Invia i campi e il messaggio compilato" />

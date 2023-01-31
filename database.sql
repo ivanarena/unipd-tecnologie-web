@@ -109,6 +109,7 @@ CREATE TABLE FORM(
     Cognome VARCHAR(50),
     Email VARCHAR(100),
     Msg VARCHAR(2048),
+    DataInvio DATE NOT NULL,
     PRIMARY KEY(IdForm)
     );
 
