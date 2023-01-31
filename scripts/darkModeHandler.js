@@ -15,10 +15,10 @@ function toggleDarkMode() {
     let head = document.getElementsByTagName("head")[0];
     if (darkModeSwitch.checked) {
         localStorage.prefersDark = true;
-        body.classList.add("dark");
+        document.getElementsByTagName("body")[0].classList.add("dark");
     } else {
         localStorage.prefersDark = false;
-        body.classList.remove("dark");
+        document.getElementsByTagName("body")[0].classList.remove("dark");
     }
     console.log(localStorage.prefersDark);
 }
