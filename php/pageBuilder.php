@@ -17,7 +17,7 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
 
 
         public function __construct(string $_fileName, string $_desc) {
-            $this->htmlPath = '<urlPrefixPlaceholder/>/pages/' . $_fileName . '.html';
+            $this->htmlPath = '/pages/' . $_fileName . '.html';
             $this->cssPath = '<urlPrefixPlaceholder/>/styles/' . $_fileName . '.css';
             if (strpos($_fileName, '-') !== false) {
                 $_fileName = str_replace('-', ' ', $_fileName);
