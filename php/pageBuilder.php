@@ -16,7 +16,7 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
         private $footer; 
         private $prefix; 
 
-        
+
         public function __construct(string $_fileName, string $_desc) {
             $this->htmlPath = '/pages/' . $_fileName . '.html';
             $this->cssPath = '/styles/' . $_fileName . '.css';
@@ -26,7 +26,7 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
             $this->title = ucfirst($_fileName);
             $this->desc = $_desc;
             
-            $this->content = trim(file_get_contents(__DIR__ ."url_prefix"));
+            $this->content = trim(file_get_contents(__DIR__ ."../url_prefix"));
             $this->content = file_get_contents(__DIR__ . $this->htmlPath);
             $this->head = file_get_contents(__DIR__."/pages/components/head.html");
             $this->header = file_get_contents(__DIR__."/pages/components/header.html");
