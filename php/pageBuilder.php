@@ -33,7 +33,7 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
 
         public function setHead() {
             $this->head = str_replace('<titlePlaceholder />', $this->title . ' | ' . $this->hostName, $this->head);
-            $this->head = str_replace('<pageCssPlaceholder />', '<link type="text/css" rel="stylesheet" href="' . $this->cssPath . '" media="handheld, screen" />', $this->head);
+            $this->head = str_replace('<pageCssPlaceholder />', '<link type="text/css" rel="stylesheet" href="' . $this->cssPath . '" media="screen" />', $this->head);
             $this->head = str_replace('<meta name="description" content="" />', '<meta name="description" content="' . $this->desc . '" />', $this->head);
             $this->content = str_replace('<headPlaceholder />', $this->head, $this->content);
         }
