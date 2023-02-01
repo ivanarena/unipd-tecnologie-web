@@ -83,7 +83,7 @@ if (isset($_SESSION['Username'])) {
                 echo 'Errore: ' . $e->getMessage();
             }
             if($registrazioneCompletata){
-                header('location: doneRegistrati.php');
+                header('location: ./doneRegistrati.php');
             }
         } else {
             header("location: ../registrati.php?errGen=1");

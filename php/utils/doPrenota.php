@@ -46,7 +46,7 @@ if (isset($_SESSION["Username"])&& !noAbbonamenti()){
             echo 'Errore: ' . $e->getMessage();
         }
         if($prenotaEffettuato){
-            header('location: donePrenota.php');
+            header('location: ./donePrenota.php');
             die();
         }
     }
