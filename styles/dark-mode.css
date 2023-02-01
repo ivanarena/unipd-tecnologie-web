@@ -1,5 +1,5 @@
 body.dark,
-.menu-is-mobile {
+body.dark .menu-is-mobile {
     background-color: var(--clr-d-background);
 }
 
