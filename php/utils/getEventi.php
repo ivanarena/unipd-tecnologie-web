@@ -2,24 +2,30 @@
 require_once("database.php");
 
 function nonPrenotato($id) {
-    $pdo = database::connect();
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = 'SELECT Count(*) FROM EVENTO_UTENTE WHERE Username=? AND IdEvento =?;';
-    $stmt = $pdo->prepare($query);
-    $stmt->execute(array($_SESSION["Username"],$id));
-    $ret = $stmt->fetchColumn() <= 0;
-    database::disconnect();
+    $ret = 0;
+    if(!empty($_SESSION["Username"])){
+        $pdo = database::connect();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $query = 'SELECT Count(*) FROM EVENTO_UTENTE WHERE Username=? AND IdEvento =?;';
+        $stmt = $pdo->prepare($query);
+        $stmt->execute(array($_SESSION["Username"],$id));
+        $ret = $stmt->fetchColumn() <= 0;
+        database::disconnect();
+    }
     return $ret;
 }
 
 function abbonato() {
-    $pdo = database::connect();
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = 'SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE Username=? AND CURDATE()<=DataScadenza;';
-    $stmt = $pdo->prepare($query);
-    $stmt->execute(array($_SESSION["Username"] ?? null));
-    $ret = $stmt->fetchColumn() > 0;
-    database::disconnect();
+    $ret = 0;
+    if(!empty($_SESSION["Username"])){
+        $pdo = database::connect();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $query = 'SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE Username=? AND CURDATE()<=DataScadenza;';
+        $stmt = $pdo->prepare($query);
+        $stmt->execute(array($_SESSION["Username"]));
+        $ret = $stmt->fetchColumn() > 0;
+        database::disconnect();
+    }
     return $ret;
 }
 
