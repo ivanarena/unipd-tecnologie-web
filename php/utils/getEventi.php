@@ -17,7 +17,7 @@ function abbonato() {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $query = 'SELECT Count(*) FROM ABBONAMENTO_UTENTE WHERE Username=? AND CURDATE()<=DataScadenza;';
     $stmt = $pdo->prepare($query);
-    $stmt->execute(array($_SESSION["Username"] ?? null);
+    $stmt->execute(array($_SESSION["Username"] ?? null));
     $ret = $stmt->fetchColumn() > 0;
     database::disconnect();
     return $ret;
