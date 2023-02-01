@@ -66,6 +66,15 @@ body.dark .h-card {
     background-color: var(--clr-d-hcard);
 }
 
+body.dark main a.primary-btn,
+body.dark main a.primary-btn:visited {
+    color: white;
+}
+
+body.dark main a.secondary-btn,
+body.dark main a.secondary-btn:visited {
+    color: black;
+}
 /*Contatti*/
 
 body.dark .contact-form {
