@@ -104,12 +104,15 @@ CREATE TABLE EVENTO_UTENTE(
     );
 
 CREATE TABLE FORM(
-    Nome VARCHAR(50) NOT NULL,
-    Cognome VARCHAR(50) NOT NULL,
-    Email VARCHAR(100) NOT NULL,
-    Msg VARCHAR(500) NOT NULL,
-    PRIMARY KEY (Email)
+    IdForm INT NOT NULL AUTO_INCREMENT,
+    Nome VARCHAR(50),
+    Cognome VARCHAR(50),
+    Email VARCHAR(100),
+    Msg VARCHAR(2048),
+    DataInvio DATE NOT NULL,
+    PRIMARY KEY(IdForm)
     );
+
 
 /**UTENTI**/
 INSERT INTO UTENTE VALUES("admin", "$2y$10$wrvZiy1egezeMrYQ.LIvAe64zjSZHUnmhOU/n4xFZCFML9kVRKnRe", "admin@gmail.com", "Mario", "Rossi", '1992-01-23', 1); 
