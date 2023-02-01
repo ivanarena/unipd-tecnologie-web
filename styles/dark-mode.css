@@ -88,11 +88,11 @@ body.dark .events-count {
     color: var(--clr-d-secondary);
 }
 body.dark .menu-link .secondary-btn{
-    background-color:--clr-d-background;
+    background-color:var(--clr-d-background);
 }
 @media screen and (max-width: 1300px) {
 
-    body.dark header,
+    body.dark header, 
     body.dark  .menu-is-mobile {
         background-color: var(--clr-d-hcard);
     }
