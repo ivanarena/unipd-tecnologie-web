@@ -4,10 +4,9 @@
 
     // Page information 
     $fileName = 'home';
-    $title = 'Home';
     $desc = 'Pagina principale di San Junipero, il metaverso più figo del mondo. Qui trovi tutte le informazioni relative al servizio';
 
-    $builder = new PageBuilder($fileName, $title, $desc);
+    $builder = new PageBuilder($fileName, $desc);
 
     $page = $builder->buildPage();
 
