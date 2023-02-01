@@ -87,7 +87,9 @@ body.dark .login-form {
 body.dark .events-count {
     color: var(--clr-d-secondary);
 }
-
+body.dark .menu-link .secondary-btn{
+    background-color:--clr-d-background;
+}
 @media screen and (max-width: 1300px) {
 
     body.dark header,
