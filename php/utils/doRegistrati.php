@@ -86,11 +86,7 @@ if (isset($_SESSION['Username'])) {
                 header('location: doneRegistrati.php');
             }
         } else {
-            if(!$dataCheck){
-                header("location: ../registrati.php?errAge=1");
-            }else{
-                header("location: ../registrati.php?errGen=1");
-            }
+            header("location: ../registrati.php?errGen=1");
         } 
     }
 }
