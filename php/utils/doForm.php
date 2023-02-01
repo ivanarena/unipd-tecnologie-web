@@ -48,7 +48,7 @@ if (!empty($_POST)) {
             echo 'Errore: ' . $e->getMessage();
         }
         if($invioEffettuato){
-            header('location: doneForm.php');
+            header('location: ./doneForm.php');
             die();
         }
     }
