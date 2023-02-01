@@ -45,7 +45,7 @@ function getAbbonamenti(){
                             </li>
                         </ul>
                         </div>
-                    <a href="/php/acquista.php?IdAbb='.$abbonamento["IdAbbonamento"].'&nomeAbb='.$abbonamento["TitoloAbb"].'" class="btn primary-btn subscribe-btn flex-row-center" aria-label="acquista abbonamento '.$abbonamento["TitoloAbb"].'">Acquista</a>
+                    <a href="<urlPrefixPlaceholder/>/php/acquista.php?IdAbb='.$abbonamento["IdAbbonamento"].'&nomeAbb='.$abbonamento["TitoloAbb"].'" class="btn primary-btn subscribe-btn flex-row-center" aria-label="acquista abbonamento '.$abbonamento["TitoloAbb"].'">Acquista</a>
                 </div>');
             } else {
                 $result.= strval('<div class="plan-card card-shadow">

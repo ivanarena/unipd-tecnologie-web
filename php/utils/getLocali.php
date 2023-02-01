@@ -31,7 +31,7 @@ function getLocali(){
         $sql = "SELECT * FROM LOCALE;";
         foreach ($pdo->query($sql)->fetchAll() as $locale) {
             $result.= strval('<div class="h-card card-shadow">
-            <img class="place-img" src="' . $locale["LinkImg"] . '" alt="' . $locale["AltImg"] . '"/>
+            <img class="place-img" src="<urlPrefixPlaceholder/>' . $locale["LinkImg"] . '" alt="' . $locale["AltImg"] . '"/>
             <div class="place-info-container">
 
                 <div class="place-text">
@@ -40,7 +40,7 @@ function getLocali(){
                     <p class="place-desc">' . $locale["Descrizione"] . '</p>
                 </div>
                 <div class="btn-container">
-                    <a class="btn primary-btn place-events-btn" href="/php/eventi.php?IdLocale='. $locale["IdLocale"] .'">Controlla gli eventi</a>
+                    <a class="btn primary-btn place-events-btn" href="<urlPrefixPlaceholder/>/php/eventi.php?IdLocale='. $locale["IdLocale"] .'">Controlla gli eventi</a>
                 </div>
             </div>
         </div>');

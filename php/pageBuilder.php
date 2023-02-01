@@ -15,9 +15,10 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
         private $header; 
         private $footer; 
 
+
         public function __construct(string $_fileName, string $_desc) {
             $this->htmlPath = '/pages/' . $_fileName . '.html';
-            $this->cssPath = '/styles/' . $_fileName . '.css';
+            $this->cssPath = '<urlPrefixPlaceholder/>/styles/' . $_fileName . '.css';
             if (strpos($_fileName, '-') !== false) {
                 $_fileName = str_replace('-', ' ', $_fileName);
             }
@@ -33,7 +34,7 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
 
         public function setHead() {
             $this->head = str_replace('<titlePlaceholder />', $this->title . ' | ' . $this->hostName, $this->head);
-            $this->head = str_replace('<pageCssPlaceholder />', '<link type="text/css" rel="stylesheet" href="' . $this->cssPath . '" media="screen" />', $this->head);
+            $this->head = str_replace('<pageCssPlaceholder />', '<link type="text/css" rel="stylesheet" href="' .$this->cssPath . '" media="screen" />', $this->head);
             $this->head = str_replace('<meta name="description" content="" />', '<meta name="description" content="' . $this->desc . '" />', $this->head);
             $this->content = str_replace('<headPlaceholder />', $this->head, $this->content);
         }
@@ -75,6 +76,7 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
             $this->setHeader();
             $this->setBreadcrumb();
             $this->setFooter();
+            $this->content = str_replace("<urlPrefixPlaceholder/>", get_prefix(),$this->content);
             return $this->content;
         }
     }

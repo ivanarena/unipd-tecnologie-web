@@ -76,7 +76,7 @@ function nEventiRimanenti(){
 function getEventi() {
     $result = '';
     if (isset($_SESSION['Username']) && $_SESSION["admin"] == 1) {
-        $result = '<a href="/php/utils/creaEvento.php" role="button" class="btn primary-btn main-btn">Crea evento</a>';
+        $result = '<a href="<urlPrefixPlaceholder/>/php/utils/creaEvento.php" role="button" class="btn primary-btn main-btn">Crea evento</a>';
     } 
     try {
         $pdo = database::connect();
@@ -102,7 +102,7 @@ function getEventi() {
                         <p class="event-desc">' . $evento["DescrizioneEvento"] . '</p>
                     </div>
                     <div class="booking-container flex-col-center">
-                        <a href="/php/utils/doEliminaEvento.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn secondary-btn booking-btn">Elimina Evento</a>
+                        <a href="<urlPrefixPlaceholder/>/php/utils/doEliminaEvento.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn secondary-btn booking-btn">Elimina Evento</a>
                         <span class="spots-available">Posti rimasti: '.$posti.'</span>
                     </div>
                 </div>
@@ -119,7 +119,7 @@ function getEventi() {
                         <p class="event-desc">' . $evento["DescrizioneEvento"] . '</p>
                     </div>
                     <div class="booking-container flex-col-center">
-                        <a href="/php/utils/doPrenota.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn primary-btn booking-btn" aria-label="Prenota evento '. $evento["NomeEvento"] .'">Prenota</a>
+                        <a href="<urlPrefixPlaceholder/>/php/utils/doPrenota.php?IdEvento='. $evento["IdEvento"] .'" role="button" class="btn primary-btn booking-btn" aria-label="Prenota evento '. $evento["NomeEvento"] .'">Prenota</a>
                         <span class="spots-available">Posti rimasti: '.$posti.'</span>
                     </div>
                 </div>

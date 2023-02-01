@@ -1,10 +1,5 @@
 const darkModeSwitch = document.getElementById('dark-mode-switch');
-const darkModeLink = document.createElement("link");
-darkModeLink.type = "text/css";
-darkModeLink.rel = "stylesheet";
-darkModeLink.href = '/styles/dark-mode.css';
 
-// cambiare con dark -- sto usando questo per testare
 
 if (localStorage.prefersDark === undefined) {
     localStorage.setItem('prefersDark',
@@ -20,10 +15,10 @@ function toggleDarkMode() {
     let head = document.getElementsByTagName("head")[0];
     if (darkModeSwitch.checked) {
         localStorage.prefersDark = true;
-        head.appendChild(darkModeLink);
+        document.getElementsByTagName("body")[0].classList.add("dark");
     } else {
         localStorage.prefersDark = false;
-        head.removeChild(darkModeLink);
+        document.getElementsByTagName("body")[0].classList.remove("dark");
     }
     console.log(localStorage.prefersDark);
 }
