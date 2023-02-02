@@ -2,6 +2,9 @@ body.dark,
 body.dark .menu-is-mobile {
     background-color: var(--clr-d-background);
 }
+body.dark .error-msg{
+    color: #ff0000
+}
 
 body.dark,
 body.dark .menu-link a,
