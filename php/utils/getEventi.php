@@ -55,6 +55,7 @@ function getPosti($idLocale){
 
 function nEventiRimanenti(){
     $ret='';
+    $numEventiIscrittiUt = 0;
     if (abbonato()) {
         try {
             $pdo = database::connect();
