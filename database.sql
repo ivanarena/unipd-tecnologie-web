@@ -167,7 +167,7 @@ INSERT INTO EVENTO VALUES("2", "Vida Loca", "Vieni a scatenarti al ritmo del rag
                             creare una serata indimenticabile. Ma non &egrave; tutto: durante la serata ci saranno
                             anche animazioni e performance di ballo per rendere la festa ancora più coinvolgente. Non
                             perdere l'occasione
-                            di vivere una notte indimenticabile all'insegna del divertimento e della musica latina!", "2", "2023-02-25 22:00:00", "2023-02-25 06:00:00");
+                            di vivere una notte indimenticabile all'insegna del divertimento e della musica latina!", "2", "2023-02-25 22:00:00", "2023-02-25 23:30:00");
 INSERT INTO EVENTO VALUES("3", "Spirit techno", "Venite a vivere la notte più emozionante della vostra vita al nostro
                             evento
                             <span lang=""en"">techno</span> in discoteca!
@@ -177,7 +177,7 @@ INSERT INTO EVENTO VALUES("3", "Spirit techno", "Venite a vivere la notte più e
                             ballo. Con i nostri <span lang=""en""><abbr title=""disc jockey"">DJ</abbr></span>
                             di fama internazionale ai piatti, questa &egrave; una serata che non dimenticherete facilmente. Non
                             perdete l'opportunità
-                            di unirvi a noi e scatenarvi al ritmo della <span lang=""en"">techno</span> più pura!", "2", "2023-02-22 22:00:00", "2023-02-22 06:00:00");
+                            di unirvi a noi e scatenarvi al ritmo della <span lang=""en"">techno</span> più pura!", "2", "2023-02-21 22:00:00", "2023-02-22 06:00:00");
 INSERT INTO EVENTO VALUES("4", "Ride", "Vieni a vivere l'adrenalina delle corse sui <span lang=""en"">kart</span> in
                             una
                             <span lang=""en"">location</span> mozzafiato! In <span lang=""en"">indoor</span> e <span

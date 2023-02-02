@@ -252,7 +252,7 @@ input[type=checkbox] {
 }
 
 .error-msg {
-    color: red;
+    color: #b30000;
     font-weight: bold;
     text-align: center;
     margin-top: 0vh;
