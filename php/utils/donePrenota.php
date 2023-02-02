@@ -5,8 +5,9 @@
     // Page information 
     $fileName = 'prenotazione';
     $desc = 'Pagina di rigraziamento per l&apos;avvenuta prenotazione';
+    $key = 'sanjunipero, metaverso, virtuale, prenota';
 
-    $builder = new PageBuilder($fileName, $desc);
+    $builder = new PageBuilder($fileName, $desc, $key);
 
     $page = $builder->buildPage();
     echo $page;
