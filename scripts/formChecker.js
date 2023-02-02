@@ -6,17 +6,17 @@ let message = document.getElementById("msg");
 
 
 function checkName() {
-    let snamev  = sname.value;
+    let snamev = sname.value;
     if (snamev == "") {
-        document.getElementById("nomeErr").classList.remove('hide');
+        document.getElementById("nameErr").classList.remove('hide');
         return false;
     }
     else if (snamev.length > 50) {
-        document.getElementById("nomeErr").classList.remove('hide');
+        document.getElementById("nameErr").classList.remove('hide');
         return false;
     }
     else {
-        document.getElementById("nomeErr").classList.add('hide');
+        document.getElementById("nameErr").classList.add('hide');
         return true;
     }
 }
@@ -33,7 +33,7 @@ function checkSurname() {
     }
     else {
         document.getElementById("cognomeErr").classList.add('hide');
-        return true; 
+        return true;
     }
 }
 
