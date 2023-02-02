@@ -89,9 +89,9 @@ function getEventi() {
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         if (empty($_GET)) {
-            $sql = "SELECT L.IdLocale, E.NomeEvento, L.NomeLocale, E.Descrizione AS DescrizioneEvento, E.IdEvento, DATE_FORMAT(DataOraInizio,'%d/%m/%Y, dalle %H:%i ') as stampaInizio, DATE_FORMAT(DataOraFine,'fino al %d/%m/%Y alle %H:%i') as stampaFine FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale;";
+            $sql = "SELECT L.IdLocale, E.NomeEvento, L.NomeLocale, E.Descrizione AS DescrizioneEvento, E.IdEvento, DATE_FORMAT(DataOraInizio,'%d/%m/%Y - %H:%i ') as stampaInizio, DATE_FORMAT(DataOraFine,'fino al %d/%m/%Y - %H:%i') as stampaFine FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale;";
         } else {
-            $sql = "SELECT L.IdLocale, E.NomeEvento, L.NomeLocale, E.Descrizione AS DescrizioneEvento, E.IdEvento, DATE_FORMAT(DataOraInizio,'%d %m %Y, dalle %H:%i ') as stampaInizio, DATE_FORMAT(DataOraFine,'fino al %d/%m/%Y alle %H:%i') as stampaFine FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale AND E.IdLocale='". $_GET["IdLocale"] ."';";
+            $sql = "SELECT L.IdLocale, E.NomeEvento, L.NomeLocale, E.Descrizione AS DescrizioneEvento, E.IdEvento, DATE_FORMAT(DataOraInizio,'%d %m %Y - %H:%i ') as stampaInizio, DATE_FORMAT(DataOraFine,'fino al %d/%m/%Y - %H:%i') as stampaFine FROM EVENTO AS E, LOCALE AS L WHERE L.IdLocale=E.IdLocale AND E.IdLocale='". $_GET["IdLocale"] ."';";
         }
         $res_sql = $pdo->query($sql);
         foreach ($res_sql->fetchAll() as $evento) {
