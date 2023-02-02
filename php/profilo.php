@@ -7,8 +7,9 @@ if(isset($_SESSION["Username"])){
     // Page information 
     $fileName = 'profilo';
     $desc = 'Visualizza il tuo profilo nel metaverso.';
+    $key = 'sanjunipero, metaverso, virtuale, profilo, area personale';
 
-    $builder = new PageBuilder($fileName, $desc);
+    $builder = new PageBuilder($fileName, $desc, $key);
 
     $builder->setContent("<usernamePlaceholder />", strval($_SESSION["Username"]));
     $builder->setContent("<anagraficaPlaceholder />", getAnagrafica());

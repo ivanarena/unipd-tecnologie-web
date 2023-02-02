@@ -6,8 +6,9 @@
     // Page information 
     $fileName = 'locali';
     $desc = 'Scopri i locali che ospitano i nostri eventi e che puoi frequentare a San Junipero.';
+    $key = 'sanjunipero, metaverso, virtuale, locali, eventi';
 
-    $builder = new PageBuilder($fileName, $desc);
+    $builder = new PageBuilder($fileName, $desc, $key);
 
     $builder->setContent("<localiPlaceholder />", getLocali());
 

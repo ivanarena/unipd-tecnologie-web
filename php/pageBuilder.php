@@ -10,13 +10,14 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
         private $content;
         private $title;
         private $desc;
+        private $key;
 
         private $head; 
         private $header; 
         private $footer; 
 
 
-        public function __construct(string $_fileName, string $_desc) {
+        public function __construct(string $_fileName, string $_desc, string $_key) {
             $this->htmlPath = '/pages/' . $_fileName . '.html';
             $this->cssPath = '<urlPrefixPlaceholder/>/styles/' . $_fileName . '.css';
             if (strpos($_fileName, '-') !== false) {
@@ -24,6 +25,7 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
             }
             $this->title = ucfirst($_fileName);
             $this->desc = $_desc;
+            $this->key = $_key;
             
             $this->content = file_get_contents(__DIR__ . $this->htmlPath);
             $this->head = file_get_contents(__DIR__."/pages/components/head.html");
@@ -36,6 +38,7 @@ if (strtok($_SERVER["REQUEST_URI"], '?') == '/php/pageBuilder.php') {
             $this->head = str_replace('<titlePlaceholder />', $this->title . ' | ' . $this->hostName, $this->head);
             $this->head = str_replace('<pageCssPlaceholder />', '<link type="text/css" rel="stylesheet" href="' .$this->cssPath . '" media="screen" />', $this->head);
             $this->head = str_replace('<meta name="description" content="" />', '<meta name="description" content="' . $this->desc . '" />', $this->head);
+            $this->head = str_replace('<meta name="keywords" content="" />', '<meta name="keywords" content="' . $this->key . '" />', $this->head);
             $this->content = str_replace('<headPlaceholder />', $this->head, $this->content);
         }
         

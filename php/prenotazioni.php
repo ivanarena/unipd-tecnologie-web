@@ -7,8 +7,9 @@ if(isset($_SESSION["Username"])){
     // Page information 
     $fileName = 'prenotazioni';
     $desc = 'Effettua la tua prenotazione agli eventi che desideri.';
+    $key = 'sanjunipero, metaverso, virtuale, prenotati, eventi';
 
-    $builder = new PageBuilder($fileName, $desc);
+    $builder = new PageBuilder($fileName, $desc, $key);
 
     $builder->setContent("<prenotazioniPlaceholder />", getPrenotazioni());
 
