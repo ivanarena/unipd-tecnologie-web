@@ -217,10 +217,10 @@ INSERT INTO EVENTO VALUES("6", "Lotta alla mafia con Saviano", "Vi invitiamo a u
                             e racconterà le sue personali esperienze nella lotta contro queste organizzazioni criminali.", "5", "2023-02-09 17:00:00", "2023-02-09 20:30:00");
 
 /**PORTAFOGLI**/
-INSERT INTO PORTAFOGLIO VALUES("user", "783584310000");
+INSERT INTO PORTAFOGLIO VALUES("user", "340000000000000");
 
 /**ABBONAMENTI UTENTI**/
-INSERT INTO ABBONAMENTO_UTENTE VALUES("2", "3", "user", "783584310000", "2023-12-01", "2023-12-07");
+INSERT INTO ABBONAMENTO_UTENTE VALUES("2", "3", "user", "340000000000000", "2023-12-01", "2023-12-07");
 
 /**EVENTI UTENTI id evento data iscr**/
 INSERT INTO EVENTO_UTENTE VALUES("user", "1", "2023-01-05");
