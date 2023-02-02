@@ -19,7 +19,7 @@ if (isset($_SESSION["Username"])&& !noAbbonamenti()){
                     if ($stmt->fetchColumn() <= 0) {
                         $stmt = $pdo->prepare("SELECT COUNT(YEARWEEK(DataIscrizione)) as NumEventiIscritti FROM EVENTO_UTENTE WHERE YEARWEEK(DataIscrizione) = YEARWEEK(NOW()) AND Username = ? GROUP BY YEARWEEK(DataIscrizione)");
                         $stmt->execute(array($_SESSION["Username"]));
-                        $numEventiIscrittiUt = $stmt->fetch()["NumEventiIscritti"];
+                        $numEventiIscrittiUt = $stmt->fetch()["NumEventiIscritti"] ?? 0;
                         $query = "SELECT EventiSettimanali FROM ABBONAMENTO_UTENTE AU JOIN ABBONAMENTO A ON AU.IdAbbonamento = A.IdAbbonamento WHERE Username=? AND CURDATE()<=DataScadenza;";
                         $stmt = $pdo->prepare($query);
                         $stmt->execute(array($_SESSION["Username"]));
