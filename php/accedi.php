@@ -6,8 +6,9 @@ if(!isset($_SESSION["Username"])){
     // Page information 
     $fileName = 'accedi';
     $desc = 'Accedi al sito dal tuo account e scopri tutte le novità disponibili sul tuo profilo.';
+    $key = 'sanjunipero, metaverso, virtuale, accedi, profilo';
 
-    $builder = new PageBuilder($fileName, $desc);
+    $builder = new PageBuilder($fileName, $desc, $key);
 
     //Visualizzazione messaggio di errore
     if(array_key_exists("errUser", $_REQUEST) && !empty($_REQUEST["errUser"])){

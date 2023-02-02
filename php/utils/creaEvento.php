@@ -8,8 +8,9 @@ if (isset($_SESSION["Username"])&& isset($_SESSION["admin"])){
         // Page information 
         $fileName = 'crea-evento';
         $desc = 'Crea un nuovo evento.';
+        $key = 'sanjunipero, metaverso, virtuale, eventi, crea evento';
 
-        $builder = new PageBuilder($fileName, $desc);
+        $builder = new PageBuilder($fileName, $desc, $key);
 
         $builder->setContent("<getLocali />", getLocaliAsOptions());
 

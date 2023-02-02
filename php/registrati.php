@@ -6,8 +6,9 @@ if(!isset($_SESSION["Username"])){
     // Page information 
     $fileName = 'registrati';
     $desc = 'Crea il tuo account e inizia la tua esperienza a San Junipero.';
+    $key = 'sanjunipero, metaverso, virtuale, registrati, account';
 
-    $builder = new PageBuilder($fileName, $desc);
+    $builder = new PageBuilder($fileName, $desc, $key);
 
     if(!empty($_GET)){
         if(array_key_exists("errUser", $_REQUEST) && !empty($_REQUEST["errUser"])){

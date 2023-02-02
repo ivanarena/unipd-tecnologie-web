@@ -6,8 +6,9 @@
     // Page information 
     $fileName = 'abbonamenti';
     $desc = 'Scegli il tipo di abbonamento che preferisci al nostro metaverso.';
+    $key = 'sanjunipero, metaverso, virtuale, abbonamento, acquista';
 
-    $builder = new PageBuilder($fileName, $desc);
+    $builder = new PageBuilder($fileName, $desc, $key);
     
     $builder->setContent("<abbonamentiPlaceholder />",getAbbonamenti());
 

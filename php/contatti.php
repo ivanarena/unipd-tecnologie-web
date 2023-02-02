@@ -5,8 +5,9 @@
     // Page information 
     $fileName = 'contatti';
     $desc = 'Contattaci per qualsiasi tuo dubbio o curiosità sul nostro servizio.';
+    $key = 'sanjunipero, metaverso, virtuale, contatti, contattaci, informazioni';
 
-    $builder = new PageBuilder($fileName, $desc);
+    $builder = new PageBuilder($fileName, $desc, $key);
 
     $page = $builder->buildPage();
     echo $page;

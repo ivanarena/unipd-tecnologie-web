@@ -5,8 +5,9 @@
     // Page information 
     $fileName = 'chi-siamo';
     $desc = 'Scopri qualcosa in più sugli sviluppatori di San Junipero.';
+    $key = 'sanjunipero, metaverso, virtuale, chi siamo, informazioni';
 
-    $builder = new PageBuilder($fileName, $desc);
+    $builder = new PageBuilder($fileName, $desc, $key);
 
     $page = $builder->buildPage();
     echo $page;
