@@ -9,8 +9,8 @@ body.dark footer {
     color: var(--clr-d-text);
 }
 
-body.dark .menu-link .secondary-btn a,
-body.dark .menu-link .secondary-btn a:visited {
+body.dark .menu-link a.secondary-btn,
+body.dark .menu-link a.secondary-btn:visited {
     background-color:var(--clr-btn-alt);
     color: black;
 }
@@ -98,7 +98,7 @@ body.dark .login-form {
 }
 
 body.dark main .login-form a.secondary-btn,
-body.dark main.login-form a.secondary-btn:visited {
+body.dark main .login-form a.secondary-btn:visited {
     color: black;
 }
 
